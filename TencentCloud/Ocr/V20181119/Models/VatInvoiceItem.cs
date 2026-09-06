@@ -25,106 +25,141 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 行号
+        /// <p>行号</p>
         /// </summary>
         [JsonProperty("LineNo")]
         public string LineNo{ get; set; }
 
         /// <summary>
-        /// 名称
+        /// <p>名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 规格
+        /// <p>规格</p>
         /// </summary>
         [JsonProperty("Spec")]
         public string Spec{ get; set; }
 
         /// <summary>
-        /// 单位
+        /// <p>单位</p>
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// <p>数量</p>
         /// </summary>
         [JsonProperty("Quantity")]
         public string Quantity{ get; set; }
 
         /// <summary>
-        /// 单价
+        /// <p>单价</p>
         /// </summary>
         [JsonProperty("UnitPrice")]
         public string UnitPrice{ get; set; }
 
         /// <summary>
-        /// 不含税金额
+        /// <p>不含税金额</p>
         /// </summary>
         [JsonProperty("AmountWithoutTax")]
         public string AmountWithoutTax{ get; set; }
 
         /// <summary>
-        /// 税率
+        /// <p>税率</p>
         /// </summary>
         [JsonProperty("TaxRate")]
         public string TaxRate{ get; set; }
 
         /// <summary>
-        /// 税额
+        /// <p>税额</p>
         /// </summary>
         [JsonProperty("TaxAmount")]
         public string TaxAmount{ get; set; }
 
         /// <summary>
-        /// 税收分类编码
+        /// <p>税收分类编码</p>
         /// </summary>
         [JsonProperty("TaxClassifyCode")]
         public string TaxClassifyCode{ get; set; }
 
         /// <summary>
-        /// 运输工具类型
+        /// <p>运输工具类型</p>
         /// </summary>
         [JsonProperty("VehicleType")]
         public string VehicleType{ get; set; }
 
         /// <summary>
-        /// 运输工具牌号
+        /// <p>运输工具牌号</p>
         /// </summary>
         [JsonProperty("VehicleBrand")]
         public string VehicleBrand{ get; set; }
 
         /// <summary>
-        /// 起始地
+        /// <p>起始地</p>
         /// </summary>
         [JsonProperty("DeparturePlace")]
         public string DeparturePlace{ get; set; }
 
         /// <summary>
-        /// 到达地
+        /// <p>到达地</p>
         /// </summary>
         [JsonProperty("ArrivalPlace")]
         public string ArrivalPlace{ get; set; }
 
         /// <summary>
-        /// 运输货物名称
+        /// <p>运输货物名称</p>
         /// </summary>
         [JsonProperty("TransportItemsName")]
         public string TransportItemsName{ get; set; }
 
         /// <summary>
-        /// 建筑服务发生地
+        /// <p>建筑服务发生地</p>
         /// </summary>
         [JsonProperty("ConstructionPlace")]
         public string ConstructionPlace{ get; set; }
 
         /// <summary>
-        /// 建筑项目名称
+        /// <p>建筑项目名称</p>
         /// </summary>
         [JsonProperty("ConstructionName")]
         public string ConstructionName{ get; set; }
+
+        /// <summary>
+        /// <p>原始税率</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalTaxRate")]
+        public string OriginalTaxRate{ get; set; }
+
+        /// <summary>
+        /// <p>原始税额</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalTaxAmount")]
+        public string OriginalTaxAmount{ get; set; }
+
+        /// <summary>
+        /// <p>零税率标识</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZeroTaxRateMark")]
+        public string ZeroTaxRateMark{ get; set; }
+
+        /// <summary>
+        /// <p>含税单价</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaxIncludedUnitPrice")]
+        public string TaxIncludedUnitPrice{ get; set; }
+
+        /// <summary>
+        /// <p>含税金额</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaxIncludedAmount")]
+        public float? TaxIncludedAmount{ get; set; }
 
 
         /// <summary>
@@ -149,6 +184,11 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TransportItemsName", this.TransportItemsName);
             this.SetParamSimple(map, prefix + "ConstructionPlace", this.ConstructionPlace);
             this.SetParamSimple(map, prefix + "ConstructionName", this.ConstructionName);
+            this.SetParamSimple(map, prefix + "OriginalTaxRate", this.OriginalTaxRate);
+            this.SetParamSimple(map, prefix + "OriginalTaxAmount", this.OriginalTaxAmount);
+            this.SetParamSimple(map, prefix + "ZeroTaxRateMark", this.ZeroTaxRateMark);
+            this.SetParamSimple(map, prefix + "TaxIncludedUnitPrice", this.TaxIncludedUnitPrice);
+            this.SetParamSimple(map, prefix + "TaxIncludedAmount", this.TaxIncludedAmount);
         }
     }
 }

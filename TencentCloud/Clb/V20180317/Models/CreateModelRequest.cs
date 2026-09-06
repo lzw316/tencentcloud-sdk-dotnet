@@ -126,6 +126,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HealthCheckConfigs")]
         public ServiceProviderHealthCheckConfigItemInput[] HealthCheckConfigs{ get; set; }
 
+        /// <summary>
+        /// <p>模型输出模态</p>
+        /// </summary>
+        [JsonProperty("Capability")]
+        public string Capability{ get; set; }
+
+        /// <summary>
+        /// <p>请求后缀</p>
+        /// </summary>
+        [JsonProperty("EndpointPath")]
+        public string EndpointPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
             this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
             this.SetParamArrayObj(map, prefix + "HealthCheckConfigs.", this.HealthCheckConfigs);
+            this.SetParamSimple(map, prefix + "Capability", this.Capability);
+            this.SetParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
         }
     }
 }

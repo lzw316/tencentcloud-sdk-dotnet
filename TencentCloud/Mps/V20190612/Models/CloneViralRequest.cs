@@ -54,6 +54,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Persona")]
         public CloneViralPersona Persona{ get; set; }
 
+        /// <summary>
+        /// <p>输出相关参数</p>
+        /// </summary>
+        [JsonProperty("Output")]
+        public CloneViralOutputOption Output{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AIGCParam.", this.AIGCParam);
             this.SetParamObj(map, prefix + "ContentParam.", this.ContentParam);
             this.SetParamObj(map, prefix + "Persona.", this.Persona);
+            this.SetParamObj(map, prefix + "Output.", this.Output);
         }
     }
 }

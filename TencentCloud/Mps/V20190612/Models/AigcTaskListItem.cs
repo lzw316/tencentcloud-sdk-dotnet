@@ -99,6 +99,20 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("RequestBody")]
         public string RequestBody{ get; set; }
 
+        /// <summary>
+        /// <p>任务其他信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskInfo")]
+        public string TaskInfo{ get; set; }
+
+        /// <summary>
+        /// <p>任务子状态</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Stage")]
+        public string Stage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +131,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
             this.SetParamSimple(map, prefix + "RequestBody", this.RequestBody);
+            this.SetParamSimple(map, prefix + "TaskInfo", this.TaskInfo);
+            this.SetParamSimple(map, prefix + "Stage", this.Stage);
         }
     }
 }

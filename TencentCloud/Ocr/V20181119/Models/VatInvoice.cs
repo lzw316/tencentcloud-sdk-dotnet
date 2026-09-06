@@ -25,222 +25,289 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 发票代码
+        /// <p>发票代码</p>
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 发票号码
+        /// <p>发票号码</p>
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 开票日期
+        /// <p>开票日期</p>
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 购方抬头
-        /// 通用机打发票类型时不返回
+        /// <p>购方抬头<br>通用机打发票类型时不返回</p>
         /// </summary>
         [JsonProperty("BuyerName")]
         public string BuyerName{ get; set; }
 
         /// <summary>
-        /// 购方税号
-        /// 通用机打发票类型时不返回
+        /// <p>购方税号<br>通用机打发票类型时不返回</p>
         /// </summary>
         [JsonProperty("BuyerTaxCode")]
         public string BuyerTaxCode{ get; set; }
 
         /// <summary>
-        /// 购方地址电话
-        /// 通用机打发票类型做不返回
+        /// <p>购方地址电话<br>通用机打发票类型做不返回</p>
         /// </summary>
         [JsonProperty("BuyerAddressPhone")]
         public string BuyerAddressPhone{ get; set; }
 
         /// <summary>
-        /// 购方银行账号
-        /// 通用机打发票类型时不返回
+        /// <p>购方银行账号<br>通用机打发票类型时不返回</p>
         /// </summary>
         [JsonProperty("BuyerBankAccount")]
         public string BuyerBankAccount{ get; set; }
 
         /// <summary>
-        /// 销方名称
+        /// <p>销方名称</p>
         /// </summary>
         [JsonProperty("SellerName")]
         public string SellerName{ get; set; }
 
         /// <summary>
-        /// 销方税号
+        /// <p>销方税号</p>
         /// </summary>
         [JsonProperty("SellerTaxCode")]
         public string SellerTaxCode{ get; set; }
 
         /// <summary>
-        /// 销方地址电话
+        /// <p>销方地址电话</p>
         /// </summary>
         [JsonProperty("SellerAddressPhone")]
         public string SellerAddressPhone{ get; set; }
 
         /// <summary>
-        /// 销方银行账号
+        /// <p>销方银行账号</p>
         /// </summary>
         [JsonProperty("SellerBankAccount")]
         public string SellerBankAccount{ get; set; }
 
         /// <summary>
-        /// 备注
+        /// <p>备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 机器编码
+        /// <p>机器编码</p>
         /// </summary>
         [JsonProperty("MachineNo")]
         public string MachineNo{ get; set; }
 
         /// <summary>
-        /// 票种类型
-        /// 01：增值税专用发票，
-        /// 02：货运运输业增值税专用发票，
-        /// 03：机动车销售统一发票，
-        /// 04：增值税普通发票，
-        /// 08：增值税电子专用发票（含全电，全电仅新版接口支持），
-        /// 09：全电发票，
-        /// 0901：全电纸质发票(增值税专用发票)，
-        /// 0903：全电纸质(机动车销售统一发票)，
-        /// 0904：全电纸质发票(增值税普通发票)，
-        /// 0910：电子发票(普通发票)，
-        /// 0915：全电纸质(二手车销售统一发票)，
-        /// 0920：电子发票(增值税专用发票)，
-        /// 0930：电子发票(机动车销售统一发票)，
-        /// 0940：电子发票(二手车销售统一发票)，
-        /// 10：增值税电子普通发票（含全电，全电仅新版接口支持），
-        /// 11：增值税普通发票（卷式），
-        /// 14：增值税电子（通行费）发票，
-        /// 15：二手车销售统一发票，
-        /// 32：深圳区块链发票，
-        /// 61：电子发票（航空运输电子客票行程单），
-        /// 8208：电子发票(通行费发票)，
-        /// 83：电子发票(铁路电子客票)，
-        /// 100：区块链发票，
-        /// 101：财政票据，
-        /// 102：通用电子发票，
-        /// 103：车辆通行费
-        /// 
-        /// 
-        /// 
+        /// <p>票种类型<br>01：增值税专用发票，<br>02：货运运输业增值税专用发票，<br>03：机动车销售统一发票，<br>04：增值税普通发票，<br>08：增值税电子专用发票（含全电，全电仅新版接口支持），<br>09：全电发票，<br>0901：全电纸质发票(增值税专用发票)，<br>0903：全电纸质(机动车销售统一发票)，<br>0904：全电纸质发票(增值税普通发票)，<br>0910：电子发票(普通发票)，<br>0915：全电纸质(二手车销售统一发票)，<br>0920：电子发票(增值税专用发票)，<br>0930：电子发票(机动车销售统一发票)，<br>0940：电子发票(二手车销售统一发票)，<br>10：增值税电子普通发票（含全电，全电仅新版接口支持），<br>11：增值税普通发票（卷式），<br>14：增值税电子（通行费）发票，<br>15：二手车销售统一发票，<br>32：深圳区块链发票，<br>61：电子发票（航空运输电子客票行程单），<br>8208：电子发票(通行费发票)，<br>83：电子发票(铁路电子客票)，<br>100：区块链发票，<br>101：财政票据，<br>102：通用电子发票，<br>103：车辆通行费</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单
+        /// <p>具体的全电发票类型：01: 全电专用发票；02：全电普通发票；03：全电火车票；04：全电机票行程单</p>
         /// </summary>
         [JsonProperty("ElectronicType")]
         public string ElectronicType{ get; set; }
 
         /// <summary>
-        /// 检验码
+        /// <p>检验码</p>
         /// </summary>
         [JsonProperty("CheckCode")]
         public string CheckCode{ get; set; }
 
         /// <summary>
-        /// 是否作废（红冲）是否作废（红冲）
-        /// Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
+        /// <p>是否作废（红冲）是否作废（红冲）<br>Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲</p>
         /// </summary>
         [JsonProperty("IsAbandoned")]
         public string IsAbandoned{ get; set; }
 
         /// <summary>
-        /// 是否有销货清单 
-        /// Y: 有清单 N：无清单 
-        /// 卷票无
+        /// <p>是否有销货清单<br>Y: 有清单 N：无清单<br>卷票无</p>
         /// </summary>
         [JsonProperty("HasSellerList")]
         public string HasSellerList{ get; set; }
 
         /// <summary>
-        /// 销货清单标题
+        /// <p>销货清单标题</p>
         /// </summary>
         [JsonProperty("SellerListTitle")]
         public string SellerListTitle{ get; set; }
 
         /// <summary>
-        /// 销货清单税额
+        /// <p>销货清单税额</p>
         /// </summary>
         [JsonProperty("SellerListTax")]
         public string SellerListTax{ get; set; }
 
         /// <summary>
-        /// 不含税金额
+        /// <p>不含税金额</p>
         /// </summary>
         [JsonProperty("AmountWithoutTax")]
         public string AmountWithoutTax{ get; set; }
 
         /// <summary>
-        /// 税额
+        /// <p>税额</p>
         /// </summary>
         [JsonProperty("TaxAmount")]
         public string TaxAmount{ get; set; }
 
         /// <summary>
-        /// 含税金额
+        /// <p>含税金额</p>
         /// </summary>
         [JsonProperty("AmountWithTax")]
         public string AmountWithTax{ get; set; }
 
         /// <summary>
-        /// 项目明细
+        /// <p>项目明细</p>
         /// </summary>
         [JsonProperty("Items")]
         public VatInvoiceItem[] Items{ get; set; }
 
         /// <summary>
-        /// 所属税局
+        /// <p>所属税局</p>
         /// </summary>
         [JsonProperty("TaxBureau")]
         public string TaxBureau{ get; set; }
 
         /// <summary>
-        /// 通行费标志:Y、是;N、否
+        /// <p>通行费标志:Y、是;N、否</p>
         /// </summary>
         [JsonProperty("TrafficFreeFlag")]
         public string TrafficFreeFlag{ get; set; }
 
         /// <summary>
-        /// 是否为红票
+        /// <p>是否为红票</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RedLetterInvoiceMark")]
         public bool? RedLetterInvoiceMark{ get; set; }
 
         /// <summary>
-        /// 开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税
+        /// <p>开具类型标识（0: 委托代开，1：自开，2：代开，3：代办退税</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IssuingTypeMark")]
         public long? IssuingTypeMark{ get; set; }
 
         /// <summary>
-        /// 代开销售方名称
+        /// <p>代开销售方名称</p>
         /// </summary>
         [JsonProperty("SellerAgentName")]
         public string SellerAgentName{ get; set; }
 
         /// <summary>
-        /// 代开销售方税号
+        /// <p>代开销售方税号</p>
         /// </summary>
         [JsonProperty("SellerAgentTaxID")]
         public string SellerAgentTaxID{ get; set; }
+
+        /// <summary>
+        /// <p>地区代码</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionCode")]
+        public string RegionCode{ get; set; }
+
+        /// <summary>
+        /// <p>复核人</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReviewerName")]
+        public string ReviewerName{ get; set; }
+
+        /// <summary>
+        /// <p>开票人</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IssuerName")]
+        public string IssuerName{ get; set; }
+
+        /// <summary>
+        /// <p>收款人</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayeeName")]
+        public string PayeeName{ get; set; }
+
+        /// <summary>
+        /// <p>开票机号</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineCode")]
+        public string MachineCode{ get; set; }
+
+        /// <summary>
+        /// <p>税控码/密码区</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaxControlCode")]
+        public string TaxControlCode{ get; set; }
+
+        /// <summary>
+        /// <p>价税合计（中文大写）</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AmountWithTaxCN")]
+        public string AmountWithTaxCN{ get; set; }
+
+        /// <summary>
+        /// <p>税率</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaxRate")]
+        public string TaxRate{ get; set; }
+
+        /// <summary>
+        /// <p>特殊票种代码</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecialTicketCode")]
+        public string SpecialTicketCode{ get; set; }
+
+        /// <summary>
+        /// <p>红字发票信息列表</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RedLetterInvoices")]
+        public RedLetterInvoiceItem[] RedLetterInvoices{ get; set; }
+
+        /// <summary>
+        /// <p>全电类型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FullElectronicType")]
+        public string FullElectronicType{ get; set; }
+
+        /// <summary>
+        /// <p>OFD版式文件下载链接</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OfdUrl")]
+        public string OfdUrl{ get; set; }
+
+        /// <summary>
+        /// <p>PDF版式文件下载链接</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PdfUrl")]
+        public string PdfUrl{ get; set; }
+
+        /// <summary>
+        /// <p>原发票代码，对应蓝字发票代码。</p>
+        /// </summary>
+        [JsonProperty("OriginalCode")]
+        public string OriginalCode{ get; set; }
+
+        /// <summary>
+        /// <p>原发票号码，对应蓝字发票号码。</p>
+        /// </summary>
+        [JsonProperty("OriginalNumber")]
+        public string OriginalNumber{ get; set; }
 
 
         /// <summary>
@@ -278,6 +345,21 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "IssuingTypeMark", this.IssuingTypeMark);
             this.SetParamSimple(map, prefix + "SellerAgentName", this.SellerAgentName);
             this.SetParamSimple(map, prefix + "SellerAgentTaxID", this.SellerAgentTaxID);
+            this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
+            this.SetParamSimple(map, prefix + "ReviewerName", this.ReviewerName);
+            this.SetParamSimple(map, prefix + "IssuerName", this.IssuerName);
+            this.SetParamSimple(map, prefix + "PayeeName", this.PayeeName);
+            this.SetParamSimple(map, prefix + "MachineCode", this.MachineCode);
+            this.SetParamSimple(map, prefix + "TaxControlCode", this.TaxControlCode);
+            this.SetParamSimple(map, prefix + "AmountWithTaxCN", this.AmountWithTaxCN);
+            this.SetParamSimple(map, prefix + "TaxRate", this.TaxRate);
+            this.SetParamSimple(map, prefix + "SpecialTicketCode", this.SpecialTicketCode);
+            this.SetParamArrayObj(map, prefix + "RedLetterInvoices.", this.RedLetterInvoices);
+            this.SetParamSimple(map, prefix + "FullElectronicType", this.FullElectronicType);
+            this.SetParamSimple(map, prefix + "OfdUrl", this.OfdUrl);
+            this.SetParamSimple(map, prefix + "PdfUrl", this.PdfUrl);
+            this.SetParamSimple(map, prefix + "OriginalCode", this.OriginalCode);
+            this.SetParamSimple(map, prefix + "OriginalNumber", this.OriginalNumber);
         }
     }
 }

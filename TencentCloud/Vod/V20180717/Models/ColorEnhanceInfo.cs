@@ -25,19 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 色彩增强控制开关，可选值：
-        /// <li>ON：开启综合增强；</li>
-        /// <li>OFF：关闭综合增强。</li>
+        /// <p>色彩增强控制开关</p><p>枚举值：</p><ul><li>ON： 开启色彩增强</li><li>OFF： 关闭色彩增强</li></ul>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：
-        /// <li>weak：轻色彩增强；</li>
-        /// <li>normal：正常色彩增强；</li>
-        /// <li>strong：强色彩增强。</li>
-        /// 默认值：weak。
+        /// <p>色彩增强类型，仅当色彩增强控制开关为 ON 时有效，可选值：</p><li>weak：轻色彩增强；</li><li>normal：正常色彩增强；</li><li>strong：强色彩增强。</li>默认值：weak。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

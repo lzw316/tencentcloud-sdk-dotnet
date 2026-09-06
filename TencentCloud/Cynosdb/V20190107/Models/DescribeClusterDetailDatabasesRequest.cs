@@ -25,25 +25,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群ID
+        /// <p>集群ID</p>
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认0
+        /// <p>偏移量，默认0</p>
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认20,最大100
+        /// <p>返回数量，默认20,最大100</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 数据库名称
+        /// <p>数据库名称，通过该字段进行子串匹配</p>
         /// </summary>
         [JsonProperty("DbName")]
         public string DbName{ get; set; }

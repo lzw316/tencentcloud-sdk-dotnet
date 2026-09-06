@@ -55,7 +55,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DeviceType{ get; set; }
 
         /// <summary>
-        /// <p>实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。</p>
+        /// <p>当前字段已废弃。当前版本不再传输该值。</p>
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         [System.Obsolete]

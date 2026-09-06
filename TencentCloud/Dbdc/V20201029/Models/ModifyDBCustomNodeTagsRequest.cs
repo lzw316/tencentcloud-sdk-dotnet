@@ -31,13 +31,13 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p>
+        /// <p>为节点绑定的标签信息</p><p>入参限制：参考标签侧的限制</p><p>如果节点未关联输入的标签键，则增加关联；若已关联，则将该节点关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
         /// </summary>
         [JsonProperty("AddTags")]
         public Tag[] AddTags{ get; set; }
 
         /// <summary>
-        /// <p>需要删除的标签Key</p>
+        /// <p>需要解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
         /// </summary>
         [JsonProperty("DeleteTagKeys")]
         public string[] DeleteTagKeys{ get; set; }

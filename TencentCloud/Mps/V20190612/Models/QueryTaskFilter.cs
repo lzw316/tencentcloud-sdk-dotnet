@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// <p>任务类型</p>
+        /// <p>任务类型</p><p>枚举值：</p><ul><li>RedrawVideo： 视频重绘</li><li>AIDrama： AI漫剧</li><li>DocGenVideo： 文档生视频</li><li>FissionVideo： 视频裂变</li></ul>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -54,6 +54,24 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Ratio")]
         public string Ratio{ get; set; }
 
+        /// <summary>
+        /// <p>任务执行模式</p><p>枚举值：</p><ul><li>auto： 直接生成</li><li>phased： 确认后再生成</li></ul>
+        /// </summary>
+        [JsonProperty("ExecuteMode")]
+        public string ExecuteMode{ get; set; }
+
+        /// <summary>
+        /// <p>裂变任务视频类型过滤: ugc、talk、display、unboxing、reaction</p><p>枚举值：</p><ul><li>ugc： UGC种草</li><li>talk： 产品口播</li><li>display： 产品展示</li><li>unboxing： 开箱分享</li><li>reaction： 反应展示</li></ul>
+        /// </summary>
+        [JsonProperty("VideoType")]
+        public string VideoType{ get; set; }
+
+        /// <summary>
+        /// <p>模型类型</p><p>枚举值：</p><ul><li>standard： 标准版</li><li>flagship： 高级版</li></ul>
+        /// </summary>
+        [JsonProperty("ModelTier")]
+        public string ModelTier{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +83,9 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamSimple(map, prefix + "Resolution", this.Resolution);
             this.SetParamSimple(map, prefix + "Ratio", this.Ratio);
+            this.SetParamSimple(map, prefix + "ExecuteMode", this.ExecuteMode);
+            this.SetParamSimple(map, prefix + "VideoType", this.VideoType);
+            this.SetParamSimple(map, prefix + "ModelTier", this.ModelTier);
         }
     }
 }

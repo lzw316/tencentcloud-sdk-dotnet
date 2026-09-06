@@ -48,6 +48,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// <p>输出模态</p>
+        /// </summary>
+        [JsonProperty("Capability")]
+        public string Capability{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ModelName", this.ModelName);
             this.SetParamArrayObj(map, prefix + "ServiceProviders.", this.ServiceProviders);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Capability", this.Capability);
         }
     }
 }

@@ -25,57 +25,53 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 加载后续详情的Context
+        /// <p>加载后续详情的Context</p>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 指定时间范围内的告警执行详情是否完整返回
+        /// <p>指定时间范围内的告警执行详情是否完整返回</p>
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// 返回的结果是否为SQL分析结果
+        /// <p>返回的结果是否为SQL分析结果</p>
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }
 
         /// <summary>
-        /// 分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；
-        /// 否则为空。
+        /// <p>分析结果的列名，如果Query语句有SQL查询，则返回查询字段的列名；<br>否则为空。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ColNames")]
         public string[] ColNames{ get; set; }
 
         /// <summary>
-        /// 执行详情查询结果。
-        /// 当Query字段无SQL语句时，返回查询结果。
-        /// 当Query字段有SQL语句时，可能返回null。
+        /// <p>执行详情查询结果。<br>当Query字段无SQL语句时，返回查询结果。<br>当Query字段有SQL语句时，可能返回null。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public LogInfo[] Results{ get; set; }
 
         /// <summary>
-        /// 执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。
-        /// 
+        /// <p>执行详情统计分析结果。当Query字段有SQL语句时，返回SQL统计结果，否则可能返回null。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisResults")]
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
-        /// 执行详情统计分析结果；UseNewAnalysis为true有效。
+        /// <p>执行详情统计分析结果；UseNewAnalysis为true有效。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisRecords")]
         public string[] AnalysisRecords{ get; set; }
 
         /// <summary>
-        /// 分析结果的列名， UseNewAnalysis为true有效
+        /// <p>分析结果的列名， UseNewAnalysis为true有效</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Columns")]

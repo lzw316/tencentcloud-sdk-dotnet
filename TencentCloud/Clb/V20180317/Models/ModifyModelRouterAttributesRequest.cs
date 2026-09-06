@@ -60,6 +60,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Bandwidth")]
         public ulong? Bandwidth{ get; set; }
 
+        /// <summary>
+        /// <p>模型输出模态</p>
+        /// </summary>
+        [JsonProperty("Capability")]
+        public string Capability{ get; set; }
+
+        /// <summary>
+        /// <p>embedding 模态配置</p>
+        /// </summary>
+        [JsonProperty("EmbeddingConfig")]
+        public EmbeddingConfig EmbeddingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "RateLimitConfig.", this.RateLimitConfig);
             this.SetParamObj(map, prefix + "RouterSetting.", this.RouterSetting);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "Capability", this.Capability);
+            this.SetParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
         }
     }
 }

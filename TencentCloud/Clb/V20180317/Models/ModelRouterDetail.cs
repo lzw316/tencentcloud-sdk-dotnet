@@ -178,6 +178,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("BillingConfig")]
         public ModelRouterBillingConfigOutput BillingConfig{ get; set; }
 
+        /// <summary>
+        /// <p>Embedding配置</p>
+        /// </summary>
+        [JsonProperty("EmbeddingConfig")]
+        public EmbeddingConfig EmbeddingConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -209,6 +215,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
             this.SetParamObj(map, prefix + "BillingConfig.", this.BillingConfig);
+            this.SetParamObj(map, prefix + "EmbeddingConfig.", this.EmbeddingConfig);
         }
     }
 }

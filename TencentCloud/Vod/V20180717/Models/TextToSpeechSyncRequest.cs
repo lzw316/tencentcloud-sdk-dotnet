@@ -49,7 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string LanguageBoost{ get; set; }
 
         /// <summary>
-        /// <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频base64。</p>
+        /// <p>输出相关参数</p><p>可以指定输出形式等。默认输出音频URL。</p>
         /// </summary>
         [JsonProperty("Output")]
         public TextToSpeechSyncOutputOption Output{ get; set; }

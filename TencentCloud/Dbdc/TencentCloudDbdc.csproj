@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{50461850-F9C3-3A53-AD7B-51584C3A8A40}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1494</VersionPrefix>
+    <VersionPrefix>3.0.1501</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20201029\Models\ContainerNetwork.cs" />
     <Compile Include="V20201029\Models\CreateDBCustomClusterRequest.cs" />
     <Compile Include="V20201029\Models\CreateDBCustomClusterResponse.cs" />
+    <Compile Include="V20201029\Models\CreateDBCustomDisasterRecoverGroupRequest.cs" />
+    <Compile Include="V20201029\Models\CreateDBCustomDisasterRecoverGroupResponse.cs" />
     <Compile Include="V20201029\Models\CreateDBCustomNodesRequest.cs" />
     <Compile Include="V20201029\Models\CreateDBCustomNodesResponse.cs" />
     <Compile Include="V20201029\Models\DBCustomCluster.cs" />
@@ -67,6 +69,10 @@
     <Compile Include="V20201029\Models\DBCustomNodeTypeInfo.cs" />
     <Compile Include="V20201029\Models\DBInstanceDetail.cs" />
     <Compile Include="V20201029\Models\DataDisk.cs" />
+    <Compile Include="V20201029\Models\DeleteDBCustomDisasterRecoverGroupsRequest.cs" />
+    <Compile Include="V20201029\Models\DeleteDBCustomDisasterRecoverGroupsResponse.cs" />
+    <Compile Include="V20201029\Models\DeleteDBCustomNodesDisasterRecoverGroupRequest.cs" />
+    <Compile Include="V20201029\Models\DeleteDBCustomNodesDisasterRecoverGroupResponse.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomClusterDetailRequest.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomClusterDetailResponse.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomClusterKubeconfigRequest.cs" />
@@ -81,6 +87,10 @@
     <Compile Include="V20201029\Models\DescribeDBCustomClusterResourcesResponse.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomClustersRequest.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomClustersResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomDisasterRecoverGroupQuotaRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomDisasterRecoverGroupQuotaResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomDisasterRecoverGroupsRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeDBCustomDisasterRecoverGroupsResponse.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomImagesRequest.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomImagesResponse.cs" />
     <Compile Include="V20201029\Models\DescribeDBCustomNodeSecurityGroupsRequest.cs" />
@@ -111,6 +121,7 @@
     <Compile Include="V20201029\Models\DestroyDBCustomNodeRequest.cs" />
     <Compile Include="V20201029\Models\DestroyDBCustomNodeResponse.cs" />
     <Compile Include="V20201029\Models\DeviceInfo.cs" />
+    <Compile Include="V20201029\Models\DisasterRecoverGroup.cs" />
     <Compile Include="V20201029\Models\Filter.cs" />
     <Compile Include="V20201029\Models\HostDetail.cs" />
     <Compile Include="V20201029\Models\InstanceDetail.cs" />
@@ -127,12 +138,18 @@
     <Compile Include="V20201029\Models\ModifyDBCustomClusterNodeConfigResponse.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomClusterTagsRequest.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomClusterTagsResponse.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomDisasterRecoverGroupAttributeRequest.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomDisasterRecoverGroupAttributeResponse.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomDisasterRecoverGroupTagsRequest.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomDisasterRecoverGroupTagsResponse.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomNodeAttributesRequest.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomNodeAttributesResponse.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomNodeSecurityGroupsRequest.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomNodeSecurityGroupsResponse.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomNodeTagsRequest.cs" />
     <Compile Include="V20201029\Models\ModifyDBCustomNodeTagsResponse.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomNodesDisasterRecoverGroupRequest.cs" />
+    <Compile Include="V20201029\Models\ModifyDBCustomNodesDisasterRecoverGroupResponse.cs" />
     <Compile Include="V20201029\Models\ModifyInstanceNameRequest.cs" />
     <Compile Include="V20201029\Models\ModifyInstanceNameResponse.cs" />
     <Compile Include="V20201029\Models\PolicyRule.cs" />

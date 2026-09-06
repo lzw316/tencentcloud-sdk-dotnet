@@ -394,6 +394,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DiskHealthIssues")]
         public DiskHealthIssue[] DiskHealthIssues{ get; set; }
 
+        /// <summary>
+        /// <p>所在节点组ID</p>
+        /// </summary>
+        [JsonProperty("NodeGroupId")]
+        public string NodeGroupId{ get; set; }
+
+        /// <summary>
+        /// <p>所在节点组名称</p>
+        /// </summary>
+        [JsonProperty("NodeGroupName")]
+        public string NodeGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -461,6 +473,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "UnderwriteSetAutoRenew", this.UnderwriteSetAutoRenew);
             this.SetParamSimple(map, prefix + "GpuDesc", this.GpuDesc);
             this.SetParamArrayObj(map, prefix + "DiskHealthIssues.", this.DiskHealthIssues);
+            this.SetParamSimple(map, prefix + "NodeGroupId", this.NodeGroupId);
+            this.SetParamSimple(map, prefix + "NodeGroupName", this.NodeGroupName);
         }
     }
 }

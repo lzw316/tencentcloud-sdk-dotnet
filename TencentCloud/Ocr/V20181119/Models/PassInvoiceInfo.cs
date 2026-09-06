@@ -25,34 +25,46 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 通行费车牌号
+        /// <p>通行费车牌号；数电通行费源字段 cph 写入该字段。</p>
         /// </summary>
         [JsonProperty("NumberPlate")]
         public string NumberPlate{ get; set; }
 
         /// <summary>
-        /// 通行费类型
+        /// <p>通行费类型；数电通行费源字段 cllx 写入该字</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 通行日期起
+        /// <p>通行日期起</p>
         /// </summary>
         [JsonProperty("PassDateBegin")]
         public string PassDateBegin{ get; set; }
 
         /// <summary>
-        /// 通行日期止
+        /// <p>通行日期止</p>
         /// </summary>
         [JsonProperty("PassDateEnd")]
         public string PassDateEnd{ get; set; }
 
         /// <summary>
-        /// 税收分类编码
+        /// <p>税收分类编码</p>
         /// </summary>
         [JsonProperty("TaxClassifyCode")]
         public string TaxClassifyCode{ get; set; }
+
+        /// <summary>
+        /// <p>通行费车牌号</p>
+        /// </summary>
+        [JsonProperty("CarType")]
+        public string CarType{ get; set; }
+
+        /// <summary>
+        /// <p>通行费车辆类型</p>
+        /// </summary>
+        [JsonProperty("PlateNumber")]
+        public string PlateNumber{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "PassDateBegin", this.PassDateBegin);
             this.SetParamSimple(map, prefix + "PassDateEnd", this.PassDateEnd);
             this.SetParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
+            this.SetParamSimple(map, prefix + "CarType", this.CarType);
+            this.SetParamSimple(map, prefix + "PlateNumber", this.PlateNumber);
         }
     }
 }

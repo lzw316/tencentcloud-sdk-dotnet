@@ -25,64 +25,88 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
     {
         
         /// <summary>
-        /// 录像任务ID
+        /// <p>录像任务ID</p>
         /// </summary>
         [JsonProperty("RecordTaskId")]
         public string RecordTaskId{ get; set; }
 
         /// <summary>
-        /// 录制计划ID
+        /// <p>录制计划ID</p>
         /// </summary>
         [JsonProperty("RecordPlanId")]
         public string RecordPlanId{ get; set; }
 
         /// <summary>
-        /// 本录制片段开始时间
+        /// <p>本录制片段开始时间</p>
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 本录制片段结束时间
+        /// <p>本录制片段结束时间</p>
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 录制模式
+        /// <p>录制模式</p>
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
 
         /// <summary>
-        /// 本录制片段对应的录制文件URL
+        /// <p>本录制片段对应的录制文件URL</p>
         /// </summary>
         [JsonProperty("VideoUrl")]
         public string VideoUrl{ get; set; }
 
         /// <summary>
-        /// 本录制片段当前的录制状态
+        /// <p>本录制片段当前的录制状态</p>
         /// </summary>
         [JsonProperty("RecordStatus")]
         public long? RecordStatus{ get; set; }
 
         /// <summary>
-        /// 场景ID
+        /// <p>场景ID</p>
         /// </summary>
         [JsonProperty("SceneId")]
         public long? SceneId{ get; set; }
 
         /// <summary>
-        /// 告警ID
+        /// <p>告警ID</p>
         /// </summary>
         [JsonProperty("WarnId")]
         public long? WarnId{ get; set; }
 
         /// <summary>
-        /// 录制id，NVR下属设备有效
+        /// <p>录制id，NVR下属设备有效</p>
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
+
+        /// <summary>
+        /// <p>视频自增ID</p>
+        /// </summary>
+        [JsonProperty("InitID")]
+        public long? InitID{ get; set; }
+
+        /// <summary>
+        /// <p>过期时间</p>
+        /// </summary>
+        [JsonProperty("ExpectDeleteTime")]
+        public long? ExpectDeleteTime{ get; set; }
+
+        /// <summary>
+        /// <p>录制时长</p>
+        /// </summary>
+        [JsonProperty("RecordTimeLen")]
+        public long? RecordTimeLen{ get; set; }
+
+        /// <summary>
+        /// <p>文件大小</p>
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public long? FileSize{ get; set; }
 
 
         /// <summary>
@@ -100,6 +124,10 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
             this.SetParamSimple(map, prefix + "WarnId", this.WarnId);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "InitID", this.InitID);
+            this.SetParamSimple(map, prefix + "ExpectDeleteTime", this.ExpectDeleteTime);
+            this.SetParamSimple(map, prefix + "RecordTimeLen", this.RecordTimeLen);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
         }
     }
 }

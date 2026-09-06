@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3D80EA95-07CB-3BD7-AB22-6D1BCDBA6B91}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1500</VersionPrefix>
+    <VersionPrefix>3.0.1501</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,8 @@
     <Compile Include="V20211122\Models\DeleteDBSBackupSetsResponse.cs" />
     <Compile Include="V20211122\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20211122\Models\DeleteUsersResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeDBCharsetsRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeDBCharsetsResponse.cs" />
     <Compile Include="V20211122\Models\DescribeDBEnginesRequest.cs" />
     <Compile Include="V20211122\Models\DescribeDBEnginesResponse.cs" />
     <Compile Include="V20211122\Models\DescribeDBInstanceDetailRequest.cs" />
@@ -121,6 +123,10 @@
     <Compile Include="V20211122\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20211122\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20211122\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeFlowTypesRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeFlowTypesResponse.cs" />
+    <Compile Include="V20211122\Models\DescribeInstanceDataReservedSpaceRequest.cs" />
+    <Compile Include="V20211122\Models\DescribeInstanceDataReservedSpaceResponse.cs" />
     <Compile Include="V20211122\Models\DescribeInstanceSSLStatusRequest.cs" />
     <Compile Include="V20211122\Models\DescribeInstanceSSLStatusResponse.cs" />
     <Compile Include="V20211122\Models\DescribeMaintenanceWindowRequest.cs" />
@@ -145,6 +151,7 @@
     <Compile Include="V20211122\Models\ExpandInstanceRequest.cs" />
     <Compile Include="V20211122\Models\ExpandInstanceResponse.cs" />
     <Compile Include="V20211122\Models\Explain.cs" />
+    <Compile Include="V20211122\Models\FlowType.cs" />
     <Compile Include="V20211122\Models\InstanceFilter.cs" />
     <Compile Include="V20211122\Models\InstanceInfo.cs" />
     <Compile Include="V20211122\Models\InstanceNode.cs" />
@@ -166,6 +173,8 @@
     <Compile Include="V20211122\Models\ModifyDBSBackupPolicyResponse.cs" />
     <Compile Include="V20211122\Models\ModifyDBSBackupSetCommentRequest.cs" />
     <Compile Include="V20211122\Models\ModifyDBSBackupSetCommentResponse.cs" />
+    <Compile Include="V20211122\Models\ModifyInstanceDataReservedSpaceRequest.cs" />
+    <Compile Include="V20211122\Models\ModifyInstanceDataReservedSpaceResponse.cs" />
     <Compile Include="V20211122\Models\ModifyInstanceNameRequest.cs" />
     <Compile Include="V20211122\Models\ModifyInstanceNameResponse.cs" />
     <Compile Include="V20211122\Models\ModifyInstanceNetworkRequest.cs" />
@@ -179,6 +188,8 @@
     <Compile Include="V20211122\Models\NodeInfo.cs" />
     <Compile Include="V20211122\Models\ParamConstraint.cs" />
     <Compile Include="V20211122\Models\ParamDesc.cs" />
+    <Compile Include="V20211122\Models\ResetDbaAdminPrivilegesRequest.cs" />
+    <Compile Include="V20211122\Models\ResetDbaAdminPrivilegesResponse.cs" />
     <Compile Include="V20211122\Models\ResetUserPasswordInfo.cs" />
     <Compile Include="V20211122\Models\ResetUsersPasswordRequest.cs" />
     <Compile Include="V20211122\Models\ResetUsersPasswordResponse.cs" />

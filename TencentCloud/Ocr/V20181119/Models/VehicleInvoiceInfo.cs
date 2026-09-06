@@ -25,115 +25,115 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 车辆类型
+        /// <p>车辆类型</p>
         /// </summary>
         [JsonProperty("CarType")]
         public string CarType{ get; set; }
 
         /// <summary>
-        /// 厂牌型号
+        /// <p>厂牌型号</p>
         /// </summary>
         [JsonProperty("PlateModel")]
         public string PlateModel{ get; set; }
 
         /// <summary>
-        /// 产地
+        /// <p>产地</p>
         /// </summary>
         [JsonProperty("ProduceAddress")]
         public string ProduceAddress{ get; set; }
 
         /// <summary>
-        /// 合格证号
+        /// <p>合格证号</p>
         /// </summary>
         [JsonProperty("CertificateNo")]
         public string CertificateNo{ get; set; }
 
         /// <summary>
-        /// 进口证明书号
+        /// <p>进口证明书号</p>
         /// </summary>
         [JsonProperty("ImportNo")]
         public string ImportNo{ get; set; }
 
         /// <summary>
-        /// LSVCA2NP9HN0xxxxx
+        /// <p>LSVCA2NP9HN0xxxxx</p>
         /// </summary>
         [JsonProperty("VinNo")]
         public string VinNo{ get; set; }
 
         /// <summary>
-        /// 完税证书号
+        /// <p>完税证书号</p>
         /// </summary>
         [JsonProperty("PayTaxesNo")]
         public string PayTaxesNo{ get; set; }
 
         /// <summary>
-        /// 吨位
+        /// <p>吨位</p>
         /// </summary>
         [JsonProperty("Tonnage")]
         public string Tonnage{ get; set; }
 
         /// <summary>
-        /// 限乘人数
+        /// <p>限乘人数</p>
         /// </summary>
         [JsonProperty("LimitCount")]
         public string LimitCount{ get; set; }
 
         /// <summary>
-        /// 发动机号码
+        /// <p>发动机号码</p>
         /// </summary>
         [JsonProperty("EngineNo")]
         public string EngineNo{ get; set; }
 
         /// <summary>
-        /// 商检单号
+        /// <p>商检单号</p>
         /// </summary>
         [JsonProperty("BizCheckFormNo")]
         public string BizCheckFormNo{ get; set; }
 
         /// <summary>
-        /// 主管税务机关代码
+        /// <p>主管税务机关代码</p>
         /// </summary>
         [JsonProperty("TaxtationOrgCode")]
         public string TaxtationOrgCode{ get; set; }
 
         /// <summary>
-        /// 主管税务机关名称
+        /// <p>主管税务机关名称</p>
         /// </summary>
         [JsonProperty("TaxtationOrgName")]
         public string TaxtationOrgName{ get; set; }
 
         /// <summary>
-        /// 税率
+        /// <p>税率</p>
         /// </summary>
         [JsonProperty("MotorTaxRate")]
         public string MotorTaxRate{ get; set; }
 
         /// <summary>
-        /// 银行账号
+        /// <p>银行账号</p>
         /// </summary>
         [JsonProperty("MotorBankName")]
         public string MotorBankName{ get; set; }
 
         /// <summary>
-        /// 开户行
+        /// <p>开户行</p>
         /// </summary>
         [JsonProperty("MotorBankAccount")]
         public string MotorBankAccount{ get; set; }
 
         /// <summary>
-        /// 销售地址
+        /// <p>销售地址</p>
         /// </summary>
         [JsonProperty("SellerAddress")]
         public string SellerAddress{ get; set; }
 
         /// <summary>
-        /// 销售电话
+        /// <p>销售电话</p>
         /// </summary>
         [JsonProperty("SellerTel")]
         public string SellerTel{ get; set; }
 
         /// <summary>
-        /// 购方身份证
+        /// <p>购方身份证</p>
         /// </summary>
         [JsonProperty("BuyerNo")]
         public string BuyerNo{ get; set; }

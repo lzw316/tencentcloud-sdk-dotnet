@@ -42,6 +42,18 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ApiBases")]
         public ApiBaseItem[] ApiBases{ get; set; }
 
+        /// <summary>
+        /// <p>非chat输出模态的Api Base URL</p>
+        /// </summary>
+        [JsonProperty("ApiBase")]
+        public string ApiBase{ get; set; }
+
+        /// <summary>
+        /// <p>非chat输出模态的请求后缀</p>
+        /// </summary>
+        [JsonProperty("EndpointPath")]
+        public string EndpointPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ServiceProviderId", this.ServiceProviderId);
             this.SetParamSimple(map, prefix + "ServiceProviderName", this.ServiceProviderName);
             this.SetParamArrayObj(map, prefix + "ApiBases.", this.ApiBases);
+            this.SetParamSimple(map, prefix + "ApiBase", this.ApiBase);
+            this.SetParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
         }
     }
 }

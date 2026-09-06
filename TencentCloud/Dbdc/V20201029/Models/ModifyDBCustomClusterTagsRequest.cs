@@ -31,13 +31,13 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p>
+        /// <p>为 DB Custom 集群绑定的标签信息</p><p>入参限制：参考标签平台的限制策略</p><p>如果集群未关联输入的标签键，则增加关联；若已关联，则将该集群关联的键对应的标签值修改为输入值。本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
         /// </summary>
         [JsonProperty("AddTags")]
         public Tag[] AddTags{ get; set; }
 
         /// <summary>
-        /// <p>为 DB Custom 集群删除的标签Key</p>
+        /// <p>为 DB Custom 集群解关联的标签Key</p><p>本接口中 AddTags 和 DeleteTagKeys 二者必须存在其一，且二者不能包含相同的标签键。</p>
         /// </summary>
         [JsonProperty("DeleteTagKeys")]
         public string[] DeleteTagKeys{ get; set; }

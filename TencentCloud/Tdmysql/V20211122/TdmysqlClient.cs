@@ -28,7 +28,7 @@ namespace TencentCloud.Tdmysql.V20211122
 
        private const string endpoint = "tdmysql.tencentcloudapi.com";
        private const string version = "2021-11-22";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1501";
 
         /// <summary>
         /// Client constructor.
@@ -239,6 +239,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
         {
             return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBCharsets）提供查询支持字符集功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public Task<DescribeDBCharsetsResponse> DescribeDBCharsets(DescribeDBCharsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCharsetsResponse>(req, "DescribeDBCharsets");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBCharsets）提供查询支持字符集功能
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCharsetsRequest"/></param>
+        /// <returns><see cref="DescribeDBCharsetsResponse"/></returns>
+        public DescribeDBCharsetsResponse DescribeDBCharsetsSync(DescribeDBCharsetsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCharsetsResponse>(req, "DescribeDBCharsets")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -554,6 +575,48 @@ namespace TencentCloud.Tdmysql.V20211122
         public DescribeFlowResponse DescribeFlowSync(DescribeFlowRequest req)
         {
             return InternalRequestAsync<DescribeFlowResponse>(req, "DescribeFlow")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFlowTypes）用于获取所有任务类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTypesRequest"/></param>
+        /// <returns><see cref="DescribeFlowTypesResponse"/></returns>
+        public Task<DescribeFlowTypesResponse> DescribeFlowTypes(DescribeFlowTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowTypesResponse>(req, "DescribeFlowTypes");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFlowTypes）用于获取所有任务类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTypesRequest"/></param>
+        /// <returns><see cref="DescribeFlowTypesResponse"/></returns>
+        public DescribeFlowTypesResponse DescribeFlowTypesSync(DescribeFlowTypesRequest req)
+        {
+            return InternalRequestAsync<DescribeFlowTypesResponse>(req, "DescribeFlowTypes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceDataReservedSpace）提供查询实例数据保留空间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDataReservedSpaceResponse"/></returns>
+        public Task<DescribeInstanceDataReservedSpaceResponse> DescribeInstanceDataReservedSpace(DescribeInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceDataReservedSpaceResponse>(req, "DescribeInstanceDataReservedSpace");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceDataReservedSpace）提供查询实例数据保留空间
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="DescribeInstanceDataReservedSpaceResponse"/></returns>
+        public DescribeInstanceDataReservedSpaceResponse DescribeInstanceDataReservedSpaceSync(DescribeInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<DescribeInstanceDataReservedSpaceResponse>(req, "DescribeInstanceDataReservedSpace")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -915,6 +978,27 @@ namespace TencentCloud.Tdmysql.V20211122
         }
 
         /// <summary>
+        /// 本接口（ModifyInstanceDataReservedSpace）提供修改实例数据保留空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDataReservedSpaceResponse"/></returns>
+        public Task<ModifyInstanceDataReservedSpaceResponse> ModifyInstanceDataReservedSpace(ModifyInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceDataReservedSpaceResponse>(req, "ModifyInstanceDataReservedSpace");
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstanceDataReservedSpace）提供修改实例数据保留空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDataReservedSpaceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDataReservedSpaceResponse"/></returns>
+        public ModifyInstanceDataReservedSpaceResponse ModifyInstanceDataReservedSpaceSync(ModifyInstanceDataReservedSpaceRequest req)
+        {
+            return InternalRequestAsync<ModifyInstanceDataReservedSpaceResponse>(req, "ModifyInstanceDataReservedSpace")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（ModifyInstanceName）提供修改实例名称功能
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
@@ -1016,6 +1100,27 @@ namespace TencentCloud.Tdmysql.V20211122
         public ModifyUserPrivilegesResponse ModifyUserPrivilegesSync(ModifyUserPrivilegesRequest req)
         {
             return InternalRequestAsync<ModifyUserPrivilegesResponse>(req, "ModifyUserPrivileges")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重置dbaadmin账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ResetDbaAdminPrivilegesRequest"/></param>
+        /// <returns><see cref="ResetDbaAdminPrivilegesResponse"/></returns>
+        public Task<ResetDbaAdminPrivilegesResponse> ResetDbaAdminPrivileges(ResetDbaAdminPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ResetDbaAdminPrivilegesResponse>(req, "ResetDbaAdminPrivileges");
+        }
+
+        /// <summary>
+        /// 重置dbaadmin账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ResetDbaAdminPrivilegesRequest"/></param>
+        /// <returns><see cref="ResetDbaAdminPrivilegesResponse"/></returns>
+        public ResetDbaAdminPrivilegesResponse ResetDbaAdminPrivilegesSync(ResetDbaAdminPrivilegesRequest req)
+        {
+            return InternalRequestAsync<ResetDbaAdminPrivilegesResponse>(req, "ResetDbaAdminPrivileges")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

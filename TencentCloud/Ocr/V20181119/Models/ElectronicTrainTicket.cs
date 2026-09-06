@@ -25,172 +25,206 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 购方名称
+        /// <p>购方名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuyerName")]
         public string BuyerName{ get; set; }
 
         /// <summary>
-        /// 购方识别号
+        /// <p>购方识别号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuyerTaxCode")]
         public string BuyerTaxCode{ get; set; }
 
         /// <summary>
-        /// 发票号码
+        /// <p>发票号码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 开票日期
+        /// <p>开票日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 价税合计（中文大写）
+        /// <p>价税合计（中文大写）</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCN")]
         public string TotalCN{ get; set; }
 
         /// <summary>
-        /// 税额
+        /// <p>税额</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tax")]
         public string Tax{ get; set; }
 
         /// <summary>
-        /// 业务类型，0：退票，1:售票
+        /// <p>业务类型，0：退票，1:售票</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
-        /// 出发时间
+        /// <p>出发时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TimeGetOn")]
         public string TimeGetOn{ get; set; }
 
         /// <summary>
-        /// 车次
+        /// <p>车次</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrainNumber")]
         public string TrainNumber{ get; set; }
 
         /// <summary>
-        /// 发票代码
+        /// <p>发票代码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 席别
+        /// <p>席别</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SeatType")]
         public string SeatType{ get; set; }
 
         /// <summary>
-        /// 乘车日期
+        /// <p>乘车日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DateGetOn")]
         public string DateGetOn{ get; set; }
 
         /// <summary>
-        /// 车厢
+        /// <p>车厢</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TrainCabin")]
         public string TrainCabin{ get; set; }
 
         /// <summary>
-        /// 出发站
+        /// <p>出发站</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StationGetOn")]
         public string StationGetOn{ get; set; }
 
         /// <summary>
-        /// 电子客票号
+        /// <p>电子客票号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElectronicNumber")]
         public string ElectronicNumber{ get; set; }
 
         /// <summary>
-        /// 姓名
+        /// <p>姓名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassengerName")]
         public string PassengerName{ get; set; }
 
         /// <summary>
-        /// 证件号
+        /// <p>证件号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassengerNo")]
         public string PassengerNo{ get; set; }
 
         /// <summary>
-        /// 金额
+        /// <p>金额</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Amount")]
         public string Amount{ get; set; }
 
         /// <summary>
-        /// 到达站
+        /// <p>到达站</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StationGetOff")]
         public string StationGetOff{ get; set; }
 
         /// <summary>
-        /// 税率
+        /// <p>税率</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaxRate")]
         public string TaxRate{ get; set; }
 
         /// <summary>
-        /// 席位
+        /// <p>席位</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Seat")]
         public string Seat{ get; set; }
 
         /// <summary>
-        /// 价税合计
+        /// <p>价税合计</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 校验码
+        /// <p>校验码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckCode")]
         public string CheckCode{ get; set; }
 
         /// <summary>
-        /// 发票状态代码，0正常 1 未更新  2作废 3已红冲
+        /// <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StateCode")]
         public string StateCode{ get; set; }
+
+        /// <summary>
+        /// <p>发票类型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// <p>空调特征</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AirConditionerFeature")]
+        public string AirConditionerFeature{ get; set; }
+
+        /// <summary>
+        /// <p>票种，不替代 VatInvoice.Type。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TicketType")]
+        public string TicketType{ get; set; }
+
+        /// <summary>
+        /// <p>原始税率</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalTaxRate")]
+        public string OriginalTaxRate{ get; set; }
+
+        /// <summary>
+        /// <p>全电发票号码，映射源字段 qdfphm。</p>
+        /// </summary>
+        [JsonProperty("FullElectronicNumber")]
+        public string FullElectronicNumber{ get; set; }
 
 
         /// <summary>
@@ -222,6 +256,11 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "CheckCode", this.CheckCode);
             this.SetParamSimple(map, prefix + "StateCode", this.StateCode);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "AirConditionerFeature", this.AirConditionerFeature);
+            this.SetParamSimple(map, prefix + "TicketType", this.TicketType);
+            this.SetParamSimple(map, prefix + "OriginalTaxRate", this.OriginalTaxRate);
+            this.SetParamSimple(map, prefix + "FullElectronicNumber", this.FullElectronicNumber);
         }
     }
 }

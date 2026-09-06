@@ -96,6 +96,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("CMRPrivateNetworkTunnelId")]
         public string CMRPrivateNetworkTunnelId{ get; set; }
 
+        /// <summary>
+        /// <p>对应模型的能力</p><p>枚举值：</p><ul><li>chat： 生文能力</li><li>embedding： 向量能力</li></ul>
+        /// </summary>
+        [JsonProperty("Capability")]
+        public string Capability{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "VerifySSL", this.VerifySSL);
             this.SetParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
             this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
+            this.SetParamSimple(map, prefix + "Capability", this.Capability);
         }
     }
 }

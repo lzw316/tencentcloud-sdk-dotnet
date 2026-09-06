@@ -42,6 +42,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// <p>模型输出模态</p>
+        /// </summary>
+        [JsonProperty("Capability")]
+        public string Capability{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ModelRouterId", this.ModelRouterId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Capability", this.Capability);
         }
     }
 }

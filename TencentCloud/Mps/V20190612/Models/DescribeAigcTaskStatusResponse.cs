@@ -86,6 +86,20 @@ namespace TencentCloud.Mps.V20190612.Models
         public string TaskType{ get; set; }
 
         /// <summary>
+        /// <p>任务其他信息</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskInfo")]
+        public string TaskInfo{ get; set; }
+
+        /// <summary>
+        /// <p>任务子状态</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Stage")]
+        public string Stage{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -107,6 +121,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TaskResultMsg", this.TaskResultMsg);
             this.SetParamSimple(map, prefix + "RequestBody", this.RequestBody);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "TaskInfo", this.TaskInfo);
+            this.SetParamSimple(map, prefix + "Stage", this.Stage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

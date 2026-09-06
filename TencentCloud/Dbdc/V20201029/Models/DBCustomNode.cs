@@ -196,6 +196,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// <p>置放群组ID</p>
+        /// </summary>
+        [JsonProperty("DisasterRecoverGroupId")]
+        public string DisasterRecoverGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -230,6 +236,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
             this.SetParamSimple(map, prefix + "EniIP", this.EniIP);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
         }
     }
 }

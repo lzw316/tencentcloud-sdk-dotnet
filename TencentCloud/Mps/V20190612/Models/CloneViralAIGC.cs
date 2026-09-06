@@ -31,7 +31,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// <p>宽高比。可选 16:9/4:3/1:1/3:4/9:16/21:9/adaptive</p>
+        /// <p>宽高比。旗舰版支持 16:9/4:3/1:1/3:4/9:16/21:9/adaptive，标准版支持16:9/1:1/9:16</p>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }

@@ -28,7 +28,7 @@ namespace TencentCloud.Dbdc.V20201029
 
        private const string endpoint = "dbdc.tencentcloudapi.com";
        private const string version = "2020-10-29";
-       private const string sdkVersion = "SDK_NET_3.0.1494";
+       private const string sdkVersion = "SDK_NET_3.0.1501";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,27 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口（CreateDBCustomDisasterRecoverGroup）用于创建 DB Custom 置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBCustomDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="CreateDBCustomDisasterRecoverGroupResponse"/></returns>
+        public Task<CreateDBCustomDisasterRecoverGroupResponse> CreateDBCustomDisasterRecoverGroup(CreateDBCustomDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDBCustomDisasterRecoverGroupResponse>(req, "CreateDBCustomDisasterRecoverGroup");
+        }
+
+        /// <summary>
+        /// 该接口（CreateDBCustomDisasterRecoverGroup）用于创建 DB Custom 置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBCustomDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="CreateDBCustomDisasterRecoverGroupResponse"/></returns>
+        public CreateDBCustomDisasterRecoverGroupResponse CreateDBCustomDisasterRecoverGroupSync(CreateDBCustomDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<CreateDBCustomDisasterRecoverGroupResponse>(req, "CreateDBCustomDisasterRecoverGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（CreateDBCustomNodes）用于创建 DB Custom 节点(需支付)。
         /// </summary>
         /// <param name="req"><see cref="CreateDBCustomNodesRequest"/></param>
@@ -134,6 +155,48 @@ namespace TencentCloud.Dbdc.V20201029
         public CreateDBCustomNodesResponse CreateDBCustomNodesSync(CreateDBCustomNodesRequest req)
         {
             return InternalRequestAsync<CreateDBCustomNodesResponse>(req, "CreateDBCustomNodes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DeleteDBCustomDisasterRecoverGroups）用于删除 DB Custom 置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBCustomDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DeleteDBCustomDisasterRecoverGroupsResponse"/></returns>
+        public Task<DeleteDBCustomDisasterRecoverGroupsResponse> DeleteDBCustomDisasterRecoverGroups(DeleteDBCustomDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteDBCustomDisasterRecoverGroupsResponse>(req, "DeleteDBCustomDisasterRecoverGroups");
+        }
+
+        /// <summary>
+        /// 该接口（DeleteDBCustomDisasterRecoverGroups）用于删除 DB Custom 置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBCustomDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DeleteDBCustomDisasterRecoverGroupsResponse"/></returns>
+        public DeleteDBCustomDisasterRecoverGroupsResponse DeleteDBCustomDisasterRecoverGroupsSync(DeleteDBCustomDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DeleteDBCustomDisasterRecoverGroupsResponse>(req, "DeleteDBCustomDisasterRecoverGroups")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DeleteDBCustomNodesDisasterRecoverGroup）用于移除 DB Custom 节点的置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBCustomNodesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="DeleteDBCustomNodesDisasterRecoverGroupResponse"/></returns>
+        public Task<DeleteDBCustomNodesDisasterRecoverGroupResponse> DeleteDBCustomNodesDisasterRecoverGroup(DeleteDBCustomNodesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDBCustomNodesDisasterRecoverGroupResponse>(req, "DeleteDBCustomNodesDisasterRecoverGroup");
+        }
+
+        /// <summary>
+        /// 该接口（DeleteDBCustomNodesDisasterRecoverGroup）用于移除 DB Custom 节点的置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBCustomNodesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="DeleteDBCustomNodesDisasterRecoverGroupResponse"/></returns>
+        public DeleteDBCustomNodesDisasterRecoverGroupResponse DeleteDBCustomNodesDisasterRecoverGroupSync(DeleteDBCustomNodesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<DeleteDBCustomNodesDisasterRecoverGroupResponse>(req, "DeleteDBCustomNodesDisasterRecoverGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -281,6 +344,48 @@ namespace TencentCloud.Dbdc.V20201029
         public DescribeDBCustomClustersResponse DescribeDBCustomClustersSync(DescribeDBCustomClustersRequest req)
         {
             return InternalRequestAsync<DescribeDBCustomClustersResponse>(req, "DescribeDBCustomClusters")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomDisasterRecoverGroupQuota）用于查询 DB Custom 置放群组配额。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomDisasterRecoverGroupQuotaRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomDisasterRecoverGroupQuotaResponse"/></returns>
+        public Task<DescribeDBCustomDisasterRecoverGroupQuotaResponse> DescribeDBCustomDisasterRecoverGroupQuota(DescribeDBCustomDisasterRecoverGroupQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomDisasterRecoverGroupQuotaResponse>(req, "DescribeDBCustomDisasterRecoverGroupQuota");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomDisasterRecoverGroupQuota）用于查询 DB Custom 置放群组配额。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomDisasterRecoverGroupQuotaRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomDisasterRecoverGroupQuotaResponse"/></returns>
+        public DescribeDBCustomDisasterRecoverGroupQuotaResponse DescribeDBCustomDisasterRecoverGroupQuotaSync(DescribeDBCustomDisasterRecoverGroupQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomDisasterRecoverGroupQuotaResponse>(req, "DescribeDBCustomDisasterRecoverGroupQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomDisasterRecoverGroups）用于查询 DB Custom 置放群组列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomDisasterRecoverGroupsResponse"/></returns>
+        public Task<DescribeDBCustomDisasterRecoverGroupsResponse> DescribeDBCustomDisasterRecoverGroups(DescribeDBCustomDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomDisasterRecoverGroupsResponse>(req, "DescribeDBCustomDisasterRecoverGroups");
+        }
+
+        /// <summary>
+        /// 该接口（DescribeDBCustomDisasterRecoverGroups）用于查询 DB Custom 置放群组列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBCustomDisasterRecoverGroupsRequest"/></param>
+        /// <returns><see cref="DescribeDBCustomDisasterRecoverGroupsResponse"/></returns>
+        public DescribeDBCustomDisasterRecoverGroupsResponse DescribeDBCustomDisasterRecoverGroupsSync(DescribeDBCustomDisasterRecoverGroupsRequest req)
+        {
+            return InternalRequestAsync<DescribeDBCustomDisasterRecoverGroupsResponse>(req, "DescribeDBCustomDisasterRecoverGroups")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -663,6 +768,48 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 该接口（ModifyDBCustomDisasterRecoverGroupAttribute）用于修改 DB Custom 置放群组的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomDisasterRecoverGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomDisasterRecoverGroupAttributeResponse"/></returns>
+        public Task<ModifyDBCustomDisasterRecoverGroupAttributeResponse> ModifyDBCustomDisasterRecoverGroupAttribute(ModifyDBCustomDisasterRecoverGroupAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomDisasterRecoverGroupAttributeResponse>(req, "ModifyDBCustomDisasterRecoverGroupAttribute");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomDisasterRecoverGroupAttribute）用于修改 DB Custom 置放群组的属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomDisasterRecoverGroupAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomDisasterRecoverGroupAttributeResponse"/></returns>
+        public ModifyDBCustomDisasterRecoverGroupAttributeResponse ModifyDBCustomDisasterRecoverGroupAttributeSync(ModifyDBCustomDisasterRecoverGroupAttributeRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomDisasterRecoverGroupAttributeResponse>(req, "ModifyDBCustomDisasterRecoverGroupAttribute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomDisasterRecoverGroupTags）用于修改 DB Custom 置放群组绑定的标签。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomDisasterRecoverGroupTagsRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomDisasterRecoverGroupTagsResponse"/></returns>
+        public Task<ModifyDBCustomDisasterRecoverGroupTagsResponse> ModifyDBCustomDisasterRecoverGroupTags(ModifyDBCustomDisasterRecoverGroupTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomDisasterRecoverGroupTagsResponse>(req, "ModifyDBCustomDisasterRecoverGroupTags");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomDisasterRecoverGroupTags）用于修改 DB Custom 置放群组绑定的标签。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomDisasterRecoverGroupTagsRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomDisasterRecoverGroupTagsResponse"/></returns>
+        public ModifyDBCustomDisasterRecoverGroupTagsResponse ModifyDBCustomDisasterRecoverGroupTagsSync(ModifyDBCustomDisasterRecoverGroupTagsRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomDisasterRecoverGroupTagsResponse>(req, "ModifyDBCustomDisasterRecoverGroupTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 该接口（ModifyDBCustomNodeAttributes）用于修改 DB Custom 节点的属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBCustomNodeAttributesRequest"/></param>
@@ -722,6 +869,27 @@ namespace TencentCloud.Dbdc.V20201029
         public ModifyDBCustomNodeTagsResponse ModifyDBCustomNodeTagsSync(ModifyDBCustomNodeTagsRequest req)
         {
             return InternalRequestAsync<ModifyDBCustomNodeTagsResponse>(req, "ModifyDBCustomNodeTags")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomNodesDisasterRecoverGroup）用于修改 DB Custom 节点的置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodesDisasterRecoverGroupResponse"/></returns>
+        public Task<ModifyDBCustomNodesDisasterRecoverGroupResponse> ModifyDBCustomNodesDisasterRecoverGroup(ModifyDBCustomNodesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodesDisasterRecoverGroupResponse>(req, "ModifyDBCustomNodesDisasterRecoverGroup");
+        }
+
+        /// <summary>
+        /// 该接口（ModifyDBCustomNodesDisasterRecoverGroup）用于修改 DB Custom 节点的置放群组。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBCustomNodesDisasterRecoverGroupRequest"/></param>
+        /// <returns><see cref="ModifyDBCustomNodesDisasterRecoverGroupResponse"/></returns>
+        public ModifyDBCustomNodesDisasterRecoverGroupResponse ModifyDBCustomNodesDisasterRecoverGroupSync(ModifyDBCustomNodesDisasterRecoverGroupRequest req)
+        {
+            return InternalRequestAsync<ModifyDBCustomNodesDisasterRecoverGroupResponse>(req, "ModifyDBCustomNodesDisasterRecoverGroup")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,139 +25,137 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 发票代码
+        /// <p>发票代码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 发票号码
+        /// <p>发票号码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 开票日期
+        /// <p>开票日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
         /// <summary>
-        /// 金额
+        /// <p>金额</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Amount")]
         public string Amount{ get; set; }
 
         /// <summary>
-        /// 校验码
+        /// <p>校验码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckCode")]
         public string CheckCode{ get; set; }
 
         /// <summary>
-        /// 价税合计
+        /// <p>价税合计</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Total")]
         public string Total{ get; set; }
 
         /// <summary>
-        /// 抵扣标志
+        /// <p>抵扣标志</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeductionMark")]
         public string DeductionMark{ get; set; }
 
         /// <summary>
-        /// 发票状态代码，0正常 1 未更新  2作废 3已红冲
+        /// <p>发票状态代码，0正常 1 未更新  2作废 3已红冲</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StateCode")]
         public string StateCode{ get; set; }
 
         /// <summary>
-        /// 购方识别号
+        /// <p>购方识别号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuyerTaxCode")]
         public string BuyerTaxCode{ get; set; }
 
         /// <summary>
-        /// 购方名称
+        /// <p>购方名称</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BuyerName")]
         public string BuyerName{ get; set; }
 
         /// <summary>
-        /// 合计税额
+        /// <p>合计税额</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tax")]
         public string Tax{ get; set; }
 
         /// <summary>
-        /// 国内国际标识
+        /// <p>国内国际标识</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DomesticInternationalMark")]
         public string DomesticInternationalMark{ get; set; }
 
         /// <summary>
-        /// 旅客姓名
+        /// <p>旅客姓名</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassengerName")]
         public string PassengerName{ get; set; }
 
         /// <summary>
-        /// 有效身份证件号码
+        /// <p>有效身份证件号码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PassengerNo")]
         public string PassengerNo{ get; set; }
 
         /// <summary>
-        /// 电子客票号码
+        /// <p>电子客票号码</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElectronicNumber")]
         public string ElectronicNumber{ get; set; }
 
         /// <summary>
-        /// 全电发票（航空运输电子客票行程单）详细信息
-        /// 
-        /// 
+        /// <p>全电发票（航空运输电子客票行程单）详细信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ElectronicAirTransportDetails")]
         public ElectronicAirTransportDetail[] ElectronicAirTransportDetails{ get; set; }
 
         /// <summary>
-        /// 票价
+        /// <p>票价</p>
         /// </summary>
         [JsonProperty("Fare")]
         public string Fare{ get; set; }
 
         /// <summary>
-        /// 燃油附加费
+        /// <p>燃油附加费</p>
         /// </summary>
         [JsonProperty("FuelSurcharge")]
         public string FuelSurcharge{ get; set; }
 
         /// <summary>
-        /// 增值税税额
+        /// <p>增值税税额</p>
         /// </summary>
         [JsonProperty("TaxAmount")]
         public string TaxAmount{ get; set; }
 
         /// <summary>
-        /// 民航发展基金
+        /// <p>民航发展基金</p>
         /// </summary>
         [JsonProperty("DevelopmentFund")]
         public string DevelopmentFund{ get; set; }

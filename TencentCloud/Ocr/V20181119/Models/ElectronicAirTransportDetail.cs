@@ -25,63 +25,63 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 航段序号
+        /// <p>航段序号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlightSegment")]
         public string FlightSegment{ get; set; }
 
         /// <summary>
-        /// 始发站
+        /// <p>始发站</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StationGetOn")]
         public string StationGetOn{ get; set; }
 
         /// <summary>
-        /// 目的站
+        /// <p>目的站</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StationGetOff")]
         public string StationGetOff{ get; set; }
 
         /// <summary>
-        /// 承运人
+        /// <p>承运人</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Carrier")]
         public string Carrier{ get; set; }
 
         /// <summary>
-        /// 航班号
+        /// <p>航班号</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlightNumber")]
         public string FlightNumber{ get; set; }
 
         /// <summary>
-        /// 座位等级
+        /// <p>座位等级</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SeatLevel")]
         public string SeatLevel{ get; set; }
 
         /// <summary>
-        /// 承运日期
+        /// <p>承运日期</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlightDate")]
         public string FlightDate{ get; set; }
 
         /// <summary>
-        /// 起飞时间
+        /// <p>起飞时间</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DepartureTime")]
         public string DepartureTime{ get; set; }
 
         /// <summary>
-        /// 客票级别/客票类别
+        /// <p>客票级别/客票类别</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FareBasis")]

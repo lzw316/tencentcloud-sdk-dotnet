@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// <p>模型积分系数配置。</p><p>必填，至少包含 <code>InputCoefficient</code>、<code>InputCachedCoefficient</code>、<code>OutputCoefficient</code> 中的一个字段，未传字段保持原值。</p><p><code>InputCoefficient</code> 为非缓存命中输入积分系数。</p><p><code>InputCachedCoefficient</code> 为缓存命中输入积分系数，用于 provider prompt cache 命中的输入 token。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>各字段取值范围：[0, 5000]，仅支持整数，0 表示该类 token 不计积分。</p>
+        /// <p>模型积分系数配置。</p><p>必填，包含 <code>InputCoefficient</code> 和 <code>OutputCoefficient</code>。</p><p><code>InputCoefficient</code> 为输入积分系数。</p><p><code>OutputCoefficient</code> 为输出积分系数。</p><p>取值范围：[1, 200]，最多支持 1 位小数。</p>
         /// </summary>
         [JsonProperty("Coefficient")]
         public Coefficient Coefficient{ get; set; }
 
         /// <summary>
-        /// <p>模型别名列表。</p><p>不传 <code>ServiceProviderIds</code>（按 ModelAlias 账号维度修改）时支持数组批量，同一份 Coefficient 应用到多个别名。</p><p>传入 <code>ServiceProviderIds</code>（按 ServiceProvider 维度修改）时只能传 1 个别名，锁定唯一 model 别名；去重后不等于 1 个将返回 InvalidParameter。</p>
+        /// <p>模型别名</p>
         /// </summary>
         [JsonProperty("ModelAliasNames")]
         public string[] ModelAliasNames{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ServiceProviderIds")]
         public string[] ServiceProviderIds{ get; set; }
 
+        /// <summary>
+        /// <p>模型能力</p>
+        /// </summary>
+        [JsonProperty("Capability")]
+        public string Capability{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Coefficient.", this.Coefficient);
             this.SetParamArraySimple(map, prefix + "ModelAliasNames.", this.ModelAliasNames);
             this.SetParamArraySimple(map, prefix + "ServiceProviderIds.", this.ServiceProviderIds);
+            this.SetParamSimple(map, prefix + "Capability", this.Capability);
         }
     }
 }

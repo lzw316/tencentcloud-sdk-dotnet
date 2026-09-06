@@ -25,148 +25,223 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 所属税局
+        /// <p>所属税局</p>
         /// </summary>
         [JsonProperty("TaxBureau")]
         public string TaxBureau{ get; set; }
 
         /// <summary>
-        /// 买方单位/个人
+        /// <p>买方单位/个人</p>
         /// </summary>
         [JsonProperty("Buyer")]
         public string Buyer{ get; set; }
 
         /// <summary>
-        /// 买方单位代码/身份证号码
+        /// <p>买方单位代码/身份证号码</p>
         /// </summary>
         [JsonProperty("BuyerNo")]
         public string BuyerNo{ get; set; }
 
         /// <summary>
-        /// 买方单位/个人地址
+        /// <p>买方单位/个人地址</p>
         /// </summary>
         [JsonProperty("BuyerAddress")]
         public string BuyerAddress{ get; set; }
 
         /// <summary>
-        /// 买方单位电话
+        /// <p>买方单位电话</p>
         /// </summary>
         [JsonProperty("BuyerTel")]
         public string BuyerTel{ get; set; }
 
         /// <summary>
-        /// 卖方单位/个人
+        /// <p>卖方单位/个人</p>
         /// </summary>
         [JsonProperty("Seller")]
         public string Seller{ get; set; }
 
         /// <summary>
-        /// 卖方单位代码/身份证号码
+        /// <p>卖方单位代码/身份证号码</p>
         /// </summary>
         [JsonProperty("SellerNo")]
         public string SellerNo{ get; set; }
 
         /// <summary>
-        /// 卖方单位/个人地址
+        /// <p>卖方单位/个人地址</p>
         /// </summary>
         [JsonProperty("SellerAddress")]
         public string SellerAddress{ get; set; }
 
         /// <summary>
-        /// 卖方单位电话
+        /// <p>卖方单位电话</p>
         /// </summary>
         [JsonProperty("SellerTel")]
         public string SellerTel{ get; set; }
 
         /// <summary>
-        /// 车牌照号
+        /// <p>车牌照号</p>
         /// </summary>
         [JsonProperty("VehicleLicenseNo")]
         public string VehicleLicenseNo{ get; set; }
 
         /// <summary>
-        /// 登记证号
+        /// <p>登记证号</p>
         /// </summary>
         [JsonProperty("RegisterNo")]
         public string RegisterNo{ get; set; }
 
         /// <summary>
-        /// 车架号/车辆识别代码
+        /// <p>车架号/车辆识别代码</p>
         /// </summary>
         [JsonProperty("VehicleIdentifyNo")]
         public string VehicleIdentifyNo{ get; set; }
 
         /// <summary>
-        /// 转入地车辆管理所名称
+        /// <p>转入地车辆管理所名称</p>
         /// </summary>
         [JsonProperty("ManagementOffice")]
         public string ManagementOffice{ get; set; }
 
         /// <summary>
-        /// 车价合计
+        /// <p>车价合计</p>
         /// </summary>
         [JsonProperty("VehicleTotalPrice")]
         public string VehicleTotalPrice{ get; set; }
 
         /// <summary>
-        /// 经营、拍卖单位
+        /// <p>经营、拍卖单位</p>
         /// </summary>
         [JsonProperty("Auctioneer")]
         public string Auctioneer{ get; set; }
 
         /// <summary>
-        /// 经营、拍卖单位地址
+        /// <p>经营、拍卖单位地址</p>
         /// </summary>
         [JsonProperty("AuctioneerAddress")]
         public string AuctioneerAddress{ get; set; }
 
         /// <summary>
-        /// 经营、拍卖单位纳税人识别号
+        /// <p>经营、拍卖单位纳税人识别号</p>
         /// </summary>
         [JsonProperty("AuctioneerTaxpayerNum")]
         public string AuctioneerTaxpayerNum{ get; set; }
 
         /// <summary>
-        /// 经营、拍卖单位开户银行、账号
+        /// <p>经营、拍卖单位开户银行、账号</p>
         /// </summary>
         [JsonProperty("AuctioneerBankAccount")]
         public string AuctioneerBankAccount{ get; set; }
 
         /// <summary>
-        /// 经营、拍卖单位电话
+        /// <p>经营、拍卖单位电话</p>
         /// </summary>
         [JsonProperty("AuctioneerTel")]
         public string AuctioneerTel{ get; set; }
 
         /// <summary>
-        /// 二手车市场
+        /// <p>二手车市场</p>
         /// </summary>
         [JsonProperty("Market")]
         public string Market{ get; set; }
 
         /// <summary>
-        /// 二手车市场纳税人识别号
+        /// <p>二手车市场纳税人识别号</p>
         /// </summary>
         [JsonProperty("MarketTaxpayerNum")]
         public string MarketTaxpayerNum{ get; set; }
 
         /// <summary>
-        /// 二手车市场地址
+        /// <p>二手车市场地址</p>
         /// </summary>
         [JsonProperty("MarketAddress")]
         public string MarketAddress{ get; set; }
 
         /// <summary>
-        /// 二手车市场开户银行账号
+        /// <p>二手车市场开户银行账号</p>
         /// </summary>
         [JsonProperty("MarketBankAccount")]
         public string MarketBankAccount{ get; set; }
 
         /// <summary>
-        /// 二手车市场电话
+        /// <p>二手车市场电话</p>
         /// </summary>
         [JsonProperty("MarketTel")]
         public string MarketTel{ get; set; }
+
+        /// <summary>
+        /// <p>车价合计中文大写</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VehicleTotalPriceCN")]
+        public string VehicleTotalPriceCN{ get; set; }
+
+        /// <summary>
+        /// <p>发票风险等级</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InvoiceRiskLevel")]
+        public string InvoiceRiskLevel{ get; set; }
+
+        /// <summary>
+        /// <p>车辆类型</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CarType")]
+        public string CarType{ get; set; }
+
+        /// <summary>
+        /// <p>厂牌型号</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PlateModel")]
+        public string PlateModel{ get; set; }
+
+        /// <summary>
+        /// <p>作废人</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AbandonerName")]
+        public string AbandonerName{ get; set; }
+
+        /// <summary>
+        /// <p>作废日期</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AbandonDate")]
+        public string AbandonDate{ get; set; }
+
+        /// <summary>
+        /// <p>开票方类型：1 经营单位，2 拍卖单位，03 二手车市场。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IssuerType")]
+        public string IssuerType{ get; set; }
+
+        /// <summary>
+        /// <p>开票方纳税人识别号</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IssuerTaxCode")]
+        public string IssuerTaxCode{ get; set; }
+
+        /// <summary>
+        /// <p>自行编码</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomCode")]
+        public string CustomCode{ get; set; }
+
+        /// <summary>
+        /// <p>商品编码</p>
+        /// </summary>
+        [JsonProperty("TaxClassifyCode")]
+        public string TaxClassifyCode{ get; set; }
+
+        /// <summary>
+        /// <p>零税率标识：空：非零税率，0：出口零税，1：免税，2：不征税，3 普通零税率</p>
+        /// </summary>
+        [JsonProperty("ZeroTaxRateMark")]
+        public string ZeroTaxRateMark{ get; set; }
 
 
         /// <summary>
@@ -198,6 +273,17 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "MarketAddress", this.MarketAddress);
             this.SetParamSimple(map, prefix + "MarketBankAccount", this.MarketBankAccount);
             this.SetParamSimple(map, prefix + "MarketTel", this.MarketTel);
+            this.SetParamSimple(map, prefix + "VehicleTotalPriceCN", this.VehicleTotalPriceCN);
+            this.SetParamSimple(map, prefix + "InvoiceRiskLevel", this.InvoiceRiskLevel);
+            this.SetParamSimple(map, prefix + "CarType", this.CarType);
+            this.SetParamSimple(map, prefix + "PlateModel", this.PlateModel);
+            this.SetParamSimple(map, prefix + "AbandonerName", this.AbandonerName);
+            this.SetParamSimple(map, prefix + "AbandonDate", this.AbandonDate);
+            this.SetParamSimple(map, prefix + "IssuerType", this.IssuerType);
+            this.SetParamSimple(map, prefix + "IssuerTaxCode", this.IssuerTaxCode);
+            this.SetParamSimple(map, prefix + "CustomCode", this.CustomCode);
+            this.SetParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
+            this.SetParamSimple(map, prefix + "ZeroTaxRateMark", this.ZeroTaxRateMark);
         }
     }
 }

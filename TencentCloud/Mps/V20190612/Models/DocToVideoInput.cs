@@ -78,6 +78,36 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("VoiceId")]
         public string VoiceId{ get; set; }
 
+        /// <summary>
+        /// <p>是否开启 PPTX 保真复刻模式。</p><p>开启状态下，会尽可能复刻输入 PPTX 文档的内容，无法完美复刻。<br>暂时无法复刻动画效果，</p><p>开启状态下，需保证输入文档中至少有一个 PPTX 文档。<br>如果有多个 PPTX 文档，则只会对首个文档进行保真复刻。</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("PPTXFidelity")]
+        public bool? PPTXFidelity{ get; set; }
+
+        /// <summary>
+        /// <p>生成视频的模式。</p><p>枚举值：</p><ul><li>stage： 确认后生成模式</li><li>auto： 端到端直接生成模式</li></ul>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
+        /// <p>用于生成视频的背景图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+        /// </summary>
+        [JsonProperty("Background")]
+        public DocToVideoBackgroundInfo Background{ get; set; }
+
+        /// <summary>
+        /// <p>用于生成视频的水印图片信息。</p><p>仅在 PreserveLayout 为 false 时起作用。</p>
+        /// </summary>
+        [JsonProperty("Watermark")]
+        public DocToVideoWatermarkInfo Watermark{ get; set; }
+
+        /// <summary>
+        /// <p>是否开启字幕生成。</p><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("EnableCaption")]
+        public bool? EnableCaption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +123,11 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "ReferenceDuration", this.ReferenceDuration);
             this.SetParamSimple(map, prefix + "EnableTTS", this.EnableTTS);
             this.SetParamSimple(map, prefix + "VoiceId", this.VoiceId);
+            this.SetParamSimple(map, prefix + "PPTXFidelity", this.PPTXFidelity);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamObj(map, prefix + "Background.", this.Background);
+            this.SetParamObj(map, prefix + "Watermark.", this.Watermark);
+            this.SetParamSimple(map, prefix + "EnableCaption", this.EnableCaption);
         }
     }
 }
