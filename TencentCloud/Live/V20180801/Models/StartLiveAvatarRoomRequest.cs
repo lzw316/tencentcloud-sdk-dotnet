@@ -54,6 +54,30 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("RoomType")]
         public string RoomType{ get; set; }
 
+        /// <summary>
+        /// <p>交互模式下的协议，支持rtmp和trtc，默认是rtmp</p>
+        /// </summary>
+        [JsonProperty("SessionProtocol")]
+        public string SessionProtocol{ get; set; }
+
+        /// <summary>
+        /// <p>使用trtc协议时，在trtc的appid</p>
+        /// </summary>
+        [JsonProperty("TrtcSdkAppId")]
+        public string TrtcSdkAppId{ get; set; }
+
+        /// <summary>
+        /// <p>进入房间时需要用UserSign来校验权限</p>
+        /// </summary>
+        [JsonProperty("TrtcUserSig")]
+        public string TrtcUserSig{ get; set; }
+
+        /// <summary>
+        /// <p>要进入的房间</p>
+        /// </summary>
+        [JsonProperty("TrtcRoomId")]
+        public string TrtcRoomId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +89,10 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
             this.SetParamSimple(map, prefix + "RoomType", this.RoomType);
+            this.SetParamSimple(map, prefix + "SessionProtocol", this.SessionProtocol);
+            this.SetParamSimple(map, prefix + "TrtcSdkAppId", this.TrtcSdkAppId);
+            this.SetParamSimple(map, prefix + "TrtcUserSig", this.TrtcUserSig);
+            this.SetParamSimple(map, prefix + "TrtcRoomId", this.TrtcRoomId);
         }
     }
 }

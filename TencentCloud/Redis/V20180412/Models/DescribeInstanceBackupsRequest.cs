@@ -55,7 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// <p>备份任务的状态：<br>1：备份在流程中。<br>2：备份正常。<br>3：备份转RDB文件处理中。<br>4：已完成RDB转换。<br>-1：备份已过期。<br>-2：备份已删除。</p>
+        /// <p>备份的状态：</p><p>枚举值：</p><ul><li>1： 备份在流程中。</li><li>2： 备份正常。</li></ul><p>默认值：2</p>
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }

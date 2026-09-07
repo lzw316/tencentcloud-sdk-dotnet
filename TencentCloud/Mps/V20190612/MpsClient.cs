@@ -28,7 +28,7 @@ namespace TencentCloud.Mps.V20190612
 
        private const string endpoint = "mps.tencentcloudapi.com";
        private const string version = "2019-06-12";
-       private const string sdkVersion = "SDK_NET_3.0.1501";
+       private const string sdkVersion = "SDK_NET_3.0.1502";
 
         /// <summary>
         /// Client constructor.
@@ -3995,6 +3995,31 @@ namespace TencentCloud.Mps.V20190612
         public ModifyContentReviewTemplateResponse ModifyContentReviewTemplateSync(ModifyContentReviewTemplateRequest req)
         {
             return InternalRequestAsync<ModifyContentReviewTemplateResponse>(req, "ModifyContentReviewTemplate")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改 AIGC 文档生视频任务状态。
+        /// 
+        /// 包含 confirm（确认当前阶段）和 regenerate（重新生成当前阶段）两种动作含义。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocToVideoTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDocToVideoTaskStatusResponse"/></returns>
+        public Task<ModifyDocToVideoTaskStatusResponse> ModifyDocToVideoTaskStatus(ModifyDocToVideoTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDocToVideoTaskStatusResponse>(req, "ModifyDocToVideoTaskStatus");
+        }
+
+        /// <summary>
+        /// 修改 AIGC 文档生视频任务状态。
+        /// 
+        /// 包含 confirm（确认当前阶段）和 regenerate（重新生成当前阶段）两种动作含义。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDocToVideoTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyDocToVideoTaskStatusResponse"/></returns>
+        public ModifyDocToVideoTaskStatusResponse ModifyDocToVideoTaskStatusSync(ModifyDocToVideoTaskStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyDocToVideoTaskStatusResponse>(req, "ModifyDocToVideoTaskStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,55 +25,56 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 触发器名称
+        /// <p>触发器名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 触发器目标
+        /// <p>触发器目标</p>
         /// </summary>
         [JsonProperty("Targets")]
         public WebhookTarget[] Targets{ get; set; }
 
         /// <summary>
-        /// 触发动作
+        /// <p>触发动作</p>
         /// </summary>
         [JsonProperty("EventTypes")]
         public string[] EventTypes{ get; set; }
 
         /// <summary>
-        /// 触发规则
+        /// <p>触发规则</p>
         /// </summary>
         [JsonProperty("Condition")]
         public string Condition{ get; set; }
 
         /// <summary>
-        /// 启用触发器
+        /// <p>启用触发器</p>
         /// </summary>
         [JsonProperty("Enabled")]
         public bool? Enabled{ get; set; }
 
         /// <summary>
-        /// 触发器Id
+        /// <p>触发器Id</p>
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 触发器描述
+        /// <p>触发器描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 触发器所属命名空间 Id
+        /// <p>触发器所属命名空间 Id</p>
         /// </summary>
         [JsonProperty("NamespaceId")]
         public long? NamespaceId{ get; set; }
 
         /// <summary>
-        /// 触发器所属命名空间名称
+        /// <p>触发器所属命名空间名称</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }

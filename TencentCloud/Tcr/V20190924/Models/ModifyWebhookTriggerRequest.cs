@@ -25,19 +25,19 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// <p>实例Id</p>
         /// </summary>
         [JsonProperty("RegistryId")]
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 触发器参数
+        /// <p>触发器参数</p>
         /// </summary>
         [JsonProperty("Trigger")]
         public WebhookTrigger Trigger{ get; set; }
 
         /// <summary>
-        /// 命名空间
+        /// <p>命名空间</p>
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }

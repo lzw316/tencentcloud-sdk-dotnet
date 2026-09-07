@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1501</VersionPrefix>
+    <VersionPrefix>3.0.1502</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -672,6 +672,7 @@
     <Compile Include="V20190612\Models\DocToVideoBackgroundInfo.cs" />
     <Compile Include="V20190612\Models\DocToVideoCosInfo.cs" />
     <Compile Include="V20190612\Models\DocToVideoInput.cs" />
+    <Compile Include="V20190612\Models\DocToVideoRegenerateInput.cs" />
     <Compile Include="V20190612\Models\DocToVideoWatermarkInfo.cs" />
     <Compile Include="V20190612\Models\DrmInfo.cs" />
     <Compile Include="V20190612\Models\EditMediaFileInfo.cs" />
@@ -848,6 +849,9 @@
     <Compile Include="V20190612\Models\ModifyBlindWatermarkTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyContentReviewTemplateResponse.cs" />
+    <Compile Include="V20190612\Models\ModifyDocToVideoTaskStatusInput.cs" />
+    <Compile Include="V20190612\Models\ModifyDocToVideoTaskStatusRequest.cs" />
+    <Compile Include="V20190612\Models\ModifyDocToVideoTaskStatusResponse.cs" />
     <Compile Include="V20190612\Models\ModifyImageSpriteTemplateRequest.cs" />
     <Compile Include="V20190612\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="V20190612\Models\ModifyInput.cs" />

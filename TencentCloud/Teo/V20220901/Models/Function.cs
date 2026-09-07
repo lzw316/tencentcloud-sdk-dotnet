@@ -25,49 +25,55 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 函数 ID。
+        /// <p>函数 ID。</p>
         /// </summary>
         [JsonProperty("FunctionId")]
         public string FunctionId{ get; set; }
 
         /// <summary>
-        /// 站点 ID。
+        /// <p>站点 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 函数名字。
+        /// <p>函数名字。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 函数描述。
+        /// <p>函数描述。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 函数内容。
+        /// <p>函数内容。</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 函数默认域名。
+        /// <p>函数默认域名。</p>
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+        /// <p>边缘函数默认域名因合规问题产生的地区访问限制列表。</p>
+        /// </summary>
+        [JsonProperty("DomainComplianceRestrictions")]
+        public ComplianceRestriction[] DomainComplianceRestrictions{ get; set; }
+
+        /// <summary>
+        /// <p>创建时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。
+        /// <p>修改时间。时间为世界标准时间（UTC）， 遵循 ISO 8601 标准的日期和时间格式。</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
@@ -84,6 +90,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamArrayObj(map, prefix + "DomainComplianceRestrictions.", this.DomainComplianceRestrictions);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

@@ -25,16 +25,34 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 直播间名称。
+        /// <p>直播间名称。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 操作者。
+        /// <p>操作者。</p>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
+
+        /// <summary>
+        /// <p>形象ID</p>
+        /// </summary>
+        [JsonProperty("AvatarKey")]
+        public string AvatarKey{ get; set; }
+
+        /// <summary>
+        /// <p>音色ID</p>
+        /// </summary>
+        [JsonProperty("TimbreKey")]
+        public string TimbreKey{ get; set; }
+
+        /// <summary>
+        /// <p>房间模式</p><p>枚举值：</p><ul><li>INTERACT： 交互模式</li><li>FREE： 自由模式</li><li>NORMAL： 普通模式</li></ul>
+        /// </summary>
+        [JsonProperty("LiveMode")]
+        public string LiveMode{ get; set; }
 
 
         /// <summary>
@@ -44,6 +62,9 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "AvatarKey", this.AvatarKey);
+            this.SetParamSimple(map, prefix + "TimbreKey", this.TimbreKey);
+            this.SetParamSimple(map, prefix + "LiveMode", this.LiveMode);
         }
     }
 }

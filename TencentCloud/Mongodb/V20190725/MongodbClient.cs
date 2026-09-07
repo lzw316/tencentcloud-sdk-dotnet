@@ -28,7 +28,7 @@ namespace TencentCloud.Mongodb.V20190725
 
        private const string endpoint = "mongodb.tencentcloudapi.com";
        private const string version = "2019-07-25";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1502";
 
         /// <summary>
         /// Client constructor.
@@ -1721,6 +1721,48 @@ namespace TencentCloud.Mongodb.V20190725
         public RestoreDBInstanceResponse RestoreDBInstanceSync(RestoreDBInstanceRequest req)
         {
             return InternalRequestAsync<RestoreDBInstanceResponse>(req, "RestoreDBInstance")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// ScaleDownDBInstanceCpu
+        /// </summary>
+        /// <param name="req"><see cref="ScaleDownDBInstanceCpuRequest"/></param>
+        /// <returns><see cref="ScaleDownDBInstanceCpuResponse"/></returns>
+        public Task<ScaleDownDBInstanceCpuResponse> ScaleDownDBInstanceCpu(ScaleDownDBInstanceCpuRequest req)
+        {
+            return InternalRequestAsync<ScaleDownDBInstanceCpuResponse>(req, "ScaleDownDBInstanceCpu");
+        }
+
+        /// <summary>
+        /// ScaleDownDBInstanceCpu
+        /// </summary>
+        /// <param name="req"><see cref="ScaleDownDBInstanceCpuRequest"/></param>
+        /// <returns><see cref="ScaleDownDBInstanceCpuResponse"/></returns>
+        public ScaleDownDBInstanceCpuResponse ScaleDownDBInstanceCpuSync(ScaleDownDBInstanceCpuRequest req)
+        {
+            return InternalRequestAsync<ScaleDownDBInstanceCpuResponse>(req, "ScaleDownDBInstanceCpu")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 手动开启cpu弹性扩容
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpDBInstanceCpuRequest"/></param>
+        /// <returns><see cref="ScaleUpDBInstanceCpuResponse"/></returns>
+        public Task<ScaleUpDBInstanceCpuResponse> ScaleUpDBInstanceCpu(ScaleUpDBInstanceCpuRequest req)
+        {
+            return InternalRequestAsync<ScaleUpDBInstanceCpuResponse>(req, "ScaleUpDBInstanceCpu");
+        }
+
+        /// <summary>
+        /// 手动开启cpu弹性扩容
+        /// </summary>
+        /// <param name="req"><see cref="ScaleUpDBInstanceCpuRequest"/></param>
+        /// <returns><see cref="ScaleUpDBInstanceCpuResponse"/></returns>
+        public ScaleUpDBInstanceCpuResponse ScaleUpDBInstanceCpuSync(ScaleUpDBInstanceCpuRequest req)
+        {
+            return InternalRequestAsync<ScaleUpDBInstanceCpuResponse>(req, "ScaleUpDBInstanceCpu")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

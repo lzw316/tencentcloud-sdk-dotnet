@@ -25,7 +25,7 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 数字人直播间 ID。
+        /// <p>数字人直播间 ID。</p>
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }

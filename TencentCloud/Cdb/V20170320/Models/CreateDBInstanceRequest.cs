@@ -288,6 +288,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("FourthZone")]
         public string FourthZone{ get; set; }
 
+        /// <summary>
+        /// <p>弹性扩容参数（如果不传，则不开启）</p>
+        /// </summary>
+        [JsonProperty("AutoStrategy")]
+        public AutoStrategy AutoStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -338,6 +344,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DiskEncryption", this.DiskEncryption);
             this.SetParamSimple(map, prefix + "DestroyProtect", this.DestroyProtect);
             this.SetParamSimple(map, prefix + "FourthZone", this.FourthZone);
+            this.SetParamObj(map, prefix + "AutoStrategy.", this.AutoStrategy);
         }
     }
 }

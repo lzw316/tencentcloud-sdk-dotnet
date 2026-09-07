@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1500</VersionPrefix>
+    <VersionPrefix>3.0.1502</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -555,7 +555,6 @@
     <Compile Include="V20210125\Models\Env.cs" />
     <Compile Include="V20210125\Models\EvalDatasetConfig.cs" />
     <Compile Include="V20210125\Models\EventItem.cs" />
-    <Compile Include="V20210125\Models\EventLogItem.cs" />
     <Compile Include="V20210125\Models\ExampleCategories.cs" />
     <Compile Include="V20210125\Models\ExampleDifficulties.cs" />
     <Compile Include="V20210125\Models\ExampleEntity.cs" />
@@ -616,8 +615,6 @@
     <Compile Include="V20210125\Models\GetRayClusterResponse.cs" />
     <Compile Include="V20210125\Models\GetRayClusterYamlRequest.cs" />
     <Compile Include="V20210125\Models\GetRayClusterYamlResponse.cs" />
-    <Compile Include="V20210125\Models\GetRayJobEventLogRequest.cs" />
-    <Compile Include="V20210125\Models\GetRayJobEventLogResponse.cs" />
     <Compile Include="V20210125\Models\GetRayJobEventRequest.cs" />
     <Compile Include="V20210125\Models\GetRayJobEventResponse.cs" />
     <Compile Include="V20210125\Models\GetRayJobHistoryRequest.cs" />

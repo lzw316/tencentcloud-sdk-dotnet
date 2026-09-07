@@ -73,6 +73,12 @@ namespace TencentCloud.Bh.V20230418.Models
         public string ClientAppKind{ get; set; }
 
         /// <summary>
+        /// <p>客户端工具启动参数</p>
+        /// </summary>
+        [JsonProperty("ClientAppArgs")]
+        public string[] ClientAppArgs{ get; set; }
+
+        /// <summary>
         /// <p>应用资产url</p>
         /// </summary>
         [JsonProperty("Url")]
@@ -206,6 +212,7 @@ namespace TencentCloud.Bh.V20230418.Models
             this.SetParamSimple(map, prefix + "Kind", this.Kind);
             this.SetParamSimple(map, prefix + "ClientAppPath", this.ClientAppPath);
             this.SetParamSimple(map, prefix + "ClientAppKind", this.ClientAppKind);
+            this.SetParamArraySimple(map, prefix + "ClientAppArgs.", this.ClientAppArgs);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "DeviceInstanceId", this.DeviceInstanceId);

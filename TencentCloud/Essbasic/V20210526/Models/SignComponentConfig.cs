@@ -25,14 +25,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。
-        /// 
-        /// - false 展示签署日期（默认）
-        /// - true 不展示签署日期 
-        /// ![image](https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png)。
+        /// <p>签署控件默认属性配置，是否默认展示签署日期， 在页面中可以进行修改。</p><ul><li>false 展示签署日期（默认）</li><li>true 不展示签署日期<br><img src="https://qcloudimg.tencent-cloud.cn/raw/448514412e2f69f6129425beda4ff568.png" alt="image">。</li></ul>
         /// </summary>
         [JsonProperty("HideDate")]
         public bool? HideDate{ get; set; }
+
+        /// <summary>
+        /// <p>【仅 SignBeanTag=1 时有效】 签署方自行添加签署印章类控件（SIGN_SEAL、SIGN_PAGING_SEAL、SIGN_LEGAL_PERSON_SEAL）时，「盖章区适配签署方印章尺寸」开关的控制策略</p><p>枚举值：</p><ul><li>0： 默认关闭，可开启。与现网一致</li><li>1： 关闭且置灰——按控件默认的4.2cm尺寸盖章，签署方无法开启开关</li><li>2： 默认开启且可修改——默认按印章实际尺寸盖章，签署方可手动关闭</li><li>3： 开启且置灰——强制按印章实际尺寸盖章，签署方不可修改</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("AddSignComponentUseSealSize")]
+        public ulong? AddSignComponentUseSealSize{ get; set; }
 
 
         /// <summary>
@@ -41,6 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "HideDate", this.HideDate);
+            this.SetParamSimple(map, prefix + "AddSignComponentUseSealSize", this.AddSignComponentUseSealSize);
         }
     }
 }

@@ -25,34 +25,46 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 页码，从1开始
+        /// <p>页码，从1开始</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public ulong? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页个数
+        /// <p>每页个数</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 流量包的唯一资源ID
+        /// <p>流量包的唯一资源ID</p>
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 流量包绑定的设备ID
+        /// <p>流量包绑定的设备ID</p>
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 流量包状态，0：未生效，1：有效期内，2：已过期
+        /// <p>流量包状态，0：未生效，1：有效期内，2：已过期</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>生效时间在此时间之后</p>
+        /// </summary>
+        [JsonProperty("ActiveTimeStart")]
+        public string ActiveTimeStart{ get; set; }
+
+        /// <summary>
+        /// <p>生效时间在此时间之前</p>
+        /// </summary>
+        [JsonProperty("ActiveTimeEnd")]
+        public string ActiveTimeEnd{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ActiveTimeStart", this.ActiveTimeStart);
+            this.SetParamSimple(map, prefix + "ActiveTimeEnd", this.ActiveTimeEnd);
         }
     }
 }

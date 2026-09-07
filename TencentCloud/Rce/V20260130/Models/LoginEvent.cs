@@ -43,6 +43,18 @@ namespace TencentCloud.Rce.V20260130.Models
         public Result LoginResult{ get; set; }
 
         /// <summary>
+        /// <p>用户注册时间。</p><p>参数格式：要求符合ISO 8601标准的带时区的毫秒级时间，格式&quot;YYYY-MM-DDTHH:mm:ss.sssZ&quot; ，例如&quot;2025-10-19T09:11:10.145+08:00&quot;</p>
+        /// </summary>
+        [JsonProperty("RegisterTime")]
+        public string RegisterTime{ get; set; }
+
+        /// <summary>
+        /// <p>是否付费用户。</p><p>枚举值：</p><ul><li>true： 付费用户</li><li>false： 非付费用户</li></ul>
+        /// </summary>
+        [JsonProperty("IsPaidUser")]
+        public bool? IsPaidUser{ get; set; }
+
+        /// <summary>
         /// <p>与RCE约定的定制化信息，为K:V 格式的对象数组，示例：[{&quot;Key&quot;: &quot;ApproverName&quot;, &quot;Value&quot;: &quot;bob&quot;},{&quot;Key&quot;:&quot;ApproverPhone&quot;,&quot;Value&quot;: &quot;+86131****5678&quot;}]</p>
         /// </summary>
         [JsonProperty("Cust")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Rce.V20260130.Models
             this.SetParamObj(map, prefix + "UserInfo.", this.UserInfo);
             this.SetParamSimple(map, prefix + "UserLoginName", this.UserLoginName);
             this.SetParamObj(map, prefix + "LoginResult.", this.LoginResult);
+            this.SetParamSimple(map, prefix + "RegisterTime", this.RegisterTime);
+            this.SetParamSimple(map, prefix + "IsPaidUser", this.IsPaidUser);
             this.SetParamArrayObj(map, prefix + "Cust.", this.Cust);
         }
     }

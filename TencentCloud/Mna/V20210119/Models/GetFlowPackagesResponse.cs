@@ -25,13 +25,13 @@ namespace TencentCloud.Mna.V20210119.Models
     {
         
         /// <summary>
-        /// 流量包列表
+        /// <p>流量包列表</p>
         /// </summary>
         [JsonProperty("PackageList")]
         public FlowPackageInfo[] PackageList{ get; set; }
 
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

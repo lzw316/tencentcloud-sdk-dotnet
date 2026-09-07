@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Mps.V20190612.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EventLogItem : AbstractModel
+    public class DocToVideoRegenerateInput : AbstractModel
     {
         
         /// <summary>
-        /// 事件时间（Unix 时间戳，秒级）
+        /// <p>重新生成的范围。</p><p>枚举值：</p><ul><li>full： 该阶段全量重新生成（例如：修改整体的场景数量）</li><li>scenes： 按场景局部重新生成（例如：修改某场景的具体内容）</li></ul>
         /// </summary>
-        [JsonProperty("EventTime")]
-        public ulong? EventTime{ get; set; }
+        [JsonProperty("Scope")]
+        public string Scope{ get; set; }
 
         /// <summary>
-        /// 组件名称
+        /// <p>重新生成时的提示词。</p>
         /// </summary>
-        [JsonProperty("Component")]
-        public string Component{ get; set; }
+        [JsonProperty("Prompt")]
+        public string Prompt{ get; set; }
 
         /// <summary>
-        /// 日志级别（INFO/WARN/ERROR）
+        /// <p>按页局部重新生成时的目标页 ID 数组。仅 Scope=scenes 时必填。不可重复，单次重新生成最多 5 页。</p>
         /// </summary>
-        [JsonProperty("Level")]
-        public string Level{ get; set; }
-
-        /// <summary>
-        /// 事件内容
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
+        [JsonProperty("SceneIds")]
+        public string[] SceneIds{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EventTime", this.EventTime);
-            this.SetParamSimple(map, prefix + "Component", this.Component);
-            this.SetParamSimple(map, prefix + "Level", this.Level);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Scope", this.Scope);
+            this.SetParamSimple(map, prefix + "Prompt", this.Prompt);
+            this.SetParamArraySimple(map, prefix + "SceneIds.", this.SceneIds);
         }
     }
 }

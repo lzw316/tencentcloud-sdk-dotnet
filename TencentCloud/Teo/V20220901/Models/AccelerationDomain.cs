@@ -116,6 +116,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }
 
+        /// <summary>
+        /// <p>域名因合规问题产生的地区访问限制列表。</p>
+        /// </summary>
+        [JsonProperty("ComplianceRestrictions")]
+        public ComplianceRestriction[] ComplianceRestrictions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamArrayObj(map, prefix + "ComplianceRestrictions.", this.ComplianceRestrictions);
         }
     }
 }

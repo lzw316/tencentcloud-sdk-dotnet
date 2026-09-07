@@ -25,30 +25,25 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同组ID，为32位字符串。
-        /// 建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。
+        /// <p>合同组ID，为32位字符串。<br>建议开发者妥善保存此合同组ID，以便于顺利进行后续操作。</p>
         /// </summary>
         [JsonProperty("FlowGroupId")]
         public string FlowGroupId{ get; set; }
 
         /// <summary>
-        /// 合同组中每个合同流程ID，每个ID均为32位字符串。
-        /// 
-        /// 注:
-        /// `此数组的顺序和入参中的FlowInfos顺序一致`
+        /// <p>合同组中每个合同流程ID，每个ID均为32位字符串。</p><p>注:<br><code>此数组的顺序和入参中的FlowInfos顺序一致</code></p>
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；
-        /// 如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过ChannelGetTaskResultApi接口查询任务详情；
+        /// <p>复杂文档合成任务（如，包含动态表格的预览任务）的任务信息数组；<br>如果文档需要异步合成，此字段会返回该异步任务的任务信息，后续可以通过<a href="https://qian.tencent.com/developers/partnerApis/files/DescribeFileConvertTask">查询转换任务状态</a>接口查询任务详情；</p>
         /// </summary>
         [JsonProperty("TaskInfos")]
         public TaskInfo[] TaskInfos{ get; set; }
 
         /// <summary>
-        /// 合同组签署方信息
+        /// <p>合同组签署方信息</p>
         /// </summary>
         [JsonProperty("Approvers")]
         public FlowGroupApprovers[] Approvers{ get; set; }

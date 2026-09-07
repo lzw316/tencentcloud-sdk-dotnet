@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1500</VersionPrefix>
+    <VersionPrefix>3.0.1502</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -132,6 +132,8 @@
     <Compile Include="V20180801\Models\CreateCasterResponse.cs" />
     <Compile Include="V20180801\Models\CreateCommonMixStreamRequest.cs" />
     <Compile Include="V20180801\Models\CreateCommonMixStreamResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLiveAvatarCloneFigureRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLiveAvatarCloneFigureResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveAvatarRoomRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveAvatarRoomResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveAvatarScriptRequest.cs" />
@@ -196,6 +198,8 @@
     <Compile Include="V20180801\Models\DeleteCasterOutputInfoResponse.cs" />
     <Compile Include="V20180801\Models\DeleteCasterRequest.cs" />
     <Compile Include="V20180801\Models\DeleteCasterResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveAvatarCloneFigureRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLiveAvatarCloneFigureResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveAvatarRoomRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveAvatarRoomResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveAvatarScriptRequest.cs" />
@@ -292,6 +296,8 @@
     <Compile Include="V20180801\Models\DescribeHttpStatusInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveAvatarBackgroundListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveAvatarBackgroundListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarCloneFigureListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLiveAvatarCloneFigureListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveAvatarImageListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLiveAvatarImageListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveAvatarRoomsRequest.cs" />
@@ -476,6 +482,7 @@
     <Compile Include="V20180801\Models\HttpStatusInfo.cs" />
     <Compile Include="V20180801\Models\InsertTaskTemporaryFilesRequest.cs" />
     <Compile Include="V20180801\Models\InsertTaskTemporaryFilesResponse.cs" />
+    <Compile Include="V20180801\Models\LiveAvatarCloneFigureInfo.cs" />
     <Compile Include="V20180801\Models\LiveCertDomainInfo.cs" />
     <Compile Include="V20180801\Models\LiveDomainCertBindings.cs" />
     <Compile Include="V20180801\Models\LiveEnhanceInfo.cs" />

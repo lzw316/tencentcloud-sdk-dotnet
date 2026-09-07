@@ -37,7 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string BackupId{ get; set; }
 
         /// <summary>
-        /// <p>备份类型。</p><ul><li>1：凌晨系统发起的自动备份。</li><li>0：用户发起的手动备份。</li></ul>
+        /// <p>备份类型。</p><p>枚举值：</p><ul><li>0： 用户发起的手动备份</li><li>1： 凌晨系统发起的自动备份</li><li>2： 变配触发的备份</li></ul>
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }

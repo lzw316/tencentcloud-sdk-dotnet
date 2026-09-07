@@ -25,10 +25,16 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 用户ID集合
+        /// <p>用户ID集合</p>
         /// </summary>
         [JsonProperty("IdSet")]
         public ulong?[] IdSet{ get; set; }
+
+        /// <summary>
+        /// <p>重置类型</p><p>枚举值：</p><ul><li>0： 同时重置本地认证密码、OTP验证码</li><li>1： 仅重置本地认证密码</li><li>2： 仅重置OTP验证码</li></ul><p>默认值：0</p>
+        /// </summary>
+        [JsonProperty("ResetType")]
+        public ulong? ResetType{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Bh.V20230418.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "IdSet.", this.IdSet);
+            this.SetParamSimple(map, prefix + "ResetType", this.ResetType);
         }
     }
 }

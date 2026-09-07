@@ -25,94 +25,100 @@ namespace TencentCloud.Es.V20180416.Models
     {
         
         /// <summary>
-        /// 采集器输出的实例类型（支持elasticsearch、logstash）
+        /// <p>采集器输出的实例类型（支持elasticsearch、logstash）</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 采集器输出的实例ID
+        /// <p>采集器输出的实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 采集器输出到的ES实例的用户名
+        /// <p>采集器输出到的ES实例的用户名</p>
         /// </summary>
         [JsonProperty("ESUserName")]
         public string ESUserName{ get; set; }
 
         /// <summary>
-        /// 采集器输出到的ES实例的密码
+        /// <p>采集器输出到的ES实例的密码</p>
         /// </summary>
         [JsonProperty("ESUserPasswd")]
         public string ESUserPasswd{ get; set; }
 
         /// <summary>
-        /// 采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）
+        /// <p>采集器输出到ES实例时，是否开启监控（1为开启，0为不开启，默认为0）</p>
         /// </summary>
         [JsonProperty("EnableMonitoring")]
         public long? EnableMonitoring{ get; set; }
 
         /// <summary>
-        /// 采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）
+        /// <p>采集器输出到ES实例时，是否开启自动在kibana中生成Dashboard（1为开启，0为不开启，默认为0）</p>
         /// </summary>
         [JsonProperty("EnableDashboard")]
         public long? EnableDashboard{ get; set; }
 
         /// <summary>
-        /// Ckafka实例的vip
+        /// <p>Ckafka实例的vip</p>
         /// </summary>
         [JsonProperty("KafkaEndpoint")]
         public string KafkaEndpoint{ get; set; }
 
         /// <summary>
-        /// Ckafka实例中的Topic
+        /// <p>Ckafka实例中的Topic</p>
         /// </summary>
         [JsonProperty("KafkaTopic")]
         public string KafkaTopic{ get; set; }
 
         /// <summary>
-        /// Ckafka实例的版本号
+        /// <p>Ckafka实例的版本号</p>
         /// </summary>
         [JsonProperty("KafkaVersion")]
         public string KafkaVersion{ get; set; }
 
         /// <summary>
-        /// topic id
+        /// <p>topic id</p>
         /// </summary>
         [JsonProperty("SesTopicId")]
         public string SesTopicId{ get; set; }
 
         /// <summary>
-        /// topic name
+        /// <p>topic name</p>
         /// </summary>
         [JsonProperty("SesTopicName")]
         public string SesTopicName{ get; set; }
 
         /// <summary>
-        /// topic address
+        /// <p>topic address</p>
         /// </summary>
         [JsonProperty("SesTopicAddress")]
         public string SesTopicAddress{ get; set; }
 
         /// <summary>
-        /// /
+        /// <p>/</p>
         /// </summary>
         [JsonProperty("SesTopicUserName")]
         public string SesTopicUserName{ get; set; }
 
         /// <summary>
-        /// /
+        /// <p>/</p>
         /// </summary>
         [JsonProperty("SesTopicPasswd")]
         public string SesTopicPasswd{ get; set; }
 
         /// <summary>
-        /// /
+        /// <p>/</p>
         /// </summary>
         [JsonProperty("LogstashListenPort")]
         public ulong? LogstashListenPort{ get; set; }
+
+        /// <summary>
+        /// <p>serverless 的 spaceid</p>
+        /// </summary>
+        [JsonProperty("SesSpaceId")]
+        public string SesSpaceId{ get; set; }
 
 
         /// <summary>
@@ -135,6 +141,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SesTopicUserName", this.SesTopicUserName);
             this.SetParamSimple(map, prefix + "SesTopicPasswd", this.SesTopicPasswd);
             this.SetParamSimple(map, prefix + "LogstashListenPort", this.LogstashListenPort);
+            this.SetParamSimple(map, prefix + "SesSpaceId", this.SesSpaceId);
         }
     }
 }

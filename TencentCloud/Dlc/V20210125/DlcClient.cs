@@ -28,7 +28,7 @@ namespace TencentCloud.Dlc.V20210125
 
        private const string endpoint = "dlc.tencentcloudapi.com";
        private const string version = "2021-01-25";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1502";
 
         /// <summary>
         /// Client constructor.
@@ -5205,27 +5205,6 @@ namespace TencentCloud.Dlc.V20210125
         public GetRayJobEventResponse GetRayJobEventSync(GetRayJobEventRequest req)
         {
             return InternalRequestAsync<GetRayJobEventResponse>(req, "GetRayJobEvent")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 获取作业事件日志
-        /// </summary>
-        /// <param name="req"><see cref="GetRayJobEventLogRequest"/></param>
-        /// <returns><see cref="GetRayJobEventLogResponse"/></returns>
-        public Task<GetRayJobEventLogResponse> GetRayJobEventLog(GetRayJobEventLogRequest req)
-        {
-            return InternalRequestAsync<GetRayJobEventLogResponse>(req, "GetRayJobEventLog");
-        }
-
-        /// <summary>
-        /// 获取作业事件日志
-        /// </summary>
-        /// <param name="req"><see cref="GetRayJobEventLogRequest"/></param>
-        /// <returns><see cref="GetRayJobEventLogResponse"/></returns>
-        public GetRayJobEventLogResponse GetRayJobEventLogSync(GetRayJobEventLogRequest req)
-        {
-            return InternalRequestAsync<GetRayJobEventLogResponse>(req, "GetRayJobEventLog")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
