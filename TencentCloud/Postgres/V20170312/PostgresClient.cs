@@ -28,7 +28,7 @@ namespace TencentCloud.Postgres.V20170312
 
        private const string endpoint = "postgres.tencentcloudapi.com";
        private const string version = "2017-03-12";
-       private const string sdkVersion = "SDK_NET_3.0.1499";
+       private const string sdkVersion = "SDK_NET_3.0.1503";
 
         /// <summary>
         /// Client constructor.
@@ -176,6 +176,48 @@ namespace TencentCloud.Postgres.V20170312
         public CloseDBProxyAddressResponse CloseDBProxyAddressSync(CloseDBProxyAddressRequest req)
         {
             return InternalRequestAsync<CloseDBProxyAddressResponse>(req, "CloseDBProxyAddress")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（CloseMem0Service）用于关闭实例的Mem0服务
+        /// </summary>
+        /// <param name="req"><see cref="CloseMem0ServiceRequest"/></param>
+        /// <returns><see cref="CloseMem0ServiceResponse"/></returns>
+        public Task<CloseMem0ServiceResponse> CloseMem0Service(CloseMem0ServiceRequest req)
+        {
+            return InternalRequestAsync<CloseMem0ServiceResponse>(req, "CloseMem0Service");
+        }
+
+        /// <summary>
+        /// 本接口（CloseMem0Service）用于关闭实例的Mem0服务
+        /// </summary>
+        /// <param name="req"><see cref="CloseMem0ServiceRequest"/></param>
+        /// <returns><see cref="CloseMem0ServiceResponse"/></returns>
+        public CloseMem0ServiceResponse CloseMem0ServiceSync(CloseMem0ServiceRequest req)
+        {
+            return InternalRequestAsync<CloseMem0ServiceResponse>(req, "CloseMem0Service")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（ClosePostgRestService）用于关闭实例的PostgREST服务
+        /// </summary>
+        /// <param name="req"><see cref="ClosePostgRESTServiceRequest"/></param>
+        /// <returns><see cref="ClosePostgRESTServiceResponse"/></returns>
+        public Task<ClosePostgRESTServiceResponse> ClosePostgRESTService(ClosePostgRESTServiceRequest req)
+        {
+            return InternalRequestAsync<ClosePostgRESTServiceResponse>(req, "ClosePostgRESTService");
+        }
+
+        /// <summary>
+        /// 本接口（ClosePostgRestService）用于关闭实例的PostgREST服务
+        /// </summary>
+        /// <param name="req"><see cref="ClosePostgRESTServiceRequest"/></param>
+        /// <returns><see cref="ClosePostgRESTServiceResponse"/></returns>
+        public ClosePostgRESTServiceResponse ClosePostgRESTServiceSync(ClosePostgRESTServiceRequest req)
+        {
+            return InternalRequestAsync<ClosePostgRESTServiceResponse>(req, "ClosePostgRESTService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1411,6 +1453,27 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeMem0Service）用于查询某个实例的Mem0服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMem0ServiceRequest"/></param>
+        /// <returns><see cref="DescribeMem0ServiceResponse"/></returns>
+        public Task<DescribeMem0ServiceResponse> DescribeMem0Service(DescribeMem0ServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeMem0ServiceResponse>(req, "DescribeMem0Service");
+        }
+
+        /// <summary>
+        /// 本接口（DescribeMem0Service）用于查询某个实例的Mem0服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMem0ServiceRequest"/></param>
+        /// <returns><see cref="DescribeMem0ServiceResponse"/></returns>
+        public DescribeMem0ServiceResponse DescribeMem0ServiceSync(DescribeMem0ServiceRequest req)
+        {
+            return InternalRequestAsync<DescribeMem0ServiceResponse>(req, "DescribeMem0Service")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口（DescribeOrders）用于查询订单信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
@@ -1491,6 +1554,27 @@ namespace TencentCloud.Postgres.V20170312
         public DescribeParamsEventResponse DescribeParamsEventSync(DescribeParamsEventRequest req)
         {
             return InternalRequestAsync<DescribeParamsEventResponse>(req, "DescribeParamsEvent")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（DescribePostgRestService）用于查询某个实例的PostgREST服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostgRESTServiceRequest"/></param>
+        /// <returns><see cref="DescribePostgRESTServiceResponse"/></returns>
+        public Task<DescribePostgRESTServiceResponse> DescribePostgRESTService(DescribePostgRESTServiceRequest req)
+        {
+            return InternalRequestAsync<DescribePostgRESTServiceResponse>(req, "DescribePostgRESTService");
+        }
+
+        /// <summary>
+        /// 本接口（DescribePostgRestService）用于查询某个实例的PostgREST服务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePostgRESTServiceRequest"/></param>
+        /// <returns><see cref="DescribePostgRESTServiceResponse"/></returns>
+        public DescribePostgRESTServiceResponse DescribePostgRESTServiceSync(DescribePostgRESTServiceRequest req)
+        {
+            return InternalRequestAsync<DescribePostgRESTServiceResponse>(req, "DescribePostgRESTService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2421,6 +2505,48 @@ namespace TencentCloud.Postgres.V20170312
         public OpenDBExtranetAccessResponse OpenDBExtranetAccessSync(OpenDBExtranetAccessRequest req)
         {
             return InternalRequestAsync<OpenDBExtranetAccessResponse>(req, "OpenDBExtranetAccess")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（OpenMem0Service）用于开启实例Mem0服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenMem0ServiceRequest"/></param>
+        /// <returns><see cref="OpenMem0ServiceResponse"/></returns>
+        public Task<OpenMem0ServiceResponse> OpenMem0Service(OpenMem0ServiceRequest req)
+        {
+            return InternalRequestAsync<OpenMem0ServiceResponse>(req, "OpenMem0Service");
+        }
+
+        /// <summary>
+        /// 本接口（OpenMem0Service）用于开启实例Mem0服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenMem0ServiceRequest"/></param>
+        /// <returns><see cref="OpenMem0ServiceResponse"/></returns>
+        public OpenMem0ServiceResponse OpenMem0ServiceSync(OpenMem0ServiceRequest req)
+        {
+            return InternalRequestAsync<OpenMem0ServiceResponse>(req, "OpenMem0Service")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口（OpenPostgRestService）用于开启实例PostgREST服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenPostgRESTServiceRequest"/></param>
+        /// <returns><see cref="OpenPostgRESTServiceResponse"/></returns>
+        public Task<OpenPostgRESTServiceResponse> OpenPostgRESTService(OpenPostgRESTServiceRequest req)
+        {
+            return InternalRequestAsync<OpenPostgRESTServiceResponse>(req, "OpenPostgRESTService");
+        }
+
+        /// <summary>
+        /// 本接口（OpenPostgRestService）用于开启实例PostgREST服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenPostgRESTServiceRequest"/></param>
+        /// <returns><see cref="OpenPostgRESTServiceResponse"/></returns>
+        public OpenPostgRESTServiceResponse OpenPostgRESTServiceSync(OpenPostgRESTServiceRequest req)
+        {
+            return InternalRequestAsync<OpenPostgRESTServiceResponse>(req, "OpenPostgRESTService")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -28,7 +28,7 @@ namespace TencentCloud.Faceid.V20180301
 
        private const string endpoint = "faceid.tencentcloudapi.com";
        private const string version = "2018-03-01";
-       private const string sdkVersion = "SDK_NET_3.0.1494";
+       private const string sdkVersion = "SDK_NET_3.0.1503";
 
         /// <summary>
         /// Client constructor.
@@ -596,27 +596,6 @@ namespace TencentCloud.Faceid.V20180301
         public IdCardVerificationResponse IdCardVerificationSync(IdCardVerificationRequest req)
         {
             return InternalRequestAsync<IdCardVerificationResponse>(req, "IdCardVerification")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人（该接口已停止接入，新客户请使用<a href="https://cloud.tencent.com/document/product/1007/102203">照片人脸核身（V2.0）</a>接口）。
-        /// </summary>
-        /// <param name="req"><see cref="ImageRecognitionRequest"/></param>
-        /// <returns><see cref="ImageRecognitionResponse"/></returns>
-        public Task<ImageRecognitionResponse> ImageRecognition(ImageRecognitionRequest req)
-        {
-            return InternalRequestAsync<ImageRecognitionResponse>(req, "ImageRecognition");
-        }
-
-        /// <summary>
-        /// 传入照片和身份信息，判断该照片与权威库的证件照是否属于同一个人（该接口已停止接入，新客户请使用<a href="https://cloud.tencent.com/document/product/1007/102203">照片人脸核身（V2.0）</a>接口）。
-        /// </summary>
-        /// <param name="req"><see cref="ImageRecognitionRequest"/></param>
-        /// <returns><see cref="ImageRecognitionResponse"/></returns>
-        public ImageRecognitionResponse ImageRecognitionSync(ImageRecognitionRequest req)
-        {
-            return InternalRequestAsync<ImageRecognitionResponse>(req, "ImageRecognition")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

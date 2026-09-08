@@ -725,6 +725,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OldEsPrivateTcpUrl")]
         public string OldEsPrivateTcpUrl{ get; set; }
 
+        /// <summary>
+        /// <p>是否需要从VIP下线旧节点</p>
+        /// </summary>
+        [JsonProperty("NeedOfflineOldNodesNotify")]
+        public bool? NeedOfflineOldNodesNotify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -838,6 +844,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "ServerCertSource", this.ServerCertSource);
             this.SetParamSimple(map, prefix + "OldEsVip", this.OldEsVip);
             this.SetParamSimple(map, prefix + "OldEsPrivateTcpUrl", this.OldEsPrivateTcpUrl);
+            this.SetParamSimple(map, prefix + "NeedOfflineOldNodesNotify", this.NeedOfflineOldNodesNotify);
         }
     }
 }

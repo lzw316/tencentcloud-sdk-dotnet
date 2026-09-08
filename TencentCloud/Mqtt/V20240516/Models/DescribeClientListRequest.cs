@@ -25,34 +25,31 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 客户端ID
+        /// <p>客户端ID</p>
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 客户端数量限制,最大1024，默认1024
+        /// <p>客户端数量限制,最大1024，默认1024</p>
         /// </summary>
         [JsonProperty("Number")]
         public string Number{ get; set; }
 
         /// <summary>
-        /// 0:查询在线和离线客户端（默认值）
-        /// 1:查询在线客户端
-        /// 2:查询离线客户端
+        /// <p>0:查询在线和离线客户端（默认值）<br>1:查询在线客户端<br>2:查询离线客户端</p>
         /// </summary>
         [JsonProperty("OnlineStatus")]
         public long? OnlineStatus{ get; set; }
 
         /// <summary>
-        /// 在线连接：表示最后的连接时间
-        /// 离线连接：表示最后的断开连接时间
+        /// <p>在线连接：表示最后的连接时间<br>离线连接：表示最后的断开连接时间</p>
         /// </summary>
         [JsonProperty("MaxTimestamp")]
         public long? MaxTimestamp{ get; set; }

@@ -157,6 +157,12 @@ namespace TencentCloud.Vm.V20210922.Models
         public VideoSegment[] VideoSegments{ get; set; }
 
         /// <summary>
+        /// <p>命中信息</p>
+        /// </summary>
+        [JsonProperty("HitSnippetInfos")]
+        public HitSnippetInfo[] HitSnippetInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -190,6 +196,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamArrayObj(map, prefix + "Asrs.", this.Asrs);
             this.SetParamObj(map, prefix + "SegmentCosUrlList.", this.SegmentCosUrlList);
             this.SetParamArrayObj(map, prefix + "VideoSegments.", this.VideoSegments);
+            this.SetParamArrayObj(map, prefix + "HitSnippetInfos.", this.HitSnippetInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1502";
+       private const string sdkVersion = "SDK_NET_3.0.1503";
 
         /// <summary>
         /// Client constructor.
@@ -576,29 +576,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 创建虚拟服务器
-        /// 创建流程为先调用[DescribeVmSpec](https://cloud.tencent.com/document/product/876/129360)获取可购买的规格，同时调用[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)拉取镜像列表，选中一个规格和一个镜像后，调用[InquireVmPrice](https://cloud.tencent.com/document/product/876/129759)询价，如果价格可接受，调用此接口创建实例
-        /// </summary>
-        /// <param name="req"><see cref="CreateVmInstanceRequest"/></param>
-        /// <returns><see cref="CreateVmInstanceResponse"/></returns>
-        public Task<CreateVmInstanceResponse> CreateVmInstance(CreateVmInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateVmInstanceResponse>(req, "CreateVmInstance");
-        }
-
-        /// <summary>
-        /// 创建虚拟服务器
-        /// 创建流程为先调用[DescribeVmSpec](https://cloud.tencent.com/document/product/876/129360)获取可购买的规格，同时调用[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)拉取镜像列表，选中一个规格和一个镜像后，调用[InquireVmPrice](https://cloud.tencent.com/document/product/876/129759)询价，如果价格可接受，调用此接口创建实例
-        /// </summary>
-        /// <param name="req"><see cref="CreateVmInstanceRequest"/></param>
-        /// <returns><see cref="CreateVmInstanceResponse"/></returns>
-        public CreateVmInstanceResponse CreateVmInstanceSync(CreateVmInstanceRequest req)
-        {
-            return InternalRequestAsync<CreateVmInstanceResponse>(req, "CreateVmInstance")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 删除 AI 模型配置分组，支持批量删除。内置分组无法删除。分组删除后，该分组下的所有模型配置将同步移除，针对该分组模型的请求将会失败，请在删除前确认业务侧已停止对该分组的调用。
         /// 
         /// 注意：
@@ -808,27 +785,6 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
         {
             return InternalRequestAsync<DeleteUsersResponse>(req, "DeleteUsers")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 销毁云服务器实例
-        /// </summary>
-        /// <param name="req"><see cref="DeleteVmInstanceRequest"/></param>
-        /// <returns><see cref="DeleteVmInstanceResponse"/></returns>
-        public Task<DeleteVmInstanceResponse> DeleteVmInstance(DeleteVmInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteVmInstanceResponse>(req, "DeleteVmInstance");
-        }
-
-        /// <summary>
-        /// 销毁云服务器实例
-        /// </summary>
-        /// <param name="req"><see cref="DeleteVmInstanceRequest"/></param>
-        /// <returns><see cref="DeleteVmInstanceResponse"/></returns>
-        public DeleteVmInstanceResponse DeleteVmInstanceSync(DeleteVmInstanceRequest req)
-        {
-            return InternalRequestAsync<DeleteVmInstanceResponse>(req, "DeleteVmInstance")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1385,6 +1341,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口DescribeHTTPServiceCachePurgeTask为只读查询，不修改任何缓存或环境资源，仅返回指定环境下域名缓存刷新任务的状态与时间等信息。通过PurgeHTTPServiceCache清除域名缓存后，可通过此接口传入任务id可查询清除任务状态、时间、缓存类型等信息。也可通过此接口查询历史任务记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHTTPServiceCachePurgeTaskRequest"/></param>
+        /// <returns><see cref="DescribeHTTPServiceCachePurgeTaskResponse"/></returns>
+        public Task<DescribeHTTPServiceCachePurgeTaskResponse> DescribeHTTPServiceCachePurgeTask(DescribeHTTPServiceCachePurgeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeHTTPServiceCachePurgeTaskResponse>(req, "DescribeHTTPServiceCachePurgeTask");
+        }
+
+        /// <summary>
+        /// 本接口DescribeHTTPServiceCachePurgeTask为只读查询，不修改任何缓存或环境资源，仅返回指定环境下域名缓存刷新任务的状态与时间等信息。通过PurgeHTTPServiceCache清除域名缓存后，可通过此接口传入任务id可查询清除任务状态、时间、缓存类型等信息。也可通过此接口查询历史任务记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHTTPServiceCachePurgeTaskRequest"/></param>
+        /// <returns><see cref="DescribeHTTPServiceCachePurgeTaskResponse"/></returns>
+        public DescribeHTTPServiceCachePurgeTaskResponse DescribeHTTPServiceCachePurgeTaskSync(DescribeHTTPServiceCachePurgeTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeHTTPServiceCachePurgeTaskResponse>(req, "DescribeHTTPServiceCachePurgeTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口DescribeHTTPServiceRoute用于查询环境下HTTP访问服务路由信息。可通过Filters过滤。如果不存在不会返回错误。HTTP访问服务提供了默认域名，通过本接口可直接获取默认域名。前置需已开通 HTTP 访问服务；调用CreateHTTPServiceRoute或者ModifyHTTPServiceRoute后可使用本接口查询创建或者修改结果
         /// </summary>
         /// <param name="req"><see cref="DescribeHTTPServiceRouteRequest"/></param>
@@ -1705,48 +1682,6 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
-        /// 查询环境下的云服务器列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVmInstancesRequest"/></param>
-        /// <returns><see cref="DescribeVmInstancesResponse"/></returns>
-        public Task<DescribeVmInstancesResponse> DescribeVmInstances(DescribeVmInstancesRequest req)
-        {
-            return InternalRequestAsync<DescribeVmInstancesResponse>(req, "DescribeVmInstances");
-        }
-
-        /// <summary>
-        /// 查询环境下的云服务器列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVmInstancesRequest"/></param>
-        /// <returns><see cref="DescribeVmInstancesResponse"/></returns>
-        public DescribeVmInstancesResponse DescribeVmInstancesSync(DescribeVmInstancesRequest req)
-        {
-            return InternalRequestAsync<DescribeVmInstancesResponse>(req, "DescribeVmInstances")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 云服务器规格list
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVmSpecRequest"/></param>
-        /// <returns><see cref="DescribeVmSpecResponse"/></returns>
-        public Task<DescribeVmSpecResponse> DescribeVmSpec(DescribeVmSpecRequest req)
-        {
-            return InternalRequestAsync<DescribeVmSpecResponse>(req, "DescribeVmSpec");
-        }
-
-        /// <summary>
-        /// 云服务器规格list
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVmSpecRequest"/></param>
-        /// <returns><see cref="DescribeVmSpecResponse"/></returns>
-        public DescribeVmSpecResponse DescribeVmSpecSync(DescribeVmSpecRequest req)
-        {
-            return InternalRequestAsync<DescribeVmSpecResponse>(req, "DescribeVmSpec")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 本接口用于销毁云开发环境。
         /// 云开发环境遵循腾讯云包年包月预付费产品生命周期，因此环境销毁需要分两步：
         /// 1. 资源退费。此时会根据当前环境剩余有效期，自动退还相关费用(代金券不退)。退款后，环境进入隔离期。
@@ -1870,27 +1805,6 @@ namespace TencentCloud.Tcb.V20180608
         public GetProvidersResponse GetProvidersSync(GetProvidersRequest req)
         {
             return InternalRequestAsync<GetProvidersResponse>(req, "GetProviders")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
-        /// 查询服务器价格
-        /// </summary>
-        /// <param name="req"><see cref="InquireVmPriceRequest"/></param>
-        /// <returns><see cref="InquireVmPriceResponse"/></returns>
-        public Task<InquireVmPriceResponse> InquireVmPrice(InquireVmPriceRequest req)
-        {
-            return InternalRequestAsync<InquireVmPriceResponse>(req, "InquireVmPrice");
-        }
-
-        /// <summary>
-        /// 查询服务器价格
-        /// </summary>
-        /// <param name="req"><see cref="InquireVmPriceRequest"/></param>
-        /// <returns><see cref="InquireVmPriceResponse"/></returns>
-        public InquireVmPriceResponse InquireVmPriceSync(InquireVmPriceRequest req)
-        {
-            return InternalRequestAsync<InquireVmPriceResponse>(req, "InquireVmPrice")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2278,6 +2192,27 @@ namespace TencentCloud.Tcb.V20180608
         public PreviewPGUserMigrationsResponse PreviewPGUserMigrationsSync(PreviewPGUserMigrationsRequest req)
         {
             return InternalRequestAsync<PreviewPGUserMigrationsResponse>(req, "PreviewPGUserMigrations")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口PurgeHTTPServiceCache为异步操作，清除指定环境下 HTTPService 域名的缓存，操作不可逆，仅影响指定 Domain 的缓存命中，不影响源站数据。用于清除HTTP访问服务域名缓存。支持刷新CDN和EO两种类型。清除缓存后会生成任务id，通过DescribeHTTPServiceCachePurgeTask传入任务id可查询任务进度和详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="PurgeHTTPServiceCacheRequest"/></param>
+        /// <returns><see cref="PurgeHTTPServiceCacheResponse"/></returns>
+        public Task<PurgeHTTPServiceCacheResponse> PurgeHTTPServiceCache(PurgeHTTPServiceCacheRequest req)
+        {
+            return InternalRequestAsync<PurgeHTTPServiceCacheResponse>(req, "PurgeHTTPServiceCache");
+        }
+
+        /// <summary>
+        /// 本接口PurgeHTTPServiceCache为异步操作，清除指定环境下 HTTPService 域名的缓存，操作不可逆，仅影响指定 Domain 的缓存命中，不影响源站数据。用于清除HTTP访问服务域名缓存。支持刷新CDN和EO两种类型。清除缓存后会生成任务id，通过DescribeHTTPServiceCachePurgeTask传入任务id可查询任务进度和详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="PurgeHTTPServiceCacheRequest"/></param>
+        /// <returns><see cref="PurgeHTTPServiceCacheResponse"/></returns>
+        public PurgeHTTPServiceCacheResponse PurgeHTTPServiceCacheSync(PurgeHTTPServiceCacheRequest req)
+        {
+            return InternalRequestAsync<PurgeHTTPServiceCacheResponse>(req, "PurgeHTTPServiceCache")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

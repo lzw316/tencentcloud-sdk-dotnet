@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1499</VersionPrefix>
+    <VersionPrefix>3.0.1503</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,10 @@
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\CloseDBProxyAddressRequest.cs" />
     <Compile Include="V20170312\Models\CloseDBProxyAddressResponse.cs" />
+    <Compile Include="V20170312\Models\CloseMem0ServiceRequest.cs" />
+    <Compile Include="V20170312\Models\CloseMem0ServiceResponse.cs" />
+    <Compile Include="V20170312\Models\ClosePostgRESTServiceRequest.cs" />
+    <Compile Include="V20170312\Models\ClosePostgRESTServiceResponse.cs" />
     <Compile Include="V20170312\Models\CreateAccountRequest.cs" />
     <Compile Include="V20170312\Models\CreateAccountResponse.cs" />
     <Compile Include="V20170312\Models\CreateAuditLogFileRequest.cs" />
@@ -194,6 +198,8 @@
     <Compile Include="V20170312\Models\DescribeLogBackupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeMaintainTimeWindowRequest.cs" />
     <Compile Include="V20170312\Models\DescribeMaintainTimeWindowResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeMem0ServiceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeMem0ServiceResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeParameterTemplateAttributesRequest.cs" />
@@ -202,6 +208,8 @@
     <Compile Include="V20170312\Models\DescribeParameterTemplatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeParamsEventRequest.cs" />
     <Compile Include="V20170312\Models\DescribeParamsEventResponse.cs" />
+    <Compile Include="V20170312\Models\DescribePostgRESTServiceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribePostgRESTServiceResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="V20170312\Models\DescribeProductConfigResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReadOnlyGroupsRequest.cs" />
@@ -302,6 +310,10 @@
     <Compile Include="V20170312\Models\OpenAuditServiceResponse.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\OpenMem0ServiceRequest.cs" />
+    <Compile Include="V20170312\Models\OpenMem0ServiceResponse.cs" />
+    <Compile Include="V20170312\Models\OpenPostgRESTServiceRequest.cs" />
+    <Compile Include="V20170312\Models\OpenPostgRESTServiceResponse.cs" />
     <Compile Include="V20170312\Models\ParamEntry.cs" />
     <Compile Include="V20170312\Models\ParamInfo.cs" />
     <Compile Include="V20170312\Models\ParamSpecRelation.cs" />

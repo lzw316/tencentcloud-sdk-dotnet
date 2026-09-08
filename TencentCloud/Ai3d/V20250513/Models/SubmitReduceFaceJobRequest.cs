@@ -25,22 +25,19 @@ namespace TencentCloud.Ai3d.V20250513.Models
     {
         
         /// <summary>
-        /// 源3D模型文件。其中参数 Type 和 Url 必填，参数 PreviewImageUrl 无意义，可忽略。
-        /// Type可选值：OBJ，GLB
+        /// <p>源3D模型文件。其中参数 Type 和 Url 必填，参数 PreviewImageUrl 无意义，可忽略。Type可选值：OBJ，GLB，FBX</p>
         /// </summary>
         [JsonProperty("File3D")]
         public File3D File3D{ get; set; }
 
         /// <summary>
-        /// 多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:
-        /// triangle:三角形面。
-        /// quadrilateral：四边形面。
+        /// <p>多边形类型，表示模型的表面由几边形网格构成，默认为triangle,参考值:<br>triangle:三角形面。<br>quadrilateral：四边形面。</p>
         /// </summary>
         [JsonProperty("PolygonType")]
         public string PolygonType{ get; set; }
 
         /// <summary>
-        /// 减面后面数档位类型，可选值：high，medium, low。
+        /// <p>减面后面数档位类型，可选值：high，medium, low。</p>
         /// </summary>
         [JsonProperty("FaceLevel")]
         public string FaceLevel{ get; set; }

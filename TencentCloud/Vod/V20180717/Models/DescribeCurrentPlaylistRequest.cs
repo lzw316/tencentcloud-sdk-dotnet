@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// <b>点播[应用](/document/product/266/14574) ID。</b>
+        /// <p><b>点播<a href="/document/product/266/14574">应用</a> ID。</b></p>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 轮播播单唯一标识。
+        /// <p>轮播播单唯一标识。</p>
         /// </summary>
         [JsonProperty("RoundPlayId")]
         public string RoundPlayId{ get; set; }
 
         /// <summary>
-        /// 返回的播放列表的长度。最大10，默认值为5。
+        /// <p>返回的播放列表的长度。最大10，默认值为5。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

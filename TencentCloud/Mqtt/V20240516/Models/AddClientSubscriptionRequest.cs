@@ -25,25 +25,25 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>实例ID</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 客户端id
+        /// <p>客户端id</p>
         /// </summary>
         [JsonProperty("ClientId")]
         public string ClientId{ get; set; }
 
         /// <summary>
-        /// 订阅
+        /// <p>订阅</p>
         /// </summary>
         [JsonProperty("TopicFilter")]
         public string TopicFilter{ get; set; }
 
         /// <summary>
-        /// 服务质量:0,1,2
+        /// <p>服务质量:0,1,2</p>
         /// </summary>
         [JsonProperty("Qos")]
         public string Qos{ get; set; }

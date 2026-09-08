@@ -25,7 +25,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 接入点
+        /// <p>接入点</p>
         /// </summary>
         [JsonProperty("Endpoints")]
         public MQTTEndpointItem[] Endpoints{ get; set; }

@@ -30,6 +30,12 @@ namespace TencentCloud.Ags.V20250920.Models
         [JsonProperty("WAAConfiguration")]
         public WAAConfiguration WAAConfiguration{ get; set; }
 
+        /// <summary>
+        /// <p>配置内置 OSWorld</p>
+        /// </summary>
+        [JsonProperty("OSWorldConfiguration")]
+        public OSWorldConfiguration OSWorldConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ags.V20250920.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "WAAConfiguration.", this.WAAConfiguration);
+            this.SetParamObj(map, prefix + "OSWorldConfiguration.", this.OSWorldConfiguration);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Thpc.V20230321
 
        private const string endpoint = "thpc.tencentcloudapi.com";
        private const string version = "2023-03-21";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1503";
 
         /// <summary>
         /// Client constructor.
@@ -439,6 +439,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMonitorStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterMonitorStatusResponse"/></returns>
+        public Task<DescribeClusterMonitorStatusResponse> DescribeClusterMonitorStatus(DescribeClusterMonitorStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMonitorStatusResponse>(req, "DescribeClusterMonitorStatus");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterMonitorStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterMonitorStatusResponse"/></returns>
+        public DescribeClusterMonitorStatusResponse DescribeClusterMonitorStatusSync(DescribeClusterMonitorStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeClusterMonitorStatusResponse>(req, "DescribeClusterMonitorStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterStorageOptionRequest"/></param>
@@ -762,6 +783,27 @@ namespace TencentCloud.Thpc.V20230321
         }
 
         /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="DisableClusterMonitorRequest"/></param>
+        /// <returns><see cref="DisableClusterMonitorResponse"/></returns>
+        public Task<DisableClusterMonitorResponse> DisableClusterMonitor(DisableClusterMonitorRequest req)
+        {
+            return InternalRequestAsync<DisableClusterMonitorResponse>(req, "DisableClusterMonitor");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="DisableClusterMonitorRequest"/></param>
+        /// <returns><see cref="DisableClusterMonitorResponse"/></returns>
+        public DisableClusterMonitorResponse DisableClusterMonitorSync(DisableClusterMonitorRequest req)
+        {
+            return InternalRequestAsync<DisableClusterMonitorResponse>(req, "DisableClusterMonitor")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口 (EnableClusterDedicatedProxy) 用于开启IDC集群的专线/VPN代理。
         /// 
         /// * 开启后，系统将自动创建VPC终端节点（EndPoint），实现IDC集群与云上VPC的网络互通。
@@ -787,6 +829,27 @@ namespace TencentCloud.Thpc.V20230321
         public EnableClusterDedicatedProxyResponse EnableClusterDedicatedProxySync(EnableClusterDedicatedProxyRequest req)
         {
             return InternalRequestAsync<EnableClusterDedicatedProxyResponse>(req, "EnableClusterDedicatedProxy")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="EnableClusterMonitorRequest"/></param>
+        /// <returns><see cref="EnableClusterMonitorResponse"/></returns>
+        public Task<EnableClusterMonitorResponse> EnableClusterMonitor(EnableClusterMonitorRequest req)
+        {
+            return InternalRequestAsync<EnableClusterMonitorResponse>(req, "EnableClusterMonitor");
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
+        /// </summary>
+        /// <param name="req"><see cref="EnableClusterMonitorRequest"/></param>
+        /// <returns><see cref="EnableClusterMonitorResponse"/></returns>
+        public EnableClusterMonitorResponse EnableClusterMonitorSync(EnableClusterMonitorRequest req)
+        {
+            return InternalRequestAsync<EnableClusterMonitorResponse>(req, "EnableClusterMonitor")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

@@ -25,14 +25,13 @@ namespace TencentCloud.Ams.V20201229.Models
     {
         
         /// <summary>
-        /// 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
-        /// <br>备注：查询接口单次最大查询量为**20条每次**。
+        /// <p>该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。<br><br>备注：查询接口单次最大查询量为<strong>20条每次</strong>。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 该布尔字段表示是否展示全部的音频片段，取值：True(展示全部的音频分片)、False(只展示命中审核规则的音频分片)；默认值为False。
+        /// <p>该布尔字段表示是否展示全部的音频片段，取值：True(展示全部的音频分片)、False(只展示命中审核规则的音频分片)；默认值为False。</p>
         /// </summary>
         [JsonProperty("ShowAllSegments")]
         public bool? ShowAllSegments{ get; set; }

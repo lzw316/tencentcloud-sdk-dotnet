@@ -28,7 +28,7 @@ namespace TencentCloud.Cls.V20201016
 
        private const string endpoint = "cls.tencentcloudapi.com";
        private const string version = "2020-10-16";
-       private const string sdkVersion = "SDK_NET_3.0.1501";
+       private const string sdkVersion = "SDK_NET_3.0.1503";
 
         /// <summary>
         /// Client constructor.
@@ -924,6 +924,48 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建工作区。
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceGraphRequest"/></param>
+        /// <returns><see cref="CreateResourceGraphResponse"/></returns>
+        public Task<CreateResourceGraphResponse> CreateResourceGraph(CreateResourceGraphRequest req)
+        {
+            return InternalRequestAsync<CreateResourceGraphResponse>(req, "CreateResourceGraph");
+        }
+
+        /// <summary>
+        /// 创建工作区。
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceGraphRequest"/></param>
+        /// <returns><see cref="CreateResourceGraphResponse"/></returns>
+        public CreateResourceGraphResponse CreateResourceGraphSync(CreateResourceGraphRequest req)
+        {
+            return InternalRequestAsync<CreateResourceGraphResponse>(req, "CreateResourceGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 接入指定云产品。EBPF 类产品需提供 EBPFCollectRule，API 类产品仅需 Product。
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="CreateResourceGraphProductIngestTaskResponse"/></returns>
+        public Task<CreateResourceGraphProductIngestTaskResponse> CreateResourceGraphProductIngestTask(CreateResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<CreateResourceGraphProductIngestTaskResponse>(req, "CreateResourceGraphProductIngestTask");
+        }
+
+        /// <summary>
+        /// 接入指定云产品。EBPF 类产品需提供 EBPFCollectRule，API 类产品仅需 Product。
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="CreateResourceGraphProductIngestTaskResponse"/></returns>
+        public CreateResourceGraphProductIngestTaskResponse CreateResourceGraphProductIngestTaskSync(CreateResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<CreateResourceGraphProductIngestTaskResponse>(req, "CreateResourceGraphProductIngestTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于创建aws导入任务
         /// </summary>
         /// <param name="req"><see cref="CreateS3RechargeRequest"/></param>
@@ -1760,6 +1802,48 @@ namespace TencentCloud.Cls.V20201016
         public DeleteRemoteWriteTaskResponse DeleteRemoteWriteTaskSync(DeleteRemoteWriteTaskRequest req)
         {
             return InternalRequestAsync<DeleteRemoteWriteTaskResponse>(req, "DeleteRemoteWriteTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除工作区。删除前需确认是否级联清理已接入的云产品（待产品确认）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceGraphRequest"/></param>
+        /// <returns><see cref="DeleteResourceGraphResponse"/></returns>
+        public Task<DeleteResourceGraphResponse> DeleteResourceGraph(DeleteResourceGraphRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceGraphResponse>(req, "DeleteResourceGraph");
+        }
+
+        /// <summary>
+        /// 删除工作区。删除前需确认是否级联清理已接入的云产品（待产品确认）。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceGraphRequest"/></param>
+        /// <returns><see cref="DeleteResourceGraphResponse"/></returns>
+        public DeleteResourceGraphResponse DeleteResourceGraphSync(DeleteResourceGraphRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceGraphResponse>(req, "DeleteResourceGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除产品接入任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="DeleteResourceGraphProductIngestTaskResponse"/></returns>
+        public Task<DeleteResourceGraphProductIngestTaskResponse> DeleteResourceGraphProductIngestTask(DeleteResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceGraphProductIngestTaskResponse>(req, "DeleteResourceGraphProductIngestTask");
+        }
+
+        /// <summary>
+        /// 删除产品接入任务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="DeleteResourceGraphProductIngestTaskResponse"/></returns>
+        public DeleteResourceGraphProductIngestTaskResponse DeleteResourceGraphProductIngestTaskSync(DeleteResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<DeleteResourceGraphProductIngestTaskResponse>(req, "DeleteResourceGraphProductIngestTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -3005,6 +3089,216 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphDetailResponse"/></returns>
+        public Task<DescribeResourceGraphDetailResponse> DescribeResourceGraphDetail(DescribeResourceGraphDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphDetailResponse>(req, "DescribeResourceGraphDetail");
+        }
+
+        /// <summary>
+        /// 查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphDetailResponse"/></returns>
+        public DescribeResourceGraphDetailResponse DescribeResourceGraphDetailSync(DescribeResourceGraphDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphDetailResponse>(req, "DescribeResourceGraphDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询资源图谱实体列表。Filters 支持  Product / EntityClassName / Keyword 过滤；TagFilter 由于结构特殊（key 单选 + values 多选）独立成字段。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphEntitiesRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphEntitiesResponse"/></returns>
+        public Task<DescribeResourceGraphEntitiesResponse> DescribeResourceGraphEntities(DescribeResourceGraphEntitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphEntitiesResponse>(req, "DescribeResourceGraphEntities");
+        }
+
+        /// <summary>
+        /// 分页查询资源图谱实体列表。Filters 支持  Product / EntityClassName / Keyword 过滤；TagFilter 由于结构特殊（key 单选 + values 多选）独立成字段。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphEntitiesRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphEntitiesResponse"/></returns>
+        public DescribeResourceGraphEntitiesResponse DescribeResourceGraphEntitiesSync(DescribeResourceGraphEntitiesRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphEntitiesResponse>(req, "DescribeResourceGraphEntities")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 以指定实体为中心，按 Direction（上/下游/全部）+ Hop（跳数）查询依赖拓扑，同时返回拓扑图（节点+边）、4 张卡片汇总、列表区数据、产品 tag 汇总。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphEntityDependencyRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphEntityDependencyResponse"/></returns>
+        public Task<DescribeResourceGraphEntityDependencyResponse> DescribeResourceGraphEntityDependency(DescribeResourceGraphEntityDependencyRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphEntityDependencyResponse>(req, "DescribeResourceGraphEntityDependency");
+        }
+
+        /// <summary>
+        /// 以指定实体为中心，按 Direction（上/下游/全部）+ Hop（跳数）查询依赖拓扑，同时返回拓扑图（节点+边）、4 张卡片汇总、列表区数据、产品 tag 汇总。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphEntityDependencyRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphEntityDependencyResponse"/></returns>
+        public DescribeResourceGraphEntityDependencyResponse DescribeResourceGraphEntityDependencySync(DescribeResourceGraphEntityDependencyRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphEntityDependencyResponse>(req, "DescribeResourceGraphEntityDependency")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询单个实体的完整详情，包含基本信息、动态属性、标签、关联主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphEntityDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphEntityDetailResponse"/></returns>
+        public Task<DescribeResourceGraphEntityDetailResponse> DescribeResourceGraphEntityDetail(DescribeResourceGraphEntityDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphEntityDetailResponse>(req, "DescribeResourceGraphEntityDetail");
+        }
+
+        /// <summary>
+        /// 查询单个实体的完整详情，包含基本信息、动态属性、标签、关联主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphEntityDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphEntityDetailResponse"/></returns>
+        public DescribeResourceGraphEntityDetailResponse DescribeResourceGraphEntityDetailSync(DescribeResourceGraphEntityDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphEntityDetailResponse>(req, "DescribeResourceGraphEntityDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源图谱失败详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphFailureDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphFailureDetailResponse"/></returns>
+        public Task<DescribeResourceGraphFailureDetailResponse> DescribeResourceGraphFailureDetail(DescribeResourceGraphFailureDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphFailureDetailResponse>(req, "DescribeResourceGraphFailureDetail");
+        }
+
+        /// <summary>
+        /// 查询资源图谱失败详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphFailureDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphFailureDetailResponse"/></returns>
+        public DescribeResourceGraphFailureDetailResponse DescribeResourceGraphFailureDetailSync(DescribeResourceGraphFailureDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphFailureDetailResponse>(req, "DescribeResourceGraphFailureDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询资源图谱失败详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphIngestTaskFailureDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphIngestTaskFailureDetailResponse"/></returns>
+        public Task<DescribeResourceGraphIngestTaskFailureDetailResponse> DescribeResourceGraphIngestTaskFailureDetail(DescribeResourceGraphIngestTaskFailureDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphIngestTaskFailureDetailResponse>(req, "DescribeResourceGraphIngestTaskFailureDetail");
+        }
+
+        /// <summary>
+        /// 查询资源图谱失败详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphIngestTaskFailureDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphIngestTaskFailureDetailResponse"/></returns>
+        public DescribeResourceGraphIngestTaskFailureDetailResponse DescribeResourceGraphIngestTaskFailureDetailSync(DescribeResourceGraphIngestTaskFailureDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphIngestTaskFailureDetailResponse>(req, "DescribeResourceGraphIngestTaskFailureDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphProductIngestTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphProductIngestTaskDetailResponse"/></returns>
+        public Task<DescribeResourceGraphProductIngestTaskDetailResponse> DescribeResourceGraphProductIngestTaskDetail(DescribeResourceGraphProductIngestTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphProductIngestTaskDetailResponse>(req, "DescribeResourceGraphProductIngestTaskDetail");
+        }
+
+        /// <summary>
+        /// 查询单个云产品接入的详情，包含基本信息、实例选择、eBPF 采集规则和关联的日志主题。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphProductIngestTaskDetailRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphProductIngestTaskDetailResponse"/></returns>
+        public DescribeResourceGraphProductIngestTaskDetailResponse DescribeResourceGraphProductIngestTaskDetailSync(DescribeResourceGraphProductIngestTaskDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphProductIngestTaskDetailResponse>(req, "DescribeResourceGraphProductIngestTaskDetail")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询云产品接入列表，返回顶部 4 张卡片汇总 + 列表行。支持按 Status / CollectMethod / Product / Name 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphProductIngestTaskListRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphProductIngestTaskListResponse"/></returns>
+        public Task<DescribeResourceGraphProductIngestTaskListResponse> DescribeResourceGraphProductIngestTaskList(DescribeResourceGraphProductIngestTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphProductIngestTaskListResponse>(req, "DescribeResourceGraphProductIngestTaskList");
+        }
+
+        /// <summary>
+        /// 分页查询云产品接入列表，返回顶部 4 张卡片汇总 + 列表行。支持按 Status / CollectMethod / Product / Name 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphProductIngestTaskListRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphProductIngestTaskListResponse"/></returns>
+        public DescribeResourceGraphProductIngestTaskListResponse DescribeResourceGraphProductIngestTaskListSync(DescribeResourceGraphProductIngestTaskListRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphProductIngestTaskListResponse>(req, "DescribeResourceGraphProductIngestTaskList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 资源图谱tke集群接入状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphTkeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphTkeClusterStatusResponse"/></returns>
+        public Task<DescribeResourceGraphTkeClusterStatusResponse> DescribeResourceGraphTkeClusterStatus(DescribeResourceGraphTkeClusterStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphTkeClusterStatusResponse>(req, "DescribeResourceGraphTkeClusterStatus");
+        }
+
+        /// <summary>
+        /// 资源图谱tke集群接入状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphTkeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphTkeClusterStatusResponse"/></returns>
+        public DescribeResourceGraphTkeClusterStatusResponse DescribeResourceGraphTkeClusterStatusSync(DescribeResourceGraphTkeClusterStatusRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphTkeClusterStatusResponse>(req, "DescribeResourceGraphTkeClusterStatus")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 分页查询工作区列表，支持按 WorkAreaId / Name / Region 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphsResponse"/></returns>
+        public Task<DescribeResourceGraphsResponse> DescribeResourceGraphs(DescribeResourceGraphsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphsResponse>(req, "DescribeResourceGraphs");
+        }
+
+        /// <summary>
+        /// 分页查询工作区列表，支持按 WorkAreaId / Name / Region 过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGraphsRequest"/></param>
+        /// <returns><see cref="DescribeResourceGraphsResponse"/></returns>
+        public DescribeResourceGraphsResponse DescribeResourceGraphsSync(DescribeResourceGraphsRequest req)
+        {
+            return InternalRequestAsync<DescribeResourceGraphsResponse>(req, "DescribeResourceGraphs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于获取cos导入配置
         /// </summary>
         /// <param name="req"><see cref="DescribeS3RechargesRequest"/></param>
@@ -4017,6 +4311,69 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 编辑工作区基本信息。支持改名（仍需保持租户内唯一）和修改描述，主题地域 Region 不可修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceGraphRequest"/></param>
+        /// <returns><see cref="ModifyResourceGraphResponse"/></returns>
+        public Task<ModifyResourceGraphResponse> ModifyResourceGraph(ModifyResourceGraphRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceGraphResponse>(req, "ModifyResourceGraph");
+        }
+
+        /// <summary>
+        /// 编辑工作区基本信息。支持改名（仍需保持租户内唯一）和修改描述，主题地域 Region 不可修改。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceGraphRequest"/></param>
+        /// <returns><see cref="ModifyResourceGraphResponse"/></returns>
+        public ModifyResourceGraphResponse ModifyResourceGraphSync(ModifyResourceGraphRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceGraphResponse>(req, "ModifyResourceGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改资源图谱实体与日志主题关系
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceGraphEntityTopicsRelationRequest"/></param>
+        /// <returns><see cref="ModifyResourceGraphEntityTopicsRelationResponse"/></returns>
+        public Task<ModifyResourceGraphEntityTopicsRelationResponse> ModifyResourceGraphEntityTopicsRelation(ModifyResourceGraphEntityTopicsRelationRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceGraphEntityTopicsRelationResponse>(req, "ModifyResourceGraphEntityTopicsRelation");
+        }
+
+        /// <summary>
+        /// 修改资源图谱实体与日志主题关系
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceGraphEntityTopicsRelationRequest"/></param>
+        /// <returns><see cref="ModifyResourceGraphEntityTopicsRelationResponse"/></returns>
+        public ModifyResourceGraphEntityTopicsRelationResponse ModifyResourceGraphEntityTopicsRelationSync(ModifyResourceGraphEntityTopicsRelationRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceGraphEntityTopicsRelationResponse>(req, "ModifyResourceGraphEntityTopicsRelation")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 编辑已接入云产品的实例选择、eBPF 规则、日志主题配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="ModifyResourceGraphProductIngestTaskResponse"/></returns>
+        public Task<ModifyResourceGraphProductIngestTaskResponse> ModifyResourceGraphProductIngestTask(ModifyResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceGraphProductIngestTaskResponse>(req, "ModifyResourceGraphProductIngestTask");
+        }
+
+        /// <summary>
+        /// 编辑已接入云产品的实例选择、eBPF 规则、日志主题配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="ModifyResourceGraphProductIngestTaskResponse"/></returns>
+        public ModifyResourceGraphProductIngestTaskResponse ModifyResourceGraphProductIngestTaskSync(ModifyResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<ModifyResourceGraphProductIngestTaskResponse>(req, "ModifyResourceGraphProductIngestTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口用于修改aws导入任务
         /// </summary>
         /// <param name="req"><see cref="ModifyS3RechargeRequest"/></param>
@@ -4290,6 +4647,48 @@ namespace TencentCloud.Cls.V20201016
         public QueryRangeMetricResponse QueryRangeMetricSync(QueryRangeMetricRequest req)
         {
             return InternalRequestAsync<QueryRangeMetricResponse>(req, "QueryRangeMetric")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重试资源图谱
+        /// </summary>
+        /// <param name="req"><see cref="RetryResourceGraphRequest"/></param>
+        /// <returns><see cref="RetryResourceGraphResponse"/></returns>
+        public Task<RetryResourceGraphResponse> RetryResourceGraph(RetryResourceGraphRequest req)
+        {
+            return InternalRequestAsync<RetryResourceGraphResponse>(req, "RetryResourceGraph");
+        }
+
+        /// <summary>
+        /// 重试资源图谱
+        /// </summary>
+        /// <param name="req"><see cref="RetryResourceGraphRequest"/></param>
+        /// <returns><see cref="RetryResourceGraphResponse"/></returns>
+        public RetryResourceGraphResponse RetryResourceGraphSync(RetryResourceGraphRequest req)
+        {
+            return InternalRequestAsync<RetryResourceGraphResponse>(req, "RetryResourceGraph")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 重试初始化资源图谱工作区
+        /// </summary>
+        /// <param name="req"><see cref="RetryResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="RetryResourceGraphProductIngestTaskResponse"/></returns>
+        public Task<RetryResourceGraphProductIngestTaskResponse> RetryResourceGraphProductIngestTask(RetryResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<RetryResourceGraphProductIngestTaskResponse>(req, "RetryResourceGraphProductIngestTask");
+        }
+
+        /// <summary>
+        /// 重试初始化资源图谱工作区
+        /// </summary>
+        /// <param name="req"><see cref="RetryResourceGraphProductIngestTaskRequest"/></param>
+        /// <returns><see cref="RetryResourceGraphProductIngestTaskResponse"/></returns>
+        public RetryResourceGraphProductIngestTaskResponse RetryResourceGraphProductIngestTaskSync(RetryResourceGraphProductIngestTaskRequest req)
+        {
+            return InternalRequestAsync<RetryResourceGraphProductIngestTaskResponse>(req, "RetryResourceGraphProductIngestTask")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

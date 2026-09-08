@@ -25,13 +25,13 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 查询总数
+        /// <p>查询总数</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 主题列表
+        /// <p>主题列表</p>
         /// </summary>
         [JsonProperty("Data")]
         public MQTTTopicItem[] Data{ get; set; }

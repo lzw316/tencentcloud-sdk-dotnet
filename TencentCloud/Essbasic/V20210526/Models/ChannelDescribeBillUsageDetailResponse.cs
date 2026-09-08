@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 返回查询记录总数
+        /// <p>返回查询记录总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 消耗记录详情
+        /// <p>消耗记录详情</p>
         /// </summary>
         [JsonProperty("Details")]
         public ChannelBillUsageDetail[] Details{ get; set; }

@@ -102,6 +102,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Capability")]
         public string Capability{ get; set; }
 
+        /// <summary>
+        /// <p>端点路径</p>
+        /// </summary>
+        [JsonProperty("EndpointPath")]
+        public string EndpointPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "HealthCheckProtocol", this.HealthCheckProtocol);
             this.SetParamSimple(map, prefix + "CMRPrivateNetworkTunnelId", this.CMRPrivateNetworkTunnelId);
             this.SetParamSimple(map, prefix + "Capability", this.Capability);
+            this.SetParamSimple(map, prefix + "EndpointPath", this.EndpointPath);
         }
     }
 }

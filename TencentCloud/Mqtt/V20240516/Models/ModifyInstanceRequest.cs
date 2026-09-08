@@ -25,66 +25,61 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
+        /// <p>要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 要修改的备注信息，最多128个字符。
+        /// <p>要修改的备注信息，最多128个字符。</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 需要变更的配置规格
-        /// 基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。
+        /// <p>需要变更的配置规格<br>基础版和专业版集群不能升配到铂金版规格，铂金版集群不能降配至基础版和增强版规格。</p>
         /// </summary>
         [JsonProperty("SkuCode")]
         public string SkuCode{ get; set; }
 
         /// <summary>
-        /// 客户端证书注册方式：
-        /// JITP：自动注册
-        /// API：手动通过API注册
+        /// <p>客户端证书注册方式：<br>JITP：自动注册<br>API：手动通过API注册</p>
         /// </summary>
         [JsonProperty("DeviceCertificateProvisionType")]
         public string DeviceCertificateProvisionType{ get; set; }
 
         /// <summary>
-        /// 自动注册证书是否自动激活
+        /// <p>自动注册证书是否自动激活</p>
         /// </summary>
         [JsonProperty("AutomaticActivation")]
         public bool? AutomaticActivation{ get; set; }
 
         /// <summary>
-        /// 授权策略开关
+        /// <p>授权策略开关</p>
         /// </summary>
         [JsonProperty("AuthorizationPolicy")]
         public bool? AuthorizationPolicy{ get; set; }
 
         /// <summary>
-        /// 是否使用默认的服务端证书
+        /// <p>是否使用默认的服务端证书</p>
         /// </summary>
         [JsonProperty("UseDefaultServerCert")]
         public bool? UseDefaultServerCert{ get; set; }
 
         /// <summary>
-        /// TLS：单向认证
-        /// mTLS；双向认证
-        /// BYOC：一机一证
+        /// <p>TLS：单向认证<br>mTLS；双向认证<br>BYOC：一机一证</p>
         /// </summary>
         [JsonProperty("X509Mode")]
         public string X509Mode{ get; set; }
 
         /// <summary>
-        /// 单客户端消息收发限速单位 条/秒
+        /// <p>单客户端消息收发限速单位 条/秒</p>
         /// </summary>
         [JsonProperty("MessageRate")]
         public long? MessageRate{ get; set; }

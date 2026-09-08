@@ -25,82 +25,88 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 投递规则ID
+        /// <p>投递规则ID</p>
         /// </summary>
         [JsonProperty("ConsumerId")]
         public string ConsumerId{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// <p>日志主题ID</p>
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 投递任务是否生效
+        /// <p>投递任务是否生效</p>
         /// </summary>
         [JsonProperty("Effective")]
         public bool? Effective{ get; set; }
 
         /// <summary>
-        /// CKafka的描述
+        /// <p>CKafka的描述</p>
         /// </summary>
         [JsonProperty("Ckafka")]
         public Ckafka Ckafka{ get; set; }
 
         /// <summary>
-        /// 是否投递日志的元数据信息
+        /// <p>是否投递日志的元数据信息</p>
         /// </summary>
         [JsonProperty("NeedContent")]
         public bool? NeedContent{ get; set; }
 
         /// <summary>
-        /// 如果需要投递元数据信息，元数据信息的描述
+        /// <p>如果需要投递元数据信息，元数据信息的描述</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Content")]
         public ConsumerContent Content{ get; set; }
 
         /// <summary>
-        /// 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+        /// <p>压缩方式[0:NONE；2:SNAPPY；3:LZ4]</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Compression")]
         public long? Compression{ get; set; }
 
         /// <summary>
-        /// 投递任务创建毫秒时间戳
+        /// <p>投递任务创建毫秒时间戳</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 角色访问描述名 [创建角色](https://cloud.tencent.com/document/product/598/19381)	
+        /// <p>角色访问描述名 <a href="https://cloud.tencent.com/document/product/598/19381">创建角色</a></p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RoleArn")]
         public string RoleArn{ get; set; }
 
         /// <summary>
-        /// 外部ID
+        /// <p>外部ID</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalId")]
         public string ExternalId{ get; set; }
 
         /// <summary>
-        /// 任务运行状态。支持`0`,`1`,`2` - `0`: 停止 - `1`: 运行中 - `2`: 异常	
+        /// <p>任务运行状态。支持<code>0</code>,<code>1</code>,<code>2</code> - <code>0</code>: 停止 - <code>1</code>: 运行中 - <code>2</code>: 异常</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskStatus")]
         public ulong? TaskStatus{ get; set; }
 
         /// <summary>
-        /// 高级配置
+        /// <p>高级配置</p>
         /// </summary>
         [JsonProperty("AdvancedConfig")]
         public AdvancedConsumerConfiguration AdvancedConfig{ get; set; }
+
+        /// <summary>
+        /// <p>日志预过滤-数据写入 ckafka 的原始数据进行预过滤处理</p>
+        /// </summary>
+        [JsonProperty("DSLFilter")]
+        public string DSLFilter{ get; set; }
 
 
         /// <summary>
@@ -120,6 +126,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamObj(map, prefix + "AdvancedConfig.", this.AdvancedConfig);
+            this.SetParamSimple(map, prefix + "DSLFilter", this.DSLFilter);
         }
     }
 }

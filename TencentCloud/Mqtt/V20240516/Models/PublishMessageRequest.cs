@@ -25,46 +25,43 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+        /// <p>腾讯云MQTT实例ID，从 <a href="https://cloud.tencent.com/document/api/1778/111029">DescribeInstanceList</a>接口或控制台获得。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码
+        /// <p>消息负载 Payload，是消息的实际内容，需要按 encoding 指定的编码方式进行编码</p>
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
 
         /// <summary>
-        /// 消息目的主题，该参数与 TargetClientId 二选一
+        /// <p>消息目的主题，该参数与 TargetClientId 二选一</p>
         /// </summary>
         [JsonProperty("TargetTopic")]
         public string TargetTopic{ get; set; }
 
         /// <summary>
-        /// 消息目的客户端 ID，该参数与 TargetTopic 二选一
+        /// <p>消息目的客户端 ID，该参数与 TargetTopic 二选一</p>
         /// </summary>
         [JsonProperty("TargetClientId")]
         public string TargetClientId{ get; set; }
 
         /// <summary>
-        /// 消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）
+        /// <p>消息 payload 编码，可选 plain 或 base64，默认为 plain（即不编码）</p>
         /// </summary>
         [JsonProperty("Encoding")]
         public string Encoding{ get; set; }
 
         /// <summary>
-        /// 消息的服务质量等级，默认为 1
-        /// QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。
-        /// QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。
-        /// QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。
+        /// <p>消息的服务质量等级，默认为 1<br>QoS 0（至多一次）消息发送后，不保证接收方一定收到，也不要求接收方确认。<br>QoS 1（至少一次）消息至少被接收方成功接收一次，但可能重复。<br>QoS 2（恰好一次）消息确保被接收方接收且仅接收一次，无重复。</p>
         /// </summary>
         [JsonProperty("Qos")]
         public long? Qos{ get; set; }
 
         /// <summary>
-        /// 是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true
+        /// <p>是否为保留消息，默认为 false，且仅支持发布到主题的消息设置为 true</p>
         /// </summary>
         [JsonProperty("Retain")]
         public bool? Retain{ get; set; }

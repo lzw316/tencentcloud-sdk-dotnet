@@ -25,25 +25,25 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+        /// <p>应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc</p>
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 用户 ID，该值必须与 ClientData 字段中 Uid 的值一致
+        /// <p>用户 ID</p>
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
 
         /// <summary>
-        /// 用户签名数据，必填字段，为标准 JSON 格式
+        /// <p>用户签名数据</p>
         /// </summary>
         [JsonProperty("ClientData")]
         public string ClientData{ get; set; }
 
         /// <summary>
-        /// 有效期，单位秒，不超过 1 小时
+        /// <p>有效期，单位秒，不超过 1 小时</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public long? ExpiredTime{ get; set; }

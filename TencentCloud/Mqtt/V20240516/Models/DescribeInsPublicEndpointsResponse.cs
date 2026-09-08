@@ -25,36 +25,31 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 接入点
+        /// <p>接入点</p>
         /// </summary>
         [JsonProperty("Endpoints")]
         public MQTTEndpointItem[] Endpoints{ get; set; }
 
         /// <summary>
-        /// 实例id
+        /// <p>实例id</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 带宽，单位Mbps
+        /// <p>带宽，单位Mbps</p>
         /// </summary>
         [JsonProperty("Bandwidth")]
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 公网访问规则
+        /// <p>公网访问规则</p>
         /// </summary>
         [JsonProperty("Rules")]
         public PublicAccessRule[] Rules{ get; set; }
 
         /// <summary>
-        /// 公网状态：
-        ///     NORMAL-正常
-        ///     CLOSING-关闭中
-        ///     MODIFYING-修改中
-        ///     CREATING-开启中
-        ///     CLOSE-关闭
+        /// <p>公网状态：<br>    NORMAL-正常<br>    CLOSING-关闭中<br>    MODIFYING-修改中<br>    CREATING-开启中<br>    CLOSE-关闭</p>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

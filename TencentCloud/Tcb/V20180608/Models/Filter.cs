@@ -25,13 +25,13 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 需要过滤的字段。过滤条件数量限制为10。
+        /// <p>需要过滤的字段。过滤条件数量限制为10。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 字段的过滤值。
+        /// <p>字段的过滤值。</p>
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

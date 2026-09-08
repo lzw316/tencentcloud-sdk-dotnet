@@ -48,6 +48,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
+        /// <summary>
+        /// <p>其他信息</p>
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamArraySimple(map, prefix + "TargetText.", this.TargetText);
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
         }
     }
 }

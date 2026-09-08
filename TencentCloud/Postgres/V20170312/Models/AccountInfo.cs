@@ -25,61 +25,64 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID，形如postgres-lnp6j617
+        /// <p>实例ID，形如postgres-lnp6j617</p>
         /// </summary>
         [JsonProperty("DBInstanceId")]
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 账号
+        /// <p>账号</p>
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 账号备注
+        /// <p>账号备注</p>
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+        /// <p>账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 账号创建时间
+        /// <p>账号创建时间</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 账号最后一次更新时间
+        /// <p>账号最后一次更新时间</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 账号密码最近一次修改时间。
-        /// 
-        /// 此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00
-        /// 同时仅通过云API或者管控控制台修改密码，才会更新该字段。
+        /// <p>账号密码最近一次修改时间。</p><p>此字段只在2025-10-31后才生效，之前无论是否修改密码，该值统一为默认值：0000-00-00 00:00:00<br>同时仅通过云API或者管控控制台修改密码，才会更新该字段。</p>
         /// </summary>
         [JsonProperty("PasswordUpdateTime")]
         public string PasswordUpdateTime{ get; set; }
 
         /// <summary>
-        /// 账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。
+        /// <p>账号类型。支持normal、tencentDBSuper。normal指代普通用户，tencentDBSuper为拥有pg_tencentdb_superuser角色的账号。</p>
         /// </summary>
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
         /// <summary>
-        /// 用户账号是否启用CAM验证
+        /// <p>用户账号是否启用CAM验证</p>
         /// </summary>
         [JsonProperty("OpenCam")]
         public bool? OpenCam{ get; set; }
+
+        /// <summary>
+        /// <p>该账号实际加入了哪些预设角色</p>
+        /// </summary>
+        [JsonProperty("PGRoles")]
+        public string[] PGRoles{ get; set; }
 
 
         /// <summary>
@@ -96,6 +99,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "PasswordUpdateTime", this.PasswordUpdateTime);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "OpenCam", this.OpenCam);
+            this.SetParamArraySimple(map, prefix + "PGRoles.", this.PGRoles);
         }
     }
 }

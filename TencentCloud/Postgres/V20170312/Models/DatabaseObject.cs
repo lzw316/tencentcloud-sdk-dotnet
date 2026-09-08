@@ -25,31 +25,31 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。
+        /// <p>支持使用的数据库对象类型有：account,database,schema,sequence,procedure,type,function,table,view,matview,column。</p>
         /// </summary>
         [JsonProperty("ObjectType")]
         public string ObjectType{ get; set; }
 
         /// <summary>
-        /// 所描述的数据库对象名称
+        /// <p>所描述的数据库对象名称，或者当ModifyType为grantRole / revokeRole时，必须等于顶层UserName</p>
         /// </summary>
         [JsonProperty("ObjectName")]
         public string ObjectName{ get; set; }
 
         /// <summary>
-        /// 所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。
+        /// <p>所要描述的数据库对象，所属的数据库名称。当描述对象类型不为database时，此参数必选。</p>
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。
+        /// <p>所要描述的数据库对象，所属的模式名称。当描述对象不为database、schema时，此参数必选。</p>
         /// </summary>
         [JsonProperty("SchemaName")]
         public string SchemaName{ get; set; }
 
         /// <summary>
-        /// 所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。
+        /// <p>所要描述的数据库对象，所属的表名称。当描述的对象类型为column时，此参数必填。</p>
         /// </summary>
         [JsonProperty("TableName")]
         public string TableName{ get; set; }

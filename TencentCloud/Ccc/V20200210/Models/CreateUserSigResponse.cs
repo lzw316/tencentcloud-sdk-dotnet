@@ -25,7 +25,7 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 签名结果
+        /// <p>签名结果</p>
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }

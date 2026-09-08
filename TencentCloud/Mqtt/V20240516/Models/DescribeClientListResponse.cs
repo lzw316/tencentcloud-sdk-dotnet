@@ -25,7 +25,7 @@ namespace TencentCloud.Mqtt.V20240516.Models
     {
         
         /// <summary>
-        /// 客户端列表
+        /// <p>客户端列表</p>
         /// </summary>
         [JsonProperty("Clients")]
         public MQTTClientInfo[] Clients{ get; set; }

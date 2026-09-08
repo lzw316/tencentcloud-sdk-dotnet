@@ -25,13 +25,13 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 变量的名称
+        /// <p>变量的名称</p>
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 变量的值
+        /// <p>变量的值</p>
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

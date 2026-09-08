@@ -28,7 +28,7 @@ namespace TencentCloud.Oceanus.V20190422
 
        private const string endpoint = "oceanus.tencentcloudapi.com";
        private const string version = "2019-04-22";
-       private const string sdkVersion = "SDK_NET_3.0.1491";
+       private const string sdkVersion = "SDK_NET_3.0.1503";
 
         /// <summary>
         /// Client constructor.
@@ -575,6 +575,27 @@ namespace TencentCloud.Oceanus.V20190422
         public DescribeJobConfigsResponse DescribeJobConfigsSync(DescribeJobConfigsRequest req)
         {
             return InternalRequestAsync<DescribeJobConfigsResponse>(req, "DescribeJobConfigs")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 显示flink作业的Dag图，以及算子、subtask等信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDetailRequest"/></param>
+        /// <returns><see cref="DescribeJobDetailResponse"/></returns>
+        public Task<DescribeJobDetailResponse> DescribeJobDetail(DescribeJobDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDetailResponse>(req, "DescribeJobDetail");
+        }
+
+        /// <summary>
+        /// 显示flink作业的Dag图，以及算子、subtask等信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobDetailRequest"/></param>
+        /// <returns><see cref="DescribeJobDetailResponse"/></returns>
+        public DescribeJobDetailResponse DescribeJobDetailSync(DescribeJobDetailRequest req)
+        {
+            return InternalRequestAsync<DescribeJobDetailResponse>(req, "DescribeJobDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

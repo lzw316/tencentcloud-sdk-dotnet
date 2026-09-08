@@ -25,14 +25,14 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 头像
+        /// <p>头像</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PortraitImage")]
         public string PortraitImage{ get; set; }
 
         /// <summary>
-        /// 头像坐标
+        /// <p>头像坐标</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageCoordinates")]

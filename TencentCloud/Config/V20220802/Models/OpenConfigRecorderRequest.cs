@@ -24,12 +24,19 @@ namespace TencentCloud.Config.V20220802.Models
     public class OpenConfigRecorderRequest : AbstractModel
     {
         
+        /// <summary>
+        /// <p>1:从控制中心调用</p>
+        /// </summary>
+        [JsonProperty("FromMode")]
+        public ulong? FromMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FromMode", this.FromMode);
         }
     }
 }

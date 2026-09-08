@@ -60,6 +60,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("Title")]
         public string Title{ get; set; }
 
+        /// <summary>
+        /// <p>额外信息</p>
+        /// </summary>
+        [JsonProperty("Extra")]
+        public string Extra{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamArraySimple(map, prefix + "ImageUrlList.", this.ImageUrlList);
             this.SetParamSimple(map, prefix + "TextContent", this.TextContent);
             this.SetParamSimple(map, prefix + "Title", this.Title);
+            this.SetParamSimple(map, prefix + "Extra", this.Extra);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("PartitionId")]
         public string PartitionId{ get; set; }
 
+        /// <summary>
+        /// 获取offset方式。 0 表示 fetch_offset，1 表示 list_offset
+        /// </summary>
+        [JsonProperty("OffsetType")]
+        public long? OffsetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "PartitionId", this.PartitionId);
+            this.SetParamSimple(map, prefix + "OffsetType", this.OffsetType);
         }
     }
 }

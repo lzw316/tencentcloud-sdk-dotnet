@@ -54,6 +54,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("JsonType")]
         public long? JsonType{ get; set; }
 
+        /// <summary>
+        /// <p>数值类型自动转换开关</p><p>枚举值：</p><ul><li>true： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）会被自动转换为数值类型（int / float）。</li><li>false： JSON 结构中第一层级的 value 中的数字字符串（如 &quot;123&quot; ）为字符串。</li></ul><p>默认值：false</p>
+        /// </summary>
+        [JsonProperty("AutoConvertNumber")]
+        public bool? AutoConvertNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
             this.SetParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
             this.SetParamSimple(map, prefix + "JsonType", this.JsonType);
+            this.SetParamSimple(map, prefix + "AutoConvertNumber", this.AutoConvertNumber);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1501</VersionPrefix>
+    <VersionPrefix>3.0.1503</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -176,6 +176,10 @@
     <Compile Include="V20201016\Models\CreateRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateRemoteWriteTaskRequest.cs" />
     <Compile Include="V20201016\Models\CreateRemoteWriteTaskResponse.cs" />
+    <Compile Include="V20201016\Models\CreateResourceGraphProductIngestTaskRequest.cs" />
+    <Compile Include="V20201016\Models\CreateResourceGraphProductIngestTaskResponse.cs" />
+    <Compile Include="V20201016\Models\CreateResourceGraphRequest.cs" />
+    <Compile Include="V20201016\Models\CreateResourceGraphResponse.cs" />
     <Compile Include="V20201016\Models\CreateS3RechargeRequest.cs" />
     <Compile Include="V20201016\Models\CreateS3RechargeResponse.cs" />
     <Compile Include="V20201016\Models\CreateScheduledSqlRequest.cs" />
@@ -269,6 +273,10 @@
     <Compile Include="V20201016\Models\DeleteRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\DeleteRemoteWriteTaskRequest.cs" />
     <Compile Include="V20201016\Models\DeleteRemoteWriteTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteResourceGraphProductIngestTaskRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteResourceGraphProductIngestTaskResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteResourceGraphRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteResourceGraphResponse.cs" />
     <Compile Include="V20201016\Models\DeleteS3RechargeRequest.cs" />
     <Compile Include="V20201016\Models\DeleteS3RechargeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteScheduledSqlRequest.cs" />
@@ -389,6 +397,26 @@
     <Compile Include="V20201016\Models\DescribeRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\DescribeRemoteWriteTasksRequest.cs" />
     <Compile Include="V20201016\Models\DescribeRemoteWriteTasksResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphDetailRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphDetailResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphEntitiesRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphEntitiesResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphEntityDependencyRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphEntityDependencyResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphEntityDetailRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphEntityDetailResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphFailureDetailRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphFailureDetailResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphIngestTaskFailureDetailRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphIngestTaskFailureDetailResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphProductIngestTaskDetailRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphProductIngestTaskDetailResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphProductIngestTaskListRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphProductIngestTaskListResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphTkeClusterStatusRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphTkeClusterStatusResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeResourceGraphsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeS3RechargesRequest.cs" />
     <Compile Include="V20201016\Models\DescribeS3RechargesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeScheduledSqlInfoRequest.cs" />
@@ -421,6 +449,12 @@
     <Compile Include="V20201016\Models\DlcPartitionInfo.cs" />
     <Compile Include="V20201016\Models\DlcTableInfo.cs" />
     <Compile Include="V20201016\Models\DynamicIndex.cs" />
+    <Compile Include="V20201016\Models\EBPFCollectFilters.cs" />
+    <Compile Include="V20201016\Models\EBPFCollectRule.cs" />
+    <Compile Include="V20201016\Models\EBPFDNSFilter.cs" />
+    <Compile Include="V20201016\Models\EBPFDestEndpointFilter.cs" />
+    <Compile Include="V20201016\Models\EBPFEndpoint.cs" />
+    <Compile Include="V20201016\Models\EBPFProcessNameFilter.cs" />
     <Compile Include="V20201016\Models\EnvInfo.cs" />
     <Compile Include="V20201016\Models\EsImportInfo.cs" />
     <Compile Include="V20201016\Models\EsInfo.cs" />
@@ -550,6 +584,12 @@
     <Compile Include="V20201016\Models\ModifyRecordingRuleYamlTaskResponse.cs" />
     <Compile Include="V20201016\Models\ModifyRemoteWriteTaskRequest.cs" />
     <Compile Include="V20201016\Models\ModifyRemoteWriteTaskResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyResourceGraphEntityTopicsRelationRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyResourceGraphEntityTopicsRelationResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyResourceGraphProductIngestTaskRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyResourceGraphProductIngestTaskResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyResourceGraphRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyResourceGraphResponse.cs" />
     <Compile Include="V20201016\Models\ModifyS3RechargeRequest.cs" />
     <Compile Include="V20201016\Models\ModifyS3RechargeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyScheduledSqlRequest.cs" />
@@ -590,6 +630,8 @@
     <Compile Include="V20201016\Models\PreviewKafkaRechargeRequest.cs" />
     <Compile Include="V20201016\Models\PreviewKafkaRechargeResponse.cs" />
     <Compile Include="V20201016\Models\PreviewLogStatistic.cs" />
+    <Compile Include="V20201016\Models\ProductIngestTaskDetail.cs" />
+    <Compile Include="V20201016\Models\ProductIngestTaskItem.cs" />
     <Compile Include="V20201016\Models\QueryMetricRequest.cs" />
     <Compile Include="V20201016\Models\QueryMetricResponse.cs" />
     <Compile Include="V20201016\Models\QueryRangeMetricRequest.cs" />
@@ -598,8 +640,17 @@
     <Compile Include="V20201016\Models\RecordingRuleTaskInfo.cs" />
     <Compile Include="V20201016\Models\RecordingRuleYamlTaskInfo.cs" />
     <Compile Include="V20201016\Models\Relabeling.cs" />
+    <Compile Include="V20201016\Models\RelationLogset.cs" />
+    <Compile Include="V20201016\Models\RelationTopic.cs" />
     <Compile Include="V20201016\Models\RemoteWriteAuthInfo.cs" />
     <Compile Include="V20201016\Models\RemoteWriteInfo.cs" />
+    <Compile Include="V20201016\Models\ResourceGraphDetailInfo.cs" />
+    <Compile Include="V20201016\Models\ResourceGraphEntityRelatedTopic.cs" />
+    <Compile Include="V20201016\Models\ResourceGraphTkeClusterInfo.cs" />
+    <Compile Include="V20201016\Models\RetryResourceGraphProductIngestTaskRequest.cs" />
+    <Compile Include="V20201016\Models\RetryResourceGraphProductIngestTaskResponse.cs" />
+    <Compile Include="V20201016\Models\RetryResourceGraphRequest.cs" />
+    <Compile Include="V20201016\Models\RetryResourceGraphResponse.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="V20201016\Models\RuleInfo.cs" />

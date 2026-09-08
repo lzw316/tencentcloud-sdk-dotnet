@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 总数
+        /// <p>总数</p>
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 消耗详情
+        /// <p>消耗详情</p>
         /// </summary>
         [JsonProperty("Details")]
         public BillUsageDetail[] Details{ get; set; }

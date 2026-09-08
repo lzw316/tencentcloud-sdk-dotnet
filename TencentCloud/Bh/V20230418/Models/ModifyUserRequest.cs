@@ -25,63 +25,61 @@ namespace TencentCloud.Bh.V20230418.Models
     {
         
         /// <summary>
-        /// 用户ID
+        /// <p>用户ID</p>
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 用户姓名，最大长度20个字符，不能包含空格
+        /// <p>用户姓名，最大长度20个字符，不能包含空格</p>
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
+        /// <p>按照&quot;国家地区代码|手机号&quot;的格式输入。如: &quot;+86|xxxxxxxx&quot;</p>
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 电子邮件
+        /// <p>电子邮件</p>
         /// </summary>
         [JsonProperty("Email")]
         public string Email{ get; set; }
 
         /// <summary>
-        /// 用户生效时间，如:"2021-09-22T00:00:00+00:00"
-        /// 生效、失效时间不填则用户长期有效
+        /// <p>用户生效时间，如:&quot;2021-09-22T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
         /// </summary>
         [JsonProperty("ValidateFrom")]
         public string ValidateFrom{ get; set; }
 
         /// <summary>
-        /// 用户失效时间，如:"2021-09-23T00:00:00+00:00"
-        /// 生效、失效时间不填则用户长期有效
+        /// <p>用户失效时间，如:&quot;2021-09-23T00:00:00+00:00&quot;<br>生效、失效时间不填则用户长期有效</p>
         /// </summary>
         [JsonProperty("ValidateTo")]
         public string ValidateTo{ get; set; }
 
         /// <summary>
-        /// 所属用户组ID集合
+        /// <p>所属用户组ID集合</p>
         /// </summary>
         [JsonProperty("GroupIdSet")]
         public ulong?[] GroupIdSet{ get; set; }
 
         /// <summary>
-        /// 认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0
+        /// <p>认证方式，0 - 本地，1 - LDAP，2 - OAuth 不传则默认为0</p>
         /// </summary>
         [JsonProperty("AuthType")]
         public ulong? AuthType{ get; set; }
 
         /// <summary>
-        /// 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
+        /// <p>访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问</p>
         /// </summary>
         [JsonProperty("ValidateTime")]
         public string ValidateTime{ get; set; }
 
         /// <summary>
-        /// 用户所属部门的ID，如1.2.3
+        /// <p>用户所属部门的ID，如1.2.3</p>
         /// </summary>
         [JsonProperty("DepartmentId")]
         public string DepartmentId{ get; set; }
