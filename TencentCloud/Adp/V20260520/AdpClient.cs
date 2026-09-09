@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1500";
+       private const string sdkVersion = "SDK_NET_3.0.1504";
 
         /// <summary>
         /// Client constructor.
@@ -54,7 +54,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 创建Agent
+        /// 复制 Agent（目前仅支持claw模式））
         /// </summary>
         /// <param name="req"><see cref="CopyAgentFromAppRequest"/></param>
         /// <returns><see cref="CopyAgentFromAppResponse"/></returns>
@@ -64,7 +64,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 创建Agent
+        /// 复制 Agent（目前仅支持claw模式））
         /// </summary>
         /// <param name="req"><see cref="CopyAgentFromAppRequest"/></param>
         /// <returns><see cref="CopyAgentFromAppResponse"/></returns>
@@ -155,6 +155,27 @@ namespace TencentCloud.Adp.V20260520
         public CreateAppTriggerResponse CreateAppTriggerSync(CreateAppTriggerRequest req)
         {
             return InternalRequestAsync<CreateAppTriggerResponse>(req, "CreateAppTrigger")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelRequest"/></param>
+        /// <returns><see cref="CreateChannelResponse"/></returns>
+        public Task<CreateChannelResponse> CreateChannel(CreateChannelRequest req)
+        {
+            return InternalRequestAsync<CreateChannelResponse>(req, "CreateChannel");
+        }
+
+        /// <summary>
+        /// 创建渠道（通过scene区分B端应用发布渠道与C端IM渠道）
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelRequest"/></param>
+        /// <returns><see cref="CreateChannelResponse"/></returns>
+        public CreateChannelResponse CreateChannelSync(CreateChannelRequest req)
+        {
+            return InternalRequestAsync<CreateChannelResponse>(req, "CreateChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -428,6 +449,27 @@ namespace TencentCloud.Adp.V20260520
         public DeleteAppTriggerResponse DeleteAppTriggerSync(DeleteAppTriggerRequest req)
         {
             return InternalRequestAsync<DeleteAppTriggerResponse>(req, "DeleteAppTrigger")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除渠道（通过scene区分场景）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteChannelRequest"/></param>
+        /// <returns><see cref="DeleteChannelResponse"/></returns>
+        public Task<DeleteChannelResponse> DeleteChannel(DeleteChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteChannelResponse>(req, "DeleteChannel");
+        }
+
+        /// <summary>
+        /// 删除渠道（通过scene区分场景）
+        /// </summary>
+        /// <param name="req"><see cref="DeleteChannelRequest"/></param>
+        /// <returns><see cref="DeleteChannelResponse"/></returns>
+        public DeleteChannelResponse DeleteChannelSync(DeleteChannelRequest req)
+        {
+            return InternalRequestAsync<DeleteChannelResponse>(req, "DeleteChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -827,6 +869,48 @@ namespace TencentCloud.Adp.V20260520
         public DescribeAuditLogMetaResponse DescribeAuditLogMetaSync(DescribeAuditLogMetaRequest req)
         {
             return InternalRequestAsync<DescribeAuditLogMetaResponse>(req, "DescribeAuditLogMeta")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取渠道详情（scene区分场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelRequest"/></param>
+        /// <returns><see cref="DescribeChannelResponse"/></returns>
+        public Task<DescribeChannelResponse> DescribeChannel(DescribeChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelResponse>(req, "DescribeChannel");
+        }
+
+        /// <summary>
+        /// 获取渠道详情（scene区分场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelRequest"/></param>
+        /// <returns><see cref="DescribeChannelResponse"/></returns>
+        public DescribeChannelResponse DescribeChannelSync(DescribeChannelRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelResponse>(req, "DescribeChannel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 获取渠道列表（scene区分场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelListRequest"/></param>
+        /// <returns><see cref="DescribeChannelListResponse"/></returns>
+        public Task<DescribeChannelListResponse> DescribeChannelList(DescribeChannelListRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelListResponse>(req, "DescribeChannelList");
+        }
+
+        /// <summary>
+        /// 获取渠道列表（scene区分场景）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelListRequest"/></param>
+        /// <returns><see cref="DescribeChannelListResponse"/></returns>
+        public DescribeChannelListResponse DescribeChannelListSync(DescribeChannelListRequest req)
+        {
+            return InternalRequestAsync<DescribeChannelListResponse>(req, "DescribeChannelList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1436,6 +1520,27 @@ namespace TencentCloud.Adp.V20260520
         public ModifyAppTriggerResponse ModifyAppTriggerSync(ModifyAppTriggerRequest req)
         {
             return InternalRequestAsync<ModifyAppTriggerResponse>(req, "ModifyAppTrigger")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改渠道（支持修改备注与企微机器人渠道回调机器人ID）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChannelRequest"/></param>
+        /// <returns><see cref="ModifyChannelResponse"/></returns>
+        public Task<ModifyChannelResponse> ModifyChannel(ModifyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyChannelResponse>(req, "ModifyChannel");
+        }
+
+        /// <summary>
+        /// 修改渠道（支持修改备注与企微机器人渠道回调机器人ID）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChannelRequest"/></param>
+        /// <returns><see cref="ModifyChannelResponse"/></returns>
+        public ModifyChannelResponse ModifyChannelSync(ModifyChannelRequest req)
+        {
+            return InternalRequestAsync<ModifyChannelResponse>(req, "ModifyChannel")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

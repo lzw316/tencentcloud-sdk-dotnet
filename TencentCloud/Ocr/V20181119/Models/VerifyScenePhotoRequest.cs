@@ -42,6 +42,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
+        /// <summary>
+        /// <p>推理 Prompt 模板，默认使用 VLM 对图片进行理解推理，同时支持使用 ${变量名} 进行推理。传入该参数即开启推理流程。</p><p>入参限制：长度限制：1–2000 字符</p>
+        /// </summary>
+        [JsonProperty("ReasoningPrompt")]
+        public string ReasoningPrompt{ get; set; }
+
+        /// <summary>
+        /// <p>推理输出配置。当 ReasoningPrompt 传入时建议同步传入，未传入时使用默认配置（OutputMode=enum, EnumValues=[&quot;true&quot;,&quot;false&quot;], EnableImageInput=true）。</p>
+        /// </summary>
+        [JsonProperty("ReasoningConfig")]
+        public ReasoningConfig ReasoningConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "ReasoningPrompt", this.ReasoningPrompt);
+            this.SetParamObj(map, prefix + "ReasoningConfig.", this.ReasoningConfig);
         }
     }
 }

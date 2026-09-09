@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StepExpand : AbstractModel
+    public class CreateChannelRequest : AbstractModel
     {
         
         /// <summary>
-        /// 标题
+        /// <p>应用业务ID</p>
         /// </summary>
-        [JsonProperty("Title")]
-        public string Title{ get; set; }
+        [JsonProperty("AppId")]
+        public string AppId{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// <p>渠道规格（场景/类型/名称/备注/配置，必填）</p>
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// cellid数组
-        /// </summary>
-        [JsonProperty("CellIds")]
-        public string[] CellIds{ get; set; }
+        [JsonProperty("Spec")]
+        public ChannelSpec Spec{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Title", this.Title);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamArraySimple(map, prefix + "CellIds.", this.CellIds);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamObj(map, prefix + "Spec.", this.Spec);
         }
     }
 }

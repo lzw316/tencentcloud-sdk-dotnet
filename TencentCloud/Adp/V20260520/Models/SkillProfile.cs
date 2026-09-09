@@ -25,52 +25,58 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 创建时间（Unix秒）
+        /// <p>创建时间（Unix秒）</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 创建者
+        /// <p>创建者</p>
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// Skill 描述
+        /// <p>Skill 描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// Skill 展示描述
+        /// <p>Skill 展示描述</p>
         /// </summary>
         [JsonProperty("DisplayDescription")]
         public string DisplayDescription{ get; set; }
 
         /// <summary>
-        /// Skill 展示名称
+        /// <p>Skill 展示名称</p>
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// Skill 图标
+        /// <p>Skill 图标</p>
         /// </summary>
         [JsonProperty("IconUrl")]
         public string IconUrl{ get; set; }
 
         /// <summary>
-        /// Skill 名称
+        /// <p>Skill 名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 更新时间（Unix秒）
+        /// <p>更新时间（Unix秒）</p>
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// <p>空间</p>
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "IconUrl", this.IconUrl);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
         }
     }
 }

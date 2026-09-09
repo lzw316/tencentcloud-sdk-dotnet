@@ -25,13 +25,13 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 工作空间 SpaceKey
+        /// <p>工作空间 SpaceKey</p>
         /// </summary>
         [JsonProperty("SpaceKey")]
         public string SpaceKey{ get; set; }
 
         /// <summary>
-        /// 工作空间名称
+        /// <p>工作空间名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

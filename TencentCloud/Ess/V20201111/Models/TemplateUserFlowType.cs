@@ -25,28 +25,34 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 合同类型id
+        /// <p>合同类型id</p>
         /// </summary>
         [JsonProperty("UserFlowTypeId")]
         public string UserFlowTypeId{ get; set; }
 
         /// <summary>
-        /// 合同类型名称
+        /// <p>合同类型名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 合同类型的具体描述
+        /// <p>合同类型的具体描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 每个合同类型绑定的模板数量
+        /// <p>每个合同类型绑定的模板数量</p>
         /// </summary>
         [JsonProperty("TemplateNum")]
         public long? TemplateNum{ get; set; }
+
+        /// <summary>
+        /// <p>自定义合同类型状态</p><p>枚举值：</p><ul><li>0： 未启用</li><li>1： 启用</li></ul>
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "TemplateNum", this.TemplateNum);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

@@ -115,7 +115,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string ChargeType{ get; set; }
 
         /// <summary>
-        /// <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>privatelink： 四层网络联通，放通SSH 通路</li><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：privatelink</p>
+        /// <p>访问主机的网络模式</p><p>枚举值：</p><ul><li>cross_tenant_eni： 三层网络联通，双网卡模式</li></ul><p>默认值：默认值为：cross_tenant_eni</p><p>原 privatelink 访问主机的网络模式已下线。</p>
         /// </summary>
         [JsonProperty("NetworkMode")]
         public string NetworkMode{ get; set; }

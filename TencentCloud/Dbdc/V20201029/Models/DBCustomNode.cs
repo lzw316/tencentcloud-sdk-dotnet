@@ -202,6 +202,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("DisasterRecoverGroupId")]
         public string DisasterRecoverGroupId{ get; set; }
 
+        /// <summary>
+        /// <p>节点最新进行中的任务类型</p><p>枚举值：</p><ul><li>add-nodes-to-cluster： 添加节点到集群</li><li>remove-nodes-from-cluster： 从集群中移除节点</li><li>modify-nodes-attributes： 修改节点属性</li><li>modify-nodes-drg： 修改节点置放群组</li></ul>
+        /// </summary>
+        [JsonProperty("LatestRunningTaskType")]
+        public string LatestRunningTaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +243,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "EniIP", this.EniIP);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "DisasterRecoverGroupId", this.DisasterRecoverGroupId);
+            this.SetParamSimple(map, prefix + "LatestRunningTaskType", this.LatestRunningTaskType);
         }
     }
 }

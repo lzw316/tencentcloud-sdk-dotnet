@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Task : AbstractModel
+    public class SkillCorpShareConfig : AbstractModel
     {
         
         /// <summary>
-        /// 任务ID
+        /// <table><tbody><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>SHARE_SCOPE_TYPE_UNSPECIFIED</td><td>0</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ALL</td><td>1</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_ACCOUNT</td><td>2</td><td></td></tr><tr><td>SHARE_SCOPE_TYPE_SPACE</td><td>3</td><td></td></tr></tbody></table><p>枚举值：</p><ul><li>0： 未指定</li><li>1： 全企业共享</li><li>3： 按空间共享</li></ul>
         /// </summary>
-        [JsonProperty("Id")]
-        public long? Id{ get; set; }
+        [JsonProperty("ShareScope")]
+        public long? ShareScope{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// <p>共享范围信息，仅支持空间；StrId 为空间ID，Name 为空间名称</p>
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 任务状态
-        /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
-
-        /// <summary>
-        /// 任务步骤列表
-        /// </summary>
-        [JsonProperty("StepInfoList")]
-        public StepInfo[] StepInfoList{ get; set; }
+        [JsonProperty("ShareScopeList")]
+        public Identity[] ShareScopeList{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamArrayObj(map, prefix + "StepInfoList.", this.StepInfoList);
+            this.SetParamSimple(map, prefix + "ShareScope", this.ShareScope);
+            this.SetParamArrayObj(map, prefix + "ShareScopeList.", this.ShareScopeList);
         }
     }
 }

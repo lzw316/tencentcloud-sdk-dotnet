@@ -31,6 +31,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string NodeId{ get; set; }
 
         /// <summary>
+        /// <p>节点 ID 列表</p><p>入参限制：最多支持 100 个</p><p>NodeId 和 NodeIds 必须传一个且不能同时传</p>
+        /// </summary>
+        [JsonProperty("NodeIds")]
+        public string[] NodeIds{ get; set; }
+
+        /// <summary>
         /// <p>主机 HostName</p><p>入参限制：参数设置规则参见：<a href="https://cloud.tencent.com/document/api/1322/132929">创建 DB Custom 节点接口</a>的 HostName 参数说明。</p><p>注意：节点在没有加入到集群之前才支持修改主机 HostName。</p>
         /// </summary>
         [JsonProperty("HostName")]
@@ -55,6 +61,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamArraySimple(map, prefix + "NodeIds.", this.NodeIds);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
             this.SetParamSimple(map, prefix + "AutoReboot", this.AutoReboot);

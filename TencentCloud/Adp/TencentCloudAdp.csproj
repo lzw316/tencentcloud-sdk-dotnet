@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1500</VersionPrefix>
+    <VersionPrefix>3.0.1504</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,8 @@
     <Compile Include="V20260520\Models\AgentModelConfig.cs" />
     <Compile Include="V20260520\Models\AgentPlugin.cs" />
     <Compile Include="V20260520\Models\AgentPluginConfig.cs" />
+    <Compile Include="V20260520\Models\AgentPluginCredentialConfig.cs" />
+    <Compile Include="V20260520\Models\AgentPluginCredentialParam.cs" />
     <Compile Include="V20260520\Models\AgentPluginParameter.cs" />
     <Compile Include="V20260520\Models\AgentProfile.cs" />
     <Compile Include="V20260520\Models\AgentRelease.cs" />
@@ -124,8 +126,11 @@
     <Compile Include="V20260520\Models\BasicBilling.cs" />
     <Compile Include="V20260520\Models\BillingAttribute.cs" />
     <Compile Include="V20260520\Models\CallSource.cs" />
+    <Compile Include="V20260520\Models\CallbackConfig.cs" />
     <Compile Include="V20260520\Models\CamAuthConfig.cs" />
     <Compile Include="V20260520\Models\CategoryPermission.cs" />
+    <Compile Include="V20260520\Models\Channel.cs" />
+    <Compile Include="V20260520\Models\ChannelSpec.cs" />
     <Compile Include="V20260520\Models\ClawAgentAgentTeamConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentConfig.cs" />
     <Compile Include="V20260520\Models\ClawAgentLongMemoryConfig.cs" />
@@ -161,6 +166,8 @@
     <Compile Include="V20260520\Models\CreateAppResponse.cs" />
     <Compile Include="V20260520\Models\CreateAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\CreateAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\CreateChannelRequest.cs" />
+    <Compile Include="V20260520\Models\CreateChannelResponse.cs" />
     <Compile Include="V20260520\Models\CreateConversationRequest.cs" />
     <Compile Include="V20260520\Models\CreateConversationResponse.cs" />
     <Compile Include="V20260520\Models\CreateMsgRecordCategoryRequest.cs" />
@@ -189,6 +196,8 @@
     <Compile Include="V20260520\Models\DeleteAppResponse.cs" />
     <Compile Include="V20260520\Models\DeleteAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\DeleteAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\DeleteChannelRequest.cs" />
+    <Compile Include="V20260520\Models\DeleteChannelResponse.cs" />
     <Compile Include="V20260520\Models\DeleteConversationRequest.cs" />
     <Compile Include="V20260520\Models\DeleteConversationResponse.cs" />
     <Compile Include="V20260520\Models\DeleteMsgRecordCategoryRequest.cs" />
@@ -227,6 +236,10 @@
     <Compile Include="V20260520\Models\DescribeAuditLogListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeAuditLogMetaRequest.cs" />
     <Compile Include="V20260520\Models\DescribeAuditLogMetaResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeChannelListRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeChannelListResponse.cs" />
+    <Compile Include="V20260520\Models\DescribeChannelRequest.cs" />
+    <Compile Include="V20260520\Models\DescribeChannelResponse.cs" />
     <Compile Include="V20260520\Models\DescribeConcurrencyLimitDetailListRequest.cs" />
     <Compile Include="V20260520\Models\DescribeConcurrencyLimitDetailListResponse.cs" />
     <Compile Include="V20260520\Models\DescribeConsumptionDetailListRequest.cs" />
@@ -277,6 +290,7 @@
     <Compile Include="V20260520\Models\DescribeVariableResponse.cs" />
     <Compile Include="V20260520\Models\DialogCustomConfig.cs" />
     <Compile Include="V20260520\Models\DigitalHumanConfig.cs" />
+    <Compile Include="V20260520\Models\DingTalkChannelConfig.cs" />
     <Compile Include="V20260520\Models\DuplexBilling.cs" />
     <Compile Include="V20260520\Models\ExecuteConfig.cs" />
     <Compile Include="V20260520\Models\FavoritePluginRequest.cs" />
@@ -291,6 +305,8 @@
     <Compile Include="V20260520\Models\InputBoxConfig.cs" />
     <Compile Include="V20260520\Models\IntentAchievementInfo.cs" />
     <Compile Include="V20260520\Models\IntervalSchedule.cs" />
+    <Compile Include="V20260520\Models\LarkChannelConfig.cs" />
+    <Compile Include="V20260520\Models\LineChannelConfig.cs" />
     <Compile Include="V20260520\Models\MCPPluginConfig.cs" />
     <Compile Include="V20260520\Models\MCPToolConfig.cs" />
     <Compile Include="V20260520\Models\MCPToolMeta.cs" />
@@ -316,6 +332,8 @@
     <Compile Include="V20260520\Models\ModifyAppResponse.cs" />
     <Compile Include="V20260520\Models\ModifyAppTriggerRequest.cs" />
     <Compile Include="V20260520\Models\ModifyAppTriggerResponse.cs" />
+    <Compile Include="V20260520\Models\ModifyChannelRequest.cs" />
+    <Compile Include="V20260520\Models\ModifyChannelResponse.cs" />
     <Compile Include="V20260520\Models\ModifyConversationRequest.cs" />
     <Compile Include="V20260520\Models\ModifyConversationResponse.cs" />
     <Compile Include="V20260520\Models\ModifyMsgRecordCategoryRequest.cs" />
@@ -374,6 +392,7 @@
     <Compile Include="V20260520\Models\SkillAnalysisInfo.cs" />
     <Compile Include="V20260520\Models\SkillCategory.cs" />
     <Compile Include="V20260520\Models\SkillClassification.cs" />
+    <Compile Include="V20260520\Models\SkillCorpShareConfig.cs" />
     <Compile Include="V20260520\Models\SkillDetail.cs" />
     <Compile Include="V20260520\Models\SkillNotice.cs" />
     <Compile Include="V20260520\Models\SkillProfile.cs" />
@@ -387,6 +406,7 @@
     <Compile Include="V20260520\Models\SpecialStatusInfo.cs" />
     <Compile Include="V20260520\Models\SupportedFileType.cs" />
     <Compile Include="V20260520\Models\SystemVariable.cs" />
+    <Compile Include="V20260520\Models\TelegramChannelConfig.cs" />
     <Compile Include="V20260520\Models\ThinkModel.cs" />
     <Compile Include="V20260520\Models\TimeRange.cs" />
     <Compile Include="V20260520\Models\TimerPushConfig.cs" />
@@ -404,9 +424,17 @@
     <Compile Include="V20260520\Models\UnfavoriteSkillResponse.cs" />
     <Compile Include="V20260520\Models\UsageDetail.cs" />
     <Compile Include="V20260520\Models\UsageSummary.cs" />
+    <Compile Include="V20260520\Models\UserAgentReference.cs" />
     <Compile Include="V20260520\Models\Variable.cs" />
     <Compile Include="V20260520\Models\ViewScope.cs" />
     <Compile Include="V20260520\Models\VoiceConfig.cs" />
+    <Compile Include="V20260520\Models\WechatChannelConfig.cs" />
+    <Compile Include="V20260520\Models\WechatClawBotChannelConfig.cs" />
+    <Compile Include="V20260520\Models\WechatCustomerServiceChannelConfig.cs" />
+    <Compile Include="V20260520\Models\WecomAppChannelConfig.cs" />
+    <Compile Include="V20260520\Models\WecomRobotCallbackAccess.cs" />
+    <Compile Include="V20260520\Models\WecomRobotChannelConfig.cs" />
+    <Compile Include="V20260520\Models\WecomRobotWebsocketAccess.cs" />
     <Compile Include="V20260520\Models\WeeklySchedule.cs" />
     <Compile Include="V20260520\Models\WeeklyTime.cs" />
   </ItemGroup>

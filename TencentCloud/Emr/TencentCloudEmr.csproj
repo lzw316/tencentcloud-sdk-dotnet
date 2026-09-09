@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1501</VersionPrefix>
+    <VersionPrefix>3.0.1504</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -82,6 +82,7 @@
     <Compile Include="V20190103\Models\ComponentBasicRestartInfo.cs" />
     <Compile Include="V20190103\Models\ComponentDeployInfo.cs" />
     <Compile Include="V20190103\Models\ComputeResourceAdvanceParams.cs" />
+    <Compile Include="V20190103\Models\ConfSubContext.cs" />
     <Compile Include="V20190103\Models\ConfigModifyInfoV2.cs" />
     <Compile Include="V20190103\Models\ConfigSetInfo.cs" />
     <Compile Include="V20190103\Models\Configuration.cs" />
@@ -146,6 +147,8 @@
     <Compile Include="V20190103\Models\DescribeEmrApplicationStaticsResponse.cs" />
     <Compile Include="V20190103\Models\DescribeEmrOverviewMetricsRequest.cs" />
     <Compile Include="V20190103\Models\DescribeEmrOverviewMetricsResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeExportConfsRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeExportConfsResponse.cs" />
     <Compile Include="V20190103\Models\DescribeGlobalConfigRequest.cs" />
     <Compile Include="V20190103\Models\DescribeGlobalConfigResponse.cs" />
     <Compile Include="V20190103\Models\DescribeGroupsSTDRequest.cs" />
@@ -236,6 +239,8 @@
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="V20190103\Models\EnableSparkAppMonitorInfo.cs" />
     <Compile Include="V20190103\Models\Execution.cs" />
+    <Compile Include="V20190103\Models\ExportConfContext.cs" />
+    <Compile Include="V20190103\Models\ExportConfMeta.cs" />
     <Compile Include="V20190103\Models\ExternalAccess.cs" />
     <Compile Include="V20190103\Models\ExternalService.cs" />
     <Compile Include="V20190103\Models\FairGlobalConfig.cs" />
@@ -320,6 +325,8 @@
     <Compile Include="V20190103\Models\ModifySLInstanceBasicResponse.cs" />
     <Compile Include="V20190103\Models\ModifySLInstanceRequest.cs" />
     <Compile Include="V20190103\Models\ModifySLInstanceResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyServiceParamsByExportConfsRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyServiceParamsByExportConfsResponse.cs" />
     <Compile Include="V20190103\Models\ModifyUserGroupRequest.cs" />
     <Compile Include="V20190103\Models\ModifyUserGroupResponse.cs" />
     <Compile Include="V20190103\Models\ModifyUserManagerPwdRequest.cs" />

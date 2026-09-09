@@ -28,7 +28,7 @@ namespace TencentCloud.Dataagent.V20250513
 
        private const string endpoint = "dataagent.tencentcloudapi.com";
        private const string version = "2025-05-13";
-       private const string sdkVersion = "SDK_NET_3.0.1491";
+       private const string sdkVersion = "SDK_NET_3.0.1504";
 
         /// <summary>
         /// Client constructor.
@@ -285,27 +285,6 @@ namespace TencentCloud.Dataagent.V20250513
         }
 
         /// <summary>
-        /// 获取用户会话记录详情列表
-        /// </summary>
-        /// <param name="req"><see cref="GetSessionDetailsRequest"/></param>
-        /// <returns><see cref="GetSessionDetailsResponse"/></returns>
-        public Task<GetSessionDetailsResponse> GetSessionDetails(GetSessionDetailsRequest req)
-        {
-            return InternalRequestAsync<GetSessionDetailsResponse>(req, "GetSessionDetails");
-        }
-
-        /// <summary>
-        /// 获取用户会话记录详情列表
-        /// </summary>
-        /// <param name="req"><see cref="GetSessionDetailsRequest"/></param>
-        /// <returns><see cref="GetSessionDetailsResponse"/></returns>
-        public GetSessionDetailsResponse GetSessionDetailsSync(GetSessionDetailsRequest req)
-        {
-            return InternalRequestAsync<GetSessionDetailsResponse>(req, "GetSessionDetails")
-                .ConfigureAwait(false).GetAwaiter().GetResult();
-        }
-
-        /// <summary>
         /// 查询上传任务
         /// </summary>
         /// <param name="req"><see cref="GetUploadJobDetailsRequest"/></param>
@@ -491,6 +470,27 @@ namespace TencentCloud.Dataagent.V20250513
         public QueryUserAuthorityResponse QueryUserAuthoritySync(QueryUserAuthorityRequest req)
         {
             return InternalRequestAsync<QueryUserAuthorityResponse>(req, "QueryUserAuthority")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询用户会话详情
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserSessionDetailRequest"/></param>
+        /// <returns><see cref="QueryUserSessionDetailResponse"/></returns>
+        public Task<QueryUserSessionDetailResponse> QueryUserSessionDetail(QueryUserSessionDetailRequest req)
+        {
+            return InternalRequestAsync<QueryUserSessionDetailResponse>(req, "QueryUserSessionDetail");
+        }
+
+        /// <summary>
+        /// 查询用户会话详情
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserSessionDetailRequest"/></param>
+        /// <returns><see cref="QueryUserSessionDetailResponse"/></returns>
+        public QueryUserSessionDetailResponse QueryUserSessionDetailSync(QueryUserSessionDetailRequest req)
+        {
+            return InternalRequestAsync<QueryUserSessionDetailResponse>(req, "QueryUserSessionDetail")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

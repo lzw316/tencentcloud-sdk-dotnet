@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1502";
+       private const string sdkVersion = "SDK_NET_3.0.1504";
 
         /// <summary>
         /// Client constructor.
@@ -401,7 +401,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建自定义错误页面。
+        /// 创建自定义响应页面。
         /// </summary>
         /// <param name="req"><see cref="CreateCustomizeErrorPageRequest"/></param>
         /// <returns><see cref="CreateCustomizeErrorPageResponse"/></returns>
@@ -411,7 +411,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 创建自定义错误页面。
+        /// 创建自定义响应页面。
         /// </summary>
         /// <param name="req"><see cref="CreateCustomizeErrorPageRequest"/></param>
         /// <returns><see cref="CreateCustomizeErrorPageResponse"/></returns>
@@ -4060,7 +4060,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改自定义错误页面。
+        /// 修改自定义响应页面。
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomErrorPageRequest"/></param>
         /// <returns><see cref="ModifyCustomErrorPageResponse"/></returns>
@@ -4070,7 +4070,7 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 修改自定义错误页面。
+        /// 修改自定义响应页面。
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomErrorPageRequest"/></param>
         /// <returns><see cref="ModifyCustomErrorPageResponse"/></returns>

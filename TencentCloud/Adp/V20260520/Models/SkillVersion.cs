@@ -25,65 +25,65 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 检测信息
+        /// <p>检测信息</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisInfo")]
         public SkillAnalysisInfo AnalysisInfo{ get; set; }
 
         /// <summary>
-        /// 当前生效版本号
+        /// <p>当前生效版本号</p>
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
 
         /// <summary>
-        /// 当前生效版本ID
+        /// <p>当前生效版本ID</p>
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
         /// <summary>
-        ///     Skill 版本发布流程状态：
-        ///       - 0 INITIALIZED      初始化（版本初始态）
-        ///       - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）
-        ///       - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）
-        ///       - 3 RELEASED         已发布
-        ///       - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史"不通过"语义）
-        ///     与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。
+        /// <p>Skill 版本发布流程状态：</p><pre><code>  - 0 INITIALIZED      初始化（版本初始态）  - 1 AUDITING         审核中（f_analysis_status ∈ {PENDING, RUNNING}）  - 2 PENDING_RELEASE  待发布（低/中风险，等用户确认上架）  - 3 RELEASED         已发布  - 4 UNRELEASED       未发布（HIGH / UNAVAILABLE / FAILED / 用户放弃，含历史&quot;不通过&quot;语义）与 SkillAnalysisStatus 解耦：前者是用户视角发布生命周期，后者是安全检测阶段。</code></pre>
         /// </summary>
         [JsonProperty("VersionStatus")]
         public long? VersionStatus{ get; set; }
 
         /// <summary>
-        /// Skill包的md5信息
+        /// <p>Skill包的md5信息</p>
         /// </summary>
         [JsonProperty("SkillMd5")]
         public string SkillMd5{ get; set; }
 
         /// <summary>
-        /// 版本包地址
+        /// <p>版本包地址</p>
         /// </summary>
         [JsonProperty("SkillUrl")]
         public string SkillUrl{ get; set; }
 
         /// <summary>
-        /// 版本创建时间（Unix秒）
+        /// <p>版本创建时间（Unix秒）</p>
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// skill md文档
+        /// <p>skill md文档</p>
         /// </summary>
         [JsonProperty("SkillMarkdownUrl")]
         public string SkillMarkdownUrl{ get; set; }
 
         /// <summary>
-        /// 版本变更说明
+        /// <p>版本变更说明</p>
         /// </summary>
         [JsonProperty("UpdateDesc")]
         public string UpdateDesc{ get; set; }
+
+        /// <summary>
+        /// <p>变更用户</p>
+        /// </summary>
+        [JsonProperty("Updater")]
+        public string Updater{ get; set; }
 
 
         /// <summary>
@@ -100,6 +100,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SkillMarkdownUrl", this.SkillMarkdownUrl);
             this.SetParamSimple(map, prefix + "UpdateDesc", this.UpdateDesc);
+            this.SetParamSimple(map, prefix + "Updater", this.Updater);
         }
     }
 }

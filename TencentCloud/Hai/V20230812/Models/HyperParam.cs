@@ -25,7 +25,7 @@ namespace TencentCloud.Hai.V20230812.Models
     {
         
         /// <summary>
-        /// HiCache缓存
+        /// <p>HiCache缓存</p>
         /// </summary>
         [JsonProperty("HiCache")]
         public HiCacheInfo HiCache{ get; set; }

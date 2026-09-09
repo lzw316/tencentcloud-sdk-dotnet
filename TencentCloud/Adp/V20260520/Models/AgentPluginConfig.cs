@@ -60,6 +60,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("OAuthConsent")]
         public long? OAuthConsent{ get; set; }
 
+        /// <summary>
+        /// <p>凭证配置</p>
+        /// </summary>
+        [JsonProperty("CredentialConfig")]
+        public AgentPluginCredentialConfig CredentialConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "EnableCamRoleAuth", this.EnableCamRoleAuth);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "OAuthConsent", this.OAuthConsent);
+            this.SetParamObj(map, prefix + "CredentialConfig.", this.CredentialConfig);
         }
     }
 }

@@ -28,7 +28,7 @@ namespace TencentCloud.Emr.V20190103
 
        private const string endpoint = "emr.tencentcloudapi.com";
        private const string version = "2019-01-03";
-       private const string sdkVersion = "SDK_NET_3.0.1501";
+       private const string sdkVersion = "SDK_NET_3.0.1504";
 
         /// <summary>
         /// Client constructor.
@@ -665,6 +665,27 @@ namespace TencentCloud.Emr.V20190103
         public DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetricsSync(DescribeEmrOverviewMetricsRequest req)
         {
             return InternalRequestAsync<DescribeEmrOverviewMetricsResponse>(req, "DescribeEmrOverviewMetrics")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询导出配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportConfsRequest"/></param>
+        /// <returns><see cref="DescribeExportConfsResponse"/></returns>
+        public Task<DescribeExportConfsResponse> DescribeExportConfs(DescribeExportConfsRequest req)
+        {
+            return InternalRequestAsync<DescribeExportConfsResponse>(req, "DescribeExportConfs");
+        }
+
+        /// <summary>
+        /// 查询导出配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExportConfsRequest"/></param>
+        /// <returns><see cref="DescribeExportConfsResponse"/></returns>
+        public DescribeExportConfsResponse DescribeExportConfsSync(DescribeExportConfsRequest req)
+        {
+            return InternalRequestAsync<DescribeExportConfsResponse>(req, "DescribeExportConfs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1836,6 +1857,27 @@ namespace TencentCloud.Emr.V20190103
         public ModifySLInstanceBasicResponse ModifySLInstanceBasicSync(ModifySLInstanceBasicRequest req)
         {
             return InternalRequestAsync<ModifySLInstanceBasicResponse>(req, "ModifySLInstanceBasic")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 配置导入下发
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceParamsByExportConfsRequest"/></param>
+        /// <returns><see cref="ModifyServiceParamsByExportConfsResponse"/></returns>
+        public Task<ModifyServiceParamsByExportConfsResponse> ModifyServiceParamsByExportConfs(ModifyServiceParamsByExportConfsRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceParamsByExportConfsResponse>(req, "ModifyServiceParamsByExportConfs");
+        }
+
+        /// <summary>
+        /// 配置导入下发
+        /// </summary>
+        /// <param name="req"><see cref="ModifyServiceParamsByExportConfsRequest"/></param>
+        /// <returns><see cref="ModifyServiceParamsByExportConfsResponse"/></returns>
+        public ModifyServiceParamsByExportConfsResponse ModifyServiceParamsByExportConfsSync(ModifyServiceParamsByExportConfsRequest req)
+        {
+            return InternalRequestAsync<ModifyServiceParamsByExportConfsResponse>(req, "ModifyServiceParamsByExportConfs")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

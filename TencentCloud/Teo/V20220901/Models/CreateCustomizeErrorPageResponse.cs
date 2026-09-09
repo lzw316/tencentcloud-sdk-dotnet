@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 页面 ID。
+        /// <p>自定义响应页面 ID。</p>
         /// </summary>
         [JsonProperty("PageId")]
         public string PageId{ get; set; }

@@ -315,6 +315,114 @@ namespace TencentCloud.Ioa.V20220601.Models
         [JsonProperty("DomainSuffix")]
         public string DomainSuffix{ get; set; }
 
+        /// <summary>
+        /// <p>连通性检查开关，0-关闭 1-开启，默认1(只支持32位)</p>
+        /// </summary>
+        [JsonProperty("ConnectivityCheckSwitch")]
+        public long? ConnectivityCheckSwitch{ get; set; }
+
+        /// <summary>
+        /// <p>连通性检查测试间隔数值，最小为1，默认1(只支持32位)</p>
+        /// </summary>
+        [JsonProperty("ConnectivityCheckInterval")]
+        public long? ConnectivityCheckInterval{ get; set; }
+
+        /// <summary>
+        /// <p>连通性检查测试间隔单位 minutes/hours/days，默认hours</p>
+        /// </summary>
+        [JsonProperty("ConnectivityCheckIntervalUnit")]
+        public string ConnectivityCheckIntervalUnit{ get; set; }
+
+        /// <summary>
+        /// <p>URL审计开关：0-关闭 1-开启，默认0</p>
+        /// </summary>
+        [JsonProperty("URLAuditState")]
+        public long? URLAuditState{ get; set; }
+
+        /// <summary>
+        /// <p>URL审计证书ID列表，多个用分号分隔</p>
+        /// </summary>
+        [JsonProperty("URLAuditId")]
+        public string URLAuditId{ get; set; }
+
+        /// <summary>
+        /// <p>URL审计路径，多个用分号分隔</p>
+        /// </summary>
+        [JsonProperty("URLPath")]
+        public string URLPath{ get; set; }
+
+        /// <summary>
+        /// <p>检测方式：0-未检测 1-主动 2-流量</p>
+        /// </summary>
+        [JsonProperty("ReachableType")]
+        public long? ReachableType{ get; set; }
+
+        /// <summary>
+        /// <p>API密钥名称</p>
+        /// </summary>
+        [JsonProperty("APISecretName")]
+        public string APISecretName{ get; set; }
+
+        /// <summary>
+        /// <p>API密钥Key</p>
+        /// </summary>
+        [JsonProperty("APISecretKey")]
+        public string APISecretKey{ get; set; }
+
+        /// <summary>
+        /// <p>是否为敏感资源：0-否 1-是</p>
+        /// </summary>
+        [JsonProperty("EnableSensitiveRes")]
+        public long? EnableSensitiveRes{ get; set; }
+
+        /// <summary>
+        /// <p>用户接入IP限制开关：0-不启用 1-启用</p>
+        /// </summary>
+        [JsonProperty("EnableIPPolicy")]
+        public long? EnableIPPolicy{ get; set; }
+
+        /// <summary>
+        /// <p>IP分组属性：0-白名单 1-黑名单</p>
+        /// </summary>
+        [JsonProperty("IPPolicyAttr")]
+        public long? IPPolicyAttr{ get; set; }
+
+        /// <summary>
+        /// <p>IP分组ID列表</p>
+        /// </summary>
+        [JsonProperty("IPPolicyIds")]
+        public long?[] IPPolicyIds{ get; set; }
+
+        /// <summary>
+        /// <p>IP分组名称（分号分隔）</p>
+        /// </summary>
+        [JsonProperty("IPPolicyNames")]
+        public string IPPolicyNames{ get; set; }
+
+        /// <summary>
+        /// <p>访问浏览器规则开关：0-不启用 1-启用</p>
+        /// </summary>
+        [JsonProperty("EnableUserAgent")]
+        public long? EnableUserAgent{ get; set; }
+
+        /// <summary>
+        /// <p>浏览器规则属性：0-白名单 1-黑名单</p>
+        /// </summary>
+        [JsonProperty("UserAgentAttr")]
+        public long? UserAgentAttr{ get; set; }
+
+        /// <summary>
+        /// <p>浏览器规则ID列表</p>
+        /// </summary>
+        [JsonProperty("UserAgentIds")]
+        public string[] UserAgentIds{ get; set; }
+
+        /// <summary>
+        /// <p>浏览器规则名称（分号分隔）</p>
+        /// </summary>
+        [JsonProperty("UserAgentNames")]
+        public string UserAgentNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -363,6 +471,24 @@ namespace TencentCloud.Ioa.V20220601.Models
             this.SetParamSimple(map, prefix + "WebGwNoAuth", this.WebGwNoAuth);
             this.SetParamSimple(map, prefix + "ConnectorGroupType", this.ConnectorGroupType);
             this.SetParamSimple(map, prefix + "DomainSuffix", this.DomainSuffix);
+            this.SetParamSimple(map, prefix + "ConnectivityCheckSwitch", this.ConnectivityCheckSwitch);
+            this.SetParamSimple(map, prefix + "ConnectivityCheckInterval", this.ConnectivityCheckInterval);
+            this.SetParamSimple(map, prefix + "ConnectivityCheckIntervalUnit", this.ConnectivityCheckIntervalUnit);
+            this.SetParamSimple(map, prefix + "URLAuditState", this.URLAuditState);
+            this.SetParamSimple(map, prefix + "URLAuditId", this.URLAuditId);
+            this.SetParamSimple(map, prefix + "URLPath", this.URLPath);
+            this.SetParamSimple(map, prefix + "ReachableType", this.ReachableType);
+            this.SetParamSimple(map, prefix + "APISecretName", this.APISecretName);
+            this.SetParamSimple(map, prefix + "APISecretKey", this.APISecretKey);
+            this.SetParamSimple(map, prefix + "EnableSensitiveRes", this.EnableSensitiveRes);
+            this.SetParamSimple(map, prefix + "EnableIPPolicy", this.EnableIPPolicy);
+            this.SetParamSimple(map, prefix + "IPPolicyAttr", this.IPPolicyAttr);
+            this.SetParamArraySimple(map, prefix + "IPPolicyIds.", this.IPPolicyIds);
+            this.SetParamSimple(map, prefix + "IPPolicyNames", this.IPPolicyNames);
+            this.SetParamSimple(map, prefix + "EnableUserAgent", this.EnableUserAgent);
+            this.SetParamSimple(map, prefix + "UserAgentAttr", this.UserAgentAttr);
+            this.SetParamArraySimple(map, prefix + "UserAgentIds.", this.UserAgentIds);
+            this.SetParamSimple(map, prefix + "UserAgentNames", this.UserAgentNames);
         }
     }
 }

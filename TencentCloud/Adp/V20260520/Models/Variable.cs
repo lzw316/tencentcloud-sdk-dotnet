@@ -43,7 +43,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// <p>模块类型。枚举值: 1:环境参数, 2:应用参数, 3:系统参数, -1:所有参数</p>
+        /// <p>变量模块类型</p><p>枚举值：</p><ul><li>0： API参数</li><li>1： 环境参数</li><li>2： 应用参数</li><li>3： 系统参数</li></ul>
         /// </summary>
         [JsonProperty("ModuleType")]
         public long? ModuleType{ get; set; }
@@ -78,6 +78,18 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("EndpointList")]
         public string[] EndpointList{ get; set; }
 
+        /// <summary>
+        /// <p>是否内置变量</p>
+        /// </summary>
+        [JsonProperty("IsBuiltin")]
+        public bool? IsBuiltin{ get; set; }
+
+        /// <summary>
+        /// <p>是否可注入到沙箱环境</p>
+        /// </summary>
+        [JsonProperty("EnableSandbox")]
+        public bool? EnableSandbox{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "VariableId", this.VariableId);
             this.SetParamSimple(map, prefix + "EnableEndpoints", this.EnableEndpoints);
             this.SetParamArraySimple(map, prefix + "EndpointList.", this.EndpointList);
+            this.SetParamSimple(map, prefix + "IsBuiltin", this.IsBuiltin);
+            this.SetParamSimple(map, prefix + "EnableSandbox", this.EnableSandbox);
         }
     }
 }

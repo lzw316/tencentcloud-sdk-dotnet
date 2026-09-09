@@ -286,6 +286,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string LatestOperationErrorMsg{ get; set; }
 
         /// <summary>
+        /// <p>实例是否开启巨型帧</p>
+        /// </summary>
+        [JsonProperty("EnableJumboFrame")]
+        public bool? EnableJumboFrame{ get; set; }
+
+        /// <summary>
         /// <p>自定义metadata，本参数对应创建 CVM时指定的Metadata 信息。<strong>注：内测中</strong>。</p>
         /// </summary>
         [JsonProperty("Metadata")]
@@ -357,6 +363,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DefaultLoginUser", this.DefaultLoginUser);
             this.SetParamSimple(map, prefix + "DefaultLoginPort", this.DefaultLoginPort);
             this.SetParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+            this.SetParamSimple(map, prefix + "EnableJumboFrame", this.EnableJumboFrame);
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamArraySimple(map, prefix + "PublicIPv6Addresses.", this.PublicIPv6Addresses);
             this.SetParamObj(map, prefix + "CpuTopology.", this.CpuTopology);

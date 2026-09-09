@@ -25,49 +25,49 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 实例 ID。可通过 [DescribeDiagDBInstances](https://cloud.tencent.com/document/api/1130/57798) 接口获取。
+        /// <p>实例 ID。可通过 <a href="https://cloud.tencent.com/document/api/1130/57798">DescribeDiagDBInstances</a> 接口获取。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 服务产品类型，支持值：mongodb
+        /// <p>服务产品类型，支持值：mongodb</p>
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 线程的ID，用于筛选线程列表。
+        /// <p>线程的ID，用于筛选线程列表。</p>
         /// </summary>
         [JsonProperty("ID")]
         public ulong? ID{ get; set; }
 
         /// <summary>
-        /// 线程的操作主机地址，用于筛选线程列表。
+        /// <p>线程的操作主机地址，用于筛选线程列表。</p>
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
         /// <summary>
-        /// 线程的操作数据库，用于筛选线程列表,如果是多个 使用 ','  分割
+        /// <p>线程的操作数据库，用于筛选线程列表,如果是多个 使用 &#39;,&#39;  分割</p>
         /// </summary>
         [JsonProperty("DB")]
         public string DB{ get; set; }
 
         /// <summary>
-        /// 命令类型 ,如果是多个 使用 ','  分割
+        /// <p>命令类型 ,如果是多个 使用 &#39;,&#39;  分割</p>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。
+        /// <p>线程的操作时长最小值，单位秒，用于筛选操作时长大于该值的线程列表。</p>
         /// </summary>
         [JsonProperty("Time")]
         public ulong? Time{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认20。
+        /// <p>返回数量，默认20。</p>
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

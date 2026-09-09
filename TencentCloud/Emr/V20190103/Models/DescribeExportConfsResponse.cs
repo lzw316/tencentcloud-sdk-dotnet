@@ -15,32 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSessionDetailsResponse : AbstractModel
+    public class DescribeExportConfsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 会话记录详情
+        /// <p>导出配置参数</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RecordList")]
-        public Record[] RecordList{ get; set; }
-
-        /// <summary>
-        /// 记录总数
-        /// </summary>
-        [JsonProperty("RecordCount")]
-        public long? RecordCount{ get; set; }
-
-        /// <summary>
-        /// 当前在运行的record信息
-        /// </summary>
-        [JsonProperty("RunRecord")]
-        public string RunRecord{ get; set; }
+        [JsonProperty("ExportConfParamList")]
+        public ExportConfMeta[] ExportConfParamList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +43,7 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "RecordList.", this.RecordList);
-            this.SetParamSimple(map, prefix + "RecordCount", this.RecordCount);
-            this.SetParamSimple(map, prefix + "RunRecord", this.RunRecord);
+            this.SetParamArrayObj(map, prefix + "ExportConfParamList.", this.ExportConfParamList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

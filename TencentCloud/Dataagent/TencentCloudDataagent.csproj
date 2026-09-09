@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8103C204-7789-3F5D-BD88-C493B239BF85}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1491</VersionPrefix>
+    <VersionPrefix>3.0.1504</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -76,8 +76,6 @@
     <Compile Include="V20250513\Models\GetKnowledgeBaseFileListResponse.cs" />
     <Compile Include="V20250513\Models\GetKnowledgeBaseListRequest.cs" />
     <Compile Include="V20250513\Models\GetKnowledgeBaseListResponse.cs" />
-    <Compile Include="V20250513\Models\GetSessionDetailsRequest.cs" />
-    <Compile Include="V20250513\Models\GetSessionDetailsResponse.cs" />
     <Compile Include="V20250513\Models\GetUploadJobDetailsRequest.cs" />
     <Compile Include="V20250513\Models\GetUploadJobDetailsResponse.cs" />
     <Compile Include="V20250513\Models\GetUserInstanceListRequest.cs" />
@@ -100,12 +98,11 @@
     <Compile Include="V20250513\Models\QueryModelsResponse.cs" />
     <Compile Include="V20250513\Models\QueryUserAuthorityRequest.cs" />
     <Compile Include="V20250513\Models\QueryUserAuthorityResponse.cs" />
-    <Compile Include="V20250513\Models\Record.cs" />
-    <Compile Include="V20250513\Models\StepExpand.cs" />
-    <Compile Include="V20250513\Models\StepInfo.cs" />
+    <Compile Include="V20250513\Models\QueryUserSessionDetailRequest.cs" />
+    <Compile Include="V20250513\Models\QueryUserSessionDetailResponse.cs" />
+    <Compile Include="V20250513\Models\RecordList.cs" />
     <Compile Include="V20250513\Models\StopChatAIRequest.cs" />
     <Compile Include="V20250513\Models\StopChatAIResponse.cs" />
-    <Compile Include="V20250513\Models\Task.cs" />
     <Compile Include="V20250513\Models\UploadAndCommitFileRequest.cs" />
     <Compile Include="V20250513\Models\UploadAndCommitFileResponse.cs" />
     <Compile Include="V20250513\Models\UploadJob.cs" />

@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dataagent.V20250513.Models
+namespace TencentCloud.Adp.V20260520.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSessionDetailsRequest : AbstractModel
+    public class LineChannelConfig : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// <p>LINE Channel Access Token</p>
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("AccessToken")]
+        public string AccessToken{ get; set; }
 
         /// <summary>
-        /// 会话ID
+        /// <p>LINE回调地址</p>
         /// </summary>
-        [JsonProperty("SessionId")]
-        public string SessionId{ get; set; }
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// <p>LINE Channel Secret</p>
+        /// </summary>
+        [JsonProperty("ChannelSecret")]
+        public string ChannelSecret{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Dataagent.V20250513.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "AccessToken", this.AccessToken);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "ChannelSecret", this.ChannelSecret);
         }
     }
 }

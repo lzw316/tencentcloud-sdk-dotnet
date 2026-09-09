@@ -31,10 +31,28 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
+        /// <p>集群 ID 列表</p><p>入参限制：最多支持 100 个</p><p>ClusterId 和 ClusterIds 必须传一个且不能同时传</p>
+        /// </summary>
+        [JsonProperty("ClusterIds")]
+        public string[] ClusterIds{ get; set; }
+
+        /// <summary>
         /// <p>是否启用集群删除保护</p><p>枚举值：</p><ul><li>true： 启用</li><li>false： 不启用</li></ul>
         /// </summary>
         [JsonProperty("DeletionProtection")]
         public bool? DeletionProtection{ get; set; }
+
+        /// <summary>
+        /// <p>集群名称</p><p>入参限制：最长128个字符</p>
+        /// </summary>
+        [JsonProperty("ClusterName")]
+        public string ClusterName{ get; set; }
+
+        /// <summary>
+        /// <p>集群描述</p><p>入参限制：最长200个字符</p>
+        /// </summary>
+        [JsonProperty("ClusterDescription")]
+        public string ClusterDescription{ get; set; }
 
 
         /// <summary>
@@ -43,7 +61,10 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
+            this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "ClusterDescription", this.ClusterDescription);
         }
     }
 }

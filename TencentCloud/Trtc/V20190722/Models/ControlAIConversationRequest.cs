@@ -25,28 +25,34 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 任务唯一标识
+        /// <p>任务唯一标识</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话
+        /// <p>控制命令，目前支持命令如下：- ServerPushText，服务端发送文本给AI机器人，AI机器人会播报该文本. - InvokeLLM，服务端发送文本给大模型，触发对话。- TransparentData，透传信息给客户端。</p>
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 服务端发送播报文本命令，当Command为ServerPushText时必填
+        /// <p>服务端发送播报文本命令，当Command为ServerPushText时必填</p>
         /// </summary>
         [JsonProperty("ServerPushText")]
         public ServerPushText ServerPushText{ get; set; }
 
         /// <summary>
-        /// 服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM="1"
+        /// <p>服务端发送命令主动请求大模型,当Command为InvokeLLM时会把content请求到大模型,头部增加X-Invoke-LLM=&quot;1&quot;</p>
         /// </summary>
         [JsonProperty("InvokeLLM")]
         public InvokeLLM InvokeLLM{ get; set; }
+
+        /// <summary>
+        /// <p>ai对话需要透传给客户端的信息</p>
+        /// </summary>
+        [JsonProperty("TransparentData")]
+        public TransparentData TransparentData{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
             this.SetParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
+            this.SetParamObj(map, prefix + "TransparentData.", this.TransparentData);
         }
     }
 }

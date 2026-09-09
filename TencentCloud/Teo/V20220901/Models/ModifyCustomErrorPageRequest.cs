@@ -25,37 +25,37 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 自定义错误页面 ID。
+        /// <p>自定义响应页面 ID。</p>
         /// </summary>
         [JsonProperty("PageId")]
         public string PageId{ get; set; }
 
         /// <summary>
-        /// 站点 ID。
+        /// <p>站点 ID。</p>
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 自定义错误页名称，名称为2 - 60个字符。
+        /// <p>自定义响应页面名称，名称为 2 - 60 个字符。</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 自定义错误页描述，描述内容不超过60个字符。
+        /// <p>自定义响应页面描述，描述内容不超过 60 个字符。</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 自定义错误页面类型，取值有：<li>text/html。 </li><li>application/json。</li><li>plain/text。</li><li>text/xml。</li>
+        /// <p>自定义响应页面类型，取值有：</p><ul><li>text/html</li><li>application/json</li><li>plain/text</li><li>text/xml</li><li>text/css</li><li>text/javascript</li><li>application/javascript</li><li>text/markdown</li></ul>
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
 
         /// <summary>
-        /// 自定义错误页面内容。内容不超过 2KB。
+        /// <p>自定义响应页面内容。内容不超过 16KB。</p>
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

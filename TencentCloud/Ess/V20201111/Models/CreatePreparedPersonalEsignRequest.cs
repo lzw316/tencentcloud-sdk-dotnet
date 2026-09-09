@@ -43,6 +43,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string SealName{ get; set; }
 
         /// <summary>
+        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
+        /// <summary>
         /// <p>执行本接口操作的员工信息。<br>注: <code>在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。</code></p>
         /// </summary>
         [JsonProperty("Operator")]
@@ -55,30 +61,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public string IdCardType{ get; set; }
 
         /// <summary>
-        /// <p>该字段已不再使用</p>
-        /// </summary>
-        [JsonProperty("SealImage")]
-        [System.Obsolete]
-        public string SealImage{ get; set; }
-
-        /// <summary>
-        /// <p>是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。</p>
-        /// </summary>
-        [JsonProperty("SealImageCompress")]
-        public bool? SealImageCompress{ get; set; }
-
-        /// <summary>
         /// <p>手机号码；当需要开通自动签时，该参数必传</p>
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }
 
         /// <summary>
-        /// <p>该字段已不再使用</p>
+        /// <p>印章图片文件 id<br>取值：<br>填写的FileId通过UploadFiles接口上传文件获取。</p>
         /// </summary>
-        [JsonProperty("EnableAutoSign")]
-        [System.Obsolete]
-        public bool? EnableAutoSign{ get; set; }
+        [JsonProperty("FileId")]
+        public string FileId{ get; set; }
 
         /// <summary>
         /// <p>印章颜色（参数ProcessSeal=true时生效）<br>默认值：BLACK黑色<br>取值:<br>BLACK 黑色,<br>RED 红色,<br>BLUE 蓝色。</p>
@@ -93,28 +85,38 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? ProcessSeal{ get; set; }
 
         /// <summary>
-        /// <p>印章图片文件 id<br>取值：<br>填写的FileId通过UploadFiles接口上传文件获取。</p>
-        /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
-
-        /// <summary>
-        /// <p>代理企业和员工的信息。<br>在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。</p>
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// <p>设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减</p>
-        /// </summary>
-        [JsonProperty("LicenseType")]
-        public long? LicenseType{ get; set; }
-
-        /// <summary>
         /// <p>自动签使用的场景值, 可以选择的场景值如下:</p><ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul><p>注: <code>不传默认为处方单场景，即E_PRESCRIPTION_AUTO_SIGN</code></p>
         /// </summary>
         [JsonProperty("SceneKey")]
         public string SceneKey{ get; set; }
+
+        /// <summary>
+        /// <p>该字段已不再使用，设置不生效。</p>
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        [System.Obsolete]
+        public long? LicenseType{ get; set; }
+
+        /// <summary>
+        /// <p>该字段已不再使用，请使用 FileId 参数代替。</p>
+        /// </summary>
+        [JsonProperty("SealImage")]
+        [System.Obsolete]
+        public string SealImage{ get; set; }
+
+        /// <summary>
+        /// <p>该字段已不再使用，设置不生效。</p>
+        /// </summary>
+        [JsonProperty("EnableAutoSign")]
+        [System.Obsolete]
+        public bool? EnableAutoSign{ get; set; }
+
+        /// <summary>
+        /// <p>该字段已不再使用，设置不生效。</p>
+        /// </summary>
+        [JsonProperty("SealImageCompress")]
+        [System.Obsolete]
+        public bool? SealImageCompress{ get; set; }
 
 
         /// <summary>
@@ -125,18 +127,18 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "UserName", this.UserName);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
             this.SetParamSimple(map, prefix + "SealName", this.SealName);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "IdCardType", this.IdCardType);
-            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
-            this.SetParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
-            this.SetParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
+            this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "SealColor", this.SealColor);
             this.SetParamSimple(map, prefix + "ProcessSeal", this.ProcessSeal);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamSimple(map, prefix + "SceneKey", this.SceneKey);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
+            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
+            this.SetParamSimple(map, prefix + "EnableAutoSign", this.EnableAutoSign);
+            this.SetParamSimple(map, prefix + "SealImageCompress", this.SealImageCompress);
         }
     }
 }

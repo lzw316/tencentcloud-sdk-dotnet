@@ -121,7 +121,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string BusinessLicense{ get; set; }
 
         /// <summary>
-        /// <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。</p>
+        /// <p>组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。    </p><p>入参限制：最大长度500个字符</p>
         /// </summary>
         [JsonProperty("ProxyAddress")]
         public string ProxyAddress{ get; set; }

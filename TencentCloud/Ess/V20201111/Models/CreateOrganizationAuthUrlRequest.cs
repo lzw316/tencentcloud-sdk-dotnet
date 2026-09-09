@@ -61,7 +61,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string AutoJumpUrl{ get; set; }
 
         /// <summary>
-        /// <p>营业执照企业地址</p>
+        /// <p>营业执照企业地址</p><p>入参限制：最大长度500个字符</p>
         /// </summary>
         [JsonProperty("OrganizationAddress")]
         public string OrganizationAddress{ get; set; }

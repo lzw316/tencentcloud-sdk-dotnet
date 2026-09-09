@@ -25,47 +25,46 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 审批ID
+        /// <p>审批ID</p>
         /// </summary>
         [JsonProperty("ApprovalId")]
         public string ApprovalId{ get; set; }
 
         /// <summary>
-        /// 共享后关联的新 skill_id
+        /// <p>共享后关联的新 skill_id</p>
         /// </summary>
         [JsonProperty("ShareSkillId")]
         public string ShareSkillId{ get; set; }
 
         /// <summary>
-        /// 共享版本，如 1.0.0
+        /// <p>共享版本，如 1.0.0</p>
         /// </summary>
         [JsonProperty("ShareVersion")]
         public string ShareVersion{ get; set; }
 
         /// <summary>
-        /// 共享版本ID
+        /// <p>共享版本ID</p>
         /// </summary>
         [JsonProperty("ShareVersionId")]
         public string ShareVersionId{ get; set; }
 
         /// <summary>
-        /// 原 skill_id
+        /// <p>原 skill_id</p>
         /// </summary>
         [JsonProperty("SkillId")]
         public string SkillId{ get; set; }
 
         /// <summary>
-        /// 共享状态
-        /// 
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 未共享 |
-        /// | 1 | 已共享 |
-        /// | 2 | 审批中 |
+        /// <p>共享状态</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 未共享 |<br>| 1 | 已共享 |<br>| 2 | 审批中 |</p>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// <p>企业共享范围</p>
+        /// </summary>
+        [JsonProperty("CorpShareConfig")]
+        public SkillCorpShareConfig CorpShareConfig{ get; set; }
 
 
         /// <summary>
@@ -79,6 +78,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "ShareVersionId", this.ShareVersionId);
             this.SetParamSimple(map, prefix + "SkillId", this.SkillId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
         }
     }
 }

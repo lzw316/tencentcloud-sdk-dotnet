@@ -25,82 +25,76 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 工作空间名称, 长度限制 2~64
+        /// <p>工作空间名称, 长度限制 2~64</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 工作空间描述, 长度限制 0~255
+        /// <p>工作空间描述, 长度限制 0~255</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。
+        /// <p>工作空间规格。Standard: 2C4G, Calculation: 4C8G, Profession: 8C16G. 默认是 Standard。</p>
         /// </summary>
         [JsonProperty("Specs")]
         public string Specs{ get; set; }
 
         /// <summary>
-        /// 工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255
+        /// <p>工作空间基础镜像名称, 默认会使用 All In One 镜像, 长度限制 1~255</p>
         /// </summary>
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
         /// <summary>
-        /// Git 仓库. 工作空间启动时会自动克隆该仓库
+        /// <p>Git 仓库. 工作空间启动时会自动克隆该仓库</p>
         /// </summary>
         [JsonProperty("Repository")]
         public GitRepository Repository{ get; set; }
 
         /// <summary>
-        /// 环境变量. 会被注入到工作空间中
+        /// <p>环境变量. 会被注入到工作空间中</p>
         /// </summary>
         [JsonProperty("Envs")]
         public Env[] Envs{ get; set; }
 
         /// <summary>
-        /// 预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10
+        /// <p>预装插件. 工作空间启动时, 会自动安装这些插件。长度限制: 0~10</p>
         /// </summary>
         [JsonProperty("Extensions")]
         public string[] Extensions{ get; set; }
 
         /// <summary>
-        /// 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+        /// <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
         /// </summary>
         [JsonProperty("Lifecycle")]
         public LifeCycle Lifecycle{ get; set; }
 
         /// <summary>
-        /// 应用名称
+        /// <p>应用名称</p>
         /// </summary>
         [JsonProperty("TenantAppId")]
         public long? TenantAppId{ get; set; }
 
         /// <summary>
-        /// 用户UIN
+        /// <p>用户UIN</p>
         /// </summary>
         [JsonProperty("TenantUin")]
         public string TenantUin{ get; set; }
 
         /// <summary>
-        /// VPCID
+        /// <p>VPCID</p>
         /// </summary>
         [JsonProperty("TenantUniqVpcId")]
         public string TenantUniqVpcId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// <p>子网ID</p>
         /// </summary>
         [JsonProperty("TenantSubnetId")]
         public string TenantSubnetId{ get; set; }
-
-        /// <summary>
-        /// 地域
-        /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
 
 
         /// <summary>
@@ -120,7 +114,6 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
             this.SetParamSimple(map, prefix + "TenantUin", this.TenantUin);
             this.SetParamSimple(map, prefix + "TenantUniqVpcId", this.TenantUniqVpcId);
             this.SetParamSimple(map, prefix + "TenantSubnetId", this.TenantSubnetId);
-            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }
