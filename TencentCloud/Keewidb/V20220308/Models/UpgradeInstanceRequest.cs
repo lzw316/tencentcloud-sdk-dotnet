@@ -25,44 +25,52 @@ namespace TencentCloud.Keewidb.V20220308.Models
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// <p>实例 ID。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 配置变更后，每个分片持久化内存容量，单位：GB。
-        /// <ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+        /// <p>配置变更后，每个分片持久化内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
         /// </summary>
         [JsonProperty("MemSize")]
         public long? MemSize{ get; set; }
 
         /// <summary>
-        /// CPU 核数，可忽略不传
+        /// <p>CPU 核数，可忽略不传</p>
         /// </summary>
         [JsonProperty("MachineCpu")]
         public long? MachineCpu{ get; set; }
 
         /// <summary>
-        /// 实例内存容量，单位：GB。
-        /// <ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+        /// <p>实例内存容量，单位：GB。</p><ul><li>KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
         /// </summary>
         [JsonProperty("MachineMemory")]
         public long? MachineMemory{ get; set; }
 
         /// <summary>
-        /// 配置变更后，分片数量。
-        /// <ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+        /// <p>配置变更后，分片数量。</p><ul><li>增加后分片的数量务必为增加之前数量的整数倍。分片数量支持选择3、5、6、8、9、10、12、15、16、18、20、21、24、25、27、30、32、33、35、36、39、40、42、45、48、50、51、54、55、56、57、60、63、64分片。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
         /// </summary>
         [JsonProperty("ShardNum")]
         public long? ShardNum{ get; set; }
 
         /// <summary>
-        /// 配置变更后，每个分片硬盘的容量。单位：GB。
-        /// <ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
+        /// <p>配置变更后，每个分片硬盘的容量。单位：GB。</p><ul><li>每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。</li><li>变更实例内存、持久化内存与磁盘、变更实例的分片数量，每次只能变更一项。</li></ul>
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// <p>配置变更后，副本数量。需要和NodeSet参数一起传递。</p><p>取值范围：[1, 2]</p>
+        /// </summary>
+        [JsonProperty("ReplicasNum")]
+        public long? ReplicasNum{ get; set; }
+
+        /// <summary>
+        /// <p>配置变更后，副本节点信息。</p><ul><li>增加副本：可不传NodeId</li><li>删除副本：需传保留节点的NodeId</li></ul>
+        /// </summary>
+        [JsonProperty("NodeSet")]
+        public NodeInfo[] NodeSet{ get; set; }
 
 
         /// <summary>
@@ -76,6 +84,8 @@ namespace TencentCloud.Keewidb.V20220308.Models
             this.SetParamSimple(map, prefix + "MachineMemory", this.MachineMemory);
             this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "ReplicasNum", this.ReplicasNum);
+            this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
         }
     }
 }

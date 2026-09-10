@@ -31,7 +31,7 @@ namespace TencentCloud.Adp.V20260520.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 操作符，默认 IN（向后兼容）<table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>FILTER_OPERATOR_IN</td><td>0</td><td>属于 value_list（默认值，向后兼容；value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_NOT_IN</td><td>1</td><td>不属于 value_list（value_list 不可为空）</td></tr></table>
+        /// 操作符，默认 IN（向后兼容）<table><tr><td>枚举项</td><td>枚举值</td><td>描述</td></tr><tr><td>FILTER_OPERATOR_IN</td><td>0</td><td>属于 value_list（默认值，向后兼容；value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_NOT_IN</td><td>1</td><td>不属于 value_list（value_list 不可为空）</td></tr><tr><td>FILTER_OPERATOR_BETWEEN</td><td>2</td><td>之间（闭区间 [start, end]；value_list 必须恰好 2 个元素，允许其一为空表示单边开区间）</td></tr></table>
         /// </summary>
         [JsonProperty("Operator")]
         public long? Operator{ get; set; }

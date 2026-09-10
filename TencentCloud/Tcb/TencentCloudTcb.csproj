@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1504</VersionPrefix>
+    <VersionPrefix>3.0.1505</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20180608\Models\AIModelSecret.cs" />
     <Compile Include="V20180608\Models\AddProviderRequest.cs" />
     <Compile Include="V20180608\Models\AddProviderResponse.cs" />
+    <Compile Include="V20180608\Models\AgentRuntimeCodeImageConfig.cs" />
     <Compile Include="V20180608\Models\AllocateEnvRequest.cs" />
     <Compile Include="V20180608\Models\AllocateEnvResponse.cs" />
     <Compile Include="V20180608\Models\ApiKeyToken.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="V20180608\Models\CloudBaseRunBuildLog.cs" />
     <Compile Include="V20180608\Models\ClsInfo.cs" />
     <Compile Include="V20180608\Models\ClusterDetail.cs" />
+    <Compile Include="V20180608\Models\CodeReq.cs" />
     <Compile Include="V20180608\Models\CreateAIModelRequest.cs" />
     <Compile Include="V20180608\Models\CreateAIModelResponse.cs" />
     <Compile Include="V20180608\Models\CreateApiKeyRequest.cs" />
@@ -93,6 +95,8 @@
     <Compile Include="V20180608\Models\CreateEnvResourceRequest.cs" />
     <Compile Include="V20180608\Models\CreateEnvResourceResponse.cs" />
     <Compile Include="V20180608\Models\CreateEnvResponse.cs" />
+    <Compile Include="V20180608\Models\CreateFunctionRequest.cs" />
+    <Compile Include="V20180608\Models\CreateFunctionResponse.cs" />
     <Compile Include="V20180608\Models\CreateHTTPServiceRouteRequest.cs" />
     <Compile Include="V20180608\Models\CreateHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\CreateHostingDomainRequest.cs" />
@@ -121,6 +125,8 @@
     <Compile Include="V20180608\Models\DeleteCloudAppResponse.cs" />
     <Compile Include="V20180608\Models\DeleteCloudAppVersionRequest.cs" />
     <Compile Include="V20180608\Models\DeleteCloudAppVersionResponse.cs" />
+    <Compile Include="V20180608\Models\DeleteFunctionRequest.cs" />
+    <Compile Include="V20180608\Models\DeleteFunctionResponse.cs" />
     <Compile Include="V20180608\Models\DeleteHTTPServiceRouteRequest.cs" />
     <Compile Include="V20180608\Models\DeleteHTTPServiceRouteResponse.cs" />
     <Compile Include="V20180608\Models\DeleteProviderRequest.cs" />
@@ -218,6 +224,8 @@
     <Compile Include="V20180608\Models\DestroyMySQLResult.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreResponse.cs" />
+    <Compile Include="V20180608\Models\DownloadFunctionRequest.cs" />
+    <Compile Include="V20180608\Models\DownloadFunctionResponse.cs" />
     <Compile Include="V20180608\Models\DropIndex.cs" />
     <Compile Include="V20180608\Models\EmailProviderConfig.cs" />
     <Compile Include="V20180608\Models\EmailSmtpConfig.cs" />
@@ -229,8 +237,18 @@
     <Compile Include="V20180608\Models\ExecutePGSqlResponse.cs" />
     <Compile Include="V20180608\Models\ExternalStorage.cs" />
     <Compile Include="V20180608\Models\Filter.cs" />
+    <Compile Include="V20180608\Models\Function.cs" />
+    <Compile Include="V20180608\Models\FunctionEipConfig.cs" />
+    <Compile Include="V20180608\Models\FunctionEipConfigFixed.cs" />
+    <Compile Include="V20180608\Models\FunctionEnvironment.cs" />
     <Compile Include="V20180608\Models\FunctionInfo.cs" />
+    <Compile Include="V20180608\Models\FunctionLayer.cs" />
+    <Compile Include="V20180608\Models\FunctionPublicNetConfig.cs" />
+    <Compile Include="V20180608\Models\FunctionTrigger.cs" />
+    <Compile Include="V20180608\Models\FunctionVpcConfig.cs" />
     <Compile Include="V20180608\Models\GatewayVersionItem.cs" />
+    <Compile Include="V20180608\Models\GetFunctionRequest.cs" />
+    <Compile Include="V20180608\Models\GetFunctionResponse.cs" />
     <Compile Include="V20180608\Models\GetProvidersRequest.cs" />
     <Compile Include="V20180608\Models\GetProvidersResponse.cs" />
     <Compile Include="V20180608\Models\HTTPServiceCacheAction.cs" />
@@ -255,6 +273,8 @@
     <Compile Include="V20180608\Models\IndexInfo.cs" />
     <Compile Include="V20180608\Models\Indexkey.cs" />
     <Compile Include="V20180608\Models\KVPair.cs" />
+    <Compile Include="V20180608\Models\ListFunctionsRequest.cs" />
+    <Compile Include="V20180608\Models\ListFunctionsResponse.cs" />
     <Compile Include="V20180608\Models\ListPGUserMigrationsRequest.cs" />
     <Compile Include="V20180608\Models\ListPGUserMigrationsResponse.cs" />
     <Compile Include="V20180608\Models\ListTablesRequest.cs" />
@@ -323,6 +343,7 @@
     <Compile Include="V20180608\Models\PostgreSQLInfo.cs" />
     <Compile Include="V20180608\Models\PreviewPGUserMigrationsRequest.cs" />
     <Compile Include="V20180608\Models\PreviewPGUserMigrationsResponse.cs" />
+    <Compile Include="V20180608\Models\PrivateConfig.cs" />
     <Compile Include="V20180608\Models\Provider.cs" />
     <Compile Include="V20180608\Models\ProviderConfig.cs" />
     <Compile Include="V20180608\Models\ProviderRequestParametersMap.cs" />
@@ -352,6 +373,7 @@
     <Compile Include="V20180608\Models\StaticEnvironment.cs" />
     <Compile Include="V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="V20180608\Models\StaticStoreInfo.cs" />
+    <Compile Include="V20180608\Models\StatusReason.cs" />
     <Compile Include="V20180608\Models\StorageInfo.cs" />
     <Compile Include="V20180608\Models\TableInfo.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />
@@ -360,6 +382,10 @@
     <Compile Include="V20180608\Models\UnbindStorageSourceResponse.cs" />
     <Compile Include="V20180608\Models\UpdateAIModelRequest.cs" />
     <Compile Include="V20180608\Models\UpdateAIModelResponse.cs" />
+    <Compile Include="V20180608\Models\UpdateFunctionCodeRequest.cs" />
+    <Compile Include="V20180608\Models\UpdateFunctionCodeResponse.cs" />
+    <Compile Include="V20180608\Models\UpdateFunctionConfigurationRequest.cs" />
+    <Compile Include="V20180608\Models\UpdateFunctionConfigurationResponse.cs" />
     <Compile Include="V20180608\Models\UpdateTableRequest.cs" />
     <Compile Include="V20180608\Models\UpdateTableResponse.cs" />
     <Compile Include="V20180608\Models\User.cs" />

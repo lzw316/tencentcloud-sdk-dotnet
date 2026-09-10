@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// plugin_list
+        /// <p>plugin_list</p>
         /// </summary>
         [JsonProperty("PluginList")]
         public PluginSummary[] PluginList{ get; set; }
 
         /// <summary>
-        /// total_count
+        /// <p>total_count</p>
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

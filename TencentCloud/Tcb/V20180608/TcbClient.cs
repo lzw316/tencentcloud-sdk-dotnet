@@ -28,7 +28,7 @@ namespace TencentCloud.Tcb.V20180608
 
        private const string endpoint = "tcb.tencentcloudapi.com";
        private const string version = "2018-06-08";
-       private const string sdkVersion = "SDK_NET_3.0.1504";
+       private const string sdkVersion = "SDK_NET_3.0.1505";
 
         /// <summary>
         /// Client constructor.
@@ -446,6 +446,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 创建云函数
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
+        /// <returns><see cref="CreateFunctionResponse"/></returns>
+        public Task<CreateFunctionResponse> CreateFunction(CreateFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionResponse>(req, "CreateFunction");
+        }
+
+        /// <summary>
+        /// 创建云函数
+        /// </summary>
+        /// <param name="req"><see cref="CreateFunctionRequest"/></param>
+        /// <returns><see cref="CreateFunctionResponse"/></returns>
+        public CreateFunctionResponse CreateFunctionSync(CreateFunctionRequest req)
+        {
+            return InternalRequestAsync<CreateFunctionResponse>(req, "CreateFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 本接口CreateHTTPServiceRoute用于创建HTTP访问服务路由。如果不传Domain.Routes，仅创建域名信息。首次创建域名后需要调用DescribeHTTPServiceRoute查询域名状态，如果状态是PROCESSING，需要轮询查询域名状态直到SUCCESS或者FAIL。如果状态是FAIL，可以删除后重新创建。创建成功后域名可能无法访问，原因是异步下发的路由，可通过http或者https探测路由是否下发，如果http访问返回404或者https访问握手失败，可等待一会再试，直到访问正常。此外HTTP访问服务提供了默认域名，通过DescribeHTTPServiceRoute接口可直接获取默认域名。
         /// </summary>
         /// <param name="req"><see cref="CreateHTTPServiceRouteRequest"/></param>
@@ -697,6 +718,31 @@ namespace TencentCloud.Tcb.V20180608
         public DeleteCloudAppVersionResponse DeleteCloudAppVersionSync(DeleteCloudAppVersionRequest req)
         {
             return InternalRequestAsync<DeleteCloudAppVersionResponse>(req, "DeleteCloudAppVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云函数。
+        /// 
+        /// 删除指定环境下的云函数。调用接口后，若通过 GetFunction 接口查询不到该函数，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionResponse"/></returns>
+        public Task<DeleteFunctionResponse> DeleteFunction(DeleteFunctionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction");
+        }
+
+        /// <summary>
+        /// 删除云函数。
+        /// 
+        /// 删除指定环境下的云函数。调用接口后，若通过 GetFunction 接口查询不到该函数，则表示删除成功。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFunctionRequest"/></param>
+        /// <returns><see cref="DeleteFunctionResponse"/></returns>
+        public DeleteFunctionResponse DeleteFunctionSync(DeleteFunctionRequest req)
+        {
+            return InternalRequestAsync<DeleteFunctionResponse>(req, "DeleteFunction")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1767,6 +1813,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取云函数地址并下载zip包
+        /// </summary>
+        /// <param name="req"><see cref="DownloadFunctionRequest"/></param>
+        /// <returns><see cref="DownloadFunctionResponse"/></returns>
+        public Task<DownloadFunctionResponse> DownloadFunction(DownloadFunctionRequest req)
+        {
+            return InternalRequestAsync<DownloadFunctionResponse>(req, "DownloadFunction");
+        }
+
+        /// <summary>
+        /// 获取云函数地址并下载zip包
+        /// </summary>
+        /// <param name="req"><see cref="DownloadFunctionRequest"/></param>
+        /// <returns><see cref="DownloadFunctionResponse"/></returns>
+        public DownloadFunctionResponse DownloadFunctionSync(DownloadFunctionRequest req)
+        {
+            return InternalRequestAsync<DownloadFunctionResponse>(req, "DownloadFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 在Postgres数据库上执行SQL
         /// </summary>
         /// <param name="req"><see cref="ExecutePGSqlRequest"/></param>
@@ -1788,6 +1855,27 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取云函数详情
+        /// </summary>
+        /// <param name="req"><see cref="GetFunctionRequest"/></param>
+        /// <returns><see cref="GetFunctionResponse"/></returns>
+        public Task<GetFunctionResponse> GetFunction(GetFunctionRequest req)
+        {
+            return InternalRequestAsync<GetFunctionResponse>(req, "GetFunction");
+        }
+
+        /// <summary>
+        /// 获取云函数详情
+        /// </summary>
+        /// <param name="req"><see cref="GetFunctionRequest"/></param>
+        /// <returns><see cref="GetFunctionResponse"/></returns>
+        public GetFunctionResponse GetFunctionSync(GetFunctionRequest req)
+        {
+            return InternalRequestAsync<GetFunctionResponse>(req, "GetFunction")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询指定云开发环境下的身份认证源列表。返回该环境已配置的所有身份认证源信息，包括第三方登录（OAuth、OIDC、SAML）、微信小程序登录、自定义登录和邮箱登录等。返回结果包含认证源基本信息、关联应用、配置状态及启用情况。若自定义登录或邮箱登录的身份源尚未创建，接口会自动追加一个默认关闭状态的身份源记录。
         /// </summary>
         /// <param name="req"><see cref="GetProvidersRequest"/></param>
@@ -1805,6 +1893,27 @@ namespace TencentCloud.Tcb.V20180608
         public GetProvidersResponse GetProvidersSync(GetProvidersRequest req)
         {
             return InternalRequestAsync<GetProvidersResponse>(req, "GetProviders")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口根据传入的查询参数返回相关函数信息。
+        /// </summary>
+        /// <param name="req"><see cref="ListFunctionsRequest"/></param>
+        /// <returns><see cref="ListFunctionsResponse"/></returns>
+        public Task<ListFunctionsResponse> ListFunctions(ListFunctionsRequest req)
+        {
+            return InternalRequestAsync<ListFunctionsResponse>(req, "ListFunctions");
+        }
+
+        /// <summary>
+        /// 该接口根据传入的查询参数返回相关函数信息。
+        /// </summary>
+        /// <param name="req"><see cref="ListFunctionsRequest"/></param>
+        /// <returns><see cref="ListFunctionsResponse"/></returns>
+        public ListFunctionsResponse ListFunctionsSync(ListFunctionsRequest req)
+        {
+            return InternalRequestAsync<ListFunctionsResponse>(req, "ListFunctions")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -2452,6 +2561,48 @@ namespace TencentCloud.Tcb.V20180608
         public UpdateAIModelResponse UpdateAIModelSync(UpdateAIModelRequest req)
         {
             return InternalRequestAsync<UpdateAIModelResponse>(req, "UpdateAIModel")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 更新云函数代码
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionCodeRequest"/></param>
+        /// <returns><see cref="UpdateFunctionCodeResponse"/></returns>
+        public Task<UpdateFunctionCodeResponse> UpdateFunctionCode(UpdateFunctionCodeRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionCodeResponse>(req, "UpdateFunctionCode");
+        }
+
+        /// <summary>
+        /// 更新云函数代码
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionCodeRequest"/></param>
+        /// <returns><see cref="UpdateFunctionCodeResponse"/></returns>
+        public UpdateFunctionCodeResponse UpdateFunctionCodeSync(UpdateFunctionCodeRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionCodeResponse>(req, "UpdateFunctionCode")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 该接口根据传入参数更新函数配置。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateFunctionConfigurationResponse"/></returns>
+        public Task<UpdateFunctionConfigurationResponse> UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionConfigurationResponse>(req, "UpdateFunctionConfiguration");
+        }
+
+        /// <summary>
+        /// 该接口根据传入参数更新函数配置。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionConfigurationRequest"/></param>
+        /// <returns><see cref="UpdateFunctionConfigurationResponse"/></returns>
+        public UpdateFunctionConfigurationResponse UpdateFunctionConfigurationSync(UpdateFunctionConfigurationRequest req)
+        {
+            return InternalRequestAsync<UpdateFunctionConfigurationResponse>(req, "UpdateFunctionConfiguration")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 

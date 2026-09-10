@@ -25,25 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 原子任务类型。
-        /// <li>Transcode：转码。</li>
-        /// <li>SampleSnapshot：采样截图。</li>
-        /// <li>AnimatedGraphics：转动图。</li>
-        /// <li>SnapshotByTimeOffset：时间点截图。</li>
-        /// <li>ImageSprites：雪碧图。</li>
-        /// <li>AdaptiveDynamicStreaming：自适应码流。</li>
-        /// <li>AiContentReview：内容审核。</li>
-        /// <li>AIRecognition：智能识别。</li>
-        /// <li>AIAnalysis：智能分析。</li>
-        /// <li>AiQualityControl：媒体质检。</li>
-        /// <li>SmartSubtitles：智能字幕。</li>
-        /// <li>SmartErase：智能擦除。</li>
+        /// <p>原子任务类型。</p><li>Transcode：转码。</li><li>SampleSnapshot：采样截图。</li><li>AnimatedGraphics：转动图。</li><li>SnapshotByTimeOffset：时间点截图。</li><li>ImageSprites：雪碧图。</li><li>AdaptiveDynamicStreaming：自适应码流。</li><li>AiContentReview：内容审核。</li><li>AIRecognition：智能识别。</li><li>AIAnalysis：智能分析。</li><li>AiQualityControl：媒体质检。</li><li>SmartSubtitles：智能字幕。</li><li>SmartErase：智能擦除。</li><li>Dubbing: AI配音</li>
         /// </summary>
         [JsonProperty("ActivityType")]
         public string ActivityType{ get; set; }
 
         /// <summary>
-        /// 原子任务输出。
+        /// <p>原子任务输出。</p>
         /// </summary>
         [JsonProperty("ActivityResItem")]
         public ActivityResItem ActivityResItem{ get; set; }

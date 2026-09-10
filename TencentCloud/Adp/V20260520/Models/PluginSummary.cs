@@ -25,6 +25,18 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
+        /// <p>插件配置信息</p>
+        /// </summary>
+        [JsonProperty("Config")]
+        public PluginConfig Config{ get; set; }
+
+        /// <summary>
+        /// <p>是否已配置共享</p>
+        /// </summary>
+        [JsonProperty("IsShared")]
+        public bool? IsShared{ get; set; }
+
+        /// <summary>
         /// <p>插件运营管理信息</p>
         /// </summary>
         [JsonProperty("Operation")]
@@ -43,6 +55,12 @@ namespace TencentCloud.Adp.V20260520.Models
         public PluginProfile Profile{ get; set; }
 
         /// <summary>
+        /// <p>插件所属空间 ID；内置插件为空</p>
+        /// </summary>
+        [JsonProperty("SpaceId")]
+        public string SpaceId{ get; set; }
+
+        /// <summary>
         /// <p>插件统计信息</p>
         /// </summary>
         [JsonProperty("Statistics")]
@@ -55,22 +73,22 @@ namespace TencentCloud.Adp.V20260520.Models
         public long? Status{ get; set; }
 
         /// <summary>
+        /// <p>工具信息</p>
+        /// </summary>
+        [JsonProperty("ToolList")]
+        public ToolSummary[] ToolList{ get; set; }
+
+        /// <summary>
         /// <p>用户维度的插件状态信息</p>
         /// </summary>
         [JsonProperty("UserState")]
         public PluginUserState UserState{ get; set; }
 
         /// <summary>
-        /// <p>插件配置信息</p>
+        /// <p>更新时间，Unix时间戳</p><p>单位：秒</p>
         /// </summary>
-        [JsonProperty("Config")]
-        public PluginConfig Config{ get; set; }
-
-        /// <summary>
-        /// <p>工具信息</p>
-        /// </summary>
-        [JsonProperty("ToolList")]
-        public ToolSummary[] ToolList{ get; set; }
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
 
 
         /// <summary>
@@ -78,14 +96,17 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Config.", this.Config);
+            this.SetParamSimple(map, prefix + "IsShared", this.IsShared);
             this.SetParamObj(map, prefix + "Operation.", this.Operation);
             this.SetParamSimple(map, prefix + "PluginId", this.PluginId);
             this.SetParamObj(map, prefix + "Profile.", this.Profile);
+            this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
             this.SetParamObj(map, prefix + "Statistics.", this.Statistics);
             this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamObj(map, prefix + "UserState.", this.UserState);
-            this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamArrayObj(map, prefix + "ToolList.", this.ToolList);
+            this.SetParamObj(map, prefix + "UserState.", this.UserState);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

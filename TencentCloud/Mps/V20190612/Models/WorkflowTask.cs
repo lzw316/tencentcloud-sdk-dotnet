@@ -25,89 +25,93 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 媒体处理任务 ID。
+        /// <p>媒体处理任务 ID。</p>
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 任务流状态，取值：
-        /// <li>PROCESSING：处理中；</li>
-        /// <li>FINISH：已完成。</li>
+        /// <p>任务流状态，取值：</p><li>PROCESSING：处理中；</li><li>FINISH：已完成。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
+        /// <p>源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。</p>
         /// </summary>
         [JsonProperty("ErrCode")]
         public long? ErrCode{ get; set; }
 
         /// <summary>
-        /// 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
+        /// <p>源异常时返回对应异常Message，否则请使用各个具体任务的 Message。</p>
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
         /// <summary>
-        /// 媒体处理的目标文件信息。
+        /// <p>媒体处理的目标文件信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 原始视频的元信息。
+        /// <p>原始视频的元信息。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 媒体处理任务的执行状态与结果。
+        /// <p>媒体处理任务的执行状态与结果。</p>
         /// </summary>
         [JsonProperty("MediaProcessResultSet")]
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
         /// <summary>
-        /// 视频内容审核任务的执行状态与结果。
+        /// <p>视频内容审核任务的执行状态与结果。</p>
         /// </summary>
         [JsonProperty("AiContentReviewResultSet")]
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }
 
         /// <summary>
-        /// 视频内容分析任务的执行状态与结果。
+        /// <p>视频内容分析任务的执行状态与结果。</p>
         /// </summary>
         [JsonProperty("AiAnalysisResultSet")]
         public AiAnalysisResult[] AiAnalysisResultSet{ get; set; }
 
         /// <summary>
-        /// 视频内容识别任务的执行状态与结果。
+        /// <p>视频内容识别任务的执行状态与结果。</p>
         /// </summary>
         [JsonProperty("AiRecognitionResultSet")]
         public AiRecognitionResult[] AiRecognitionResultSet{ get; set; }
 
         /// <summary>
-        /// 媒体质检任务的执行状态与结果。
+        /// <p>媒体质检任务的执行状态与结果。</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiQualityControlTaskResult")]
         public ScheduleQualityControlTaskResult AiQualityControlTaskResult{ get; set; }
 
         /// <summary>
-        /// 智能字幕任务的执行结果
+        /// <p>智能字幕任务的执行结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmartSubtitlesTaskResult")]
         public SmartSubtitlesResult[] SmartSubtitlesTaskResult{ get; set; }
 
         /// <summary>
-        /// 智能擦除任务的执行结果
+        /// <p>智能擦除任务的执行结果</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmartEraseTaskResult")]
         public SmartEraseTaskResult SmartEraseTaskResult{ get; set; }
+
+        /// <summary>
+        /// <p>AI配音任务的执行结果。</p>
+        /// </summary>
+        [JsonProperty("AiDubbingTaskResult")]
+        public AIDubbingTaskResult AiDubbingTaskResult{ get; set; }
 
 
         /// <summary>
@@ -128,6 +132,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiQualityControlTaskResult.", this.AiQualityControlTaskResult);
             this.SetParamArrayObj(map, prefix + "SmartSubtitlesTaskResult.", this.SmartSubtitlesTaskResult);
             this.SetParamObj(map, prefix + "SmartEraseTaskResult.", this.SmartEraseTaskResult);
+            this.SetParamObj(map, prefix + "AiDubbingTaskResult.", this.AiDubbingTaskResult);
         }
     }
 }

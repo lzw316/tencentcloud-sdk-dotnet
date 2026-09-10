@@ -25,40 +25,52 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// <p>[tokens 族] 时间周期内的累计总 token 数。</p>
+        /// <p>[tokens / apikey_usage 族] 时间周期内的累计总 token 数。</p>
         /// </summary>
         [JsonProperty("TotalToken")]
         public long? TotalToken{ get; set; }
 
         /// <summary>
-        /// <p>[tokens 族] 时间周期内的累计输入 token 数。</p>
+        /// <p>[tokens / apikey_usage 族] 时间周期内的累计输入 token 数。</p>
         /// </summary>
         [JsonProperty("InputTotalToken")]
         public long? InputTotalToken{ get; set; }
 
         /// <summary>
-        /// <p>[tokens 族] 时间周期内的累计输出 token 数。</p>
+        /// <p>[tokens / apikey_usage 族] 时间周期内的累计输出 token 数。</p>
         /// </summary>
         [JsonProperty("OutputTotalToken")]
         public long? OutputTotalToken{ get; set; }
 
         /// <summary>
-        /// <p>[tokens 族] 时间周期内的累计读缓存 token 数（命中缓存部分）</p>
+        /// <p>[tokens / apikey_usage 族] 时间周期内的累计读缓存 token 数（命中缓存部分）注意：CacheTotalToken 是 InputTotalToken 的子集（已包含在内）。</p>
         /// </summary>
         [JsonProperty("CacheTotalToken")]
         public long? CacheTotalToken{ get; set; }
 
         /// <summary>
-        /// <p>[search 族] 整段累计联网搜索请求数</p>
+        /// <p>[search 族] 时间周期内的累计联网搜索请求数</p>
         /// </summary>
         [JsonProperty("SearchRequestCount")]
         public long? SearchRequestCount{ get; set; }
 
         /// <summary>
-        /// <p>[search 族] 整段累计搜索引擎调用次数</p>
+        /// <p>[search 族] 时间周期内的累计搜索引擎调用次数</p>
         /// </summary>
         [JsonProperty("SearchCount")]
         public long? SearchCount{ get; set; }
+
+        /// <summary>
+        /// <p>[apikey_usage 族] 时间周期内的累计请求次数</p>
+        /// </summary>
+        [JsonProperty("RequestCount")]
+        public long? RequestCount{ get; set; }
+
+        /// <summary>
+        /// <p>[apikey_usage 族] 时间周期内的累计请求失败次数</p>
+        /// </summary>
+        [JsonProperty("RequestFailCount")]
+        public long? RequestFailCount{ get; set; }
 
 
         /// <summary>
@@ -72,6 +84,8 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "CacheTotalToken", this.CacheTotalToken);
             this.SetParamSimple(map, prefix + "SearchRequestCount", this.SearchRequestCount);
             this.SetParamSimple(map, prefix + "SearchCount", this.SearchCount);
+            this.SetParamSimple(map, prefix + "RequestCount", this.RequestCount);
+            this.SetParamSimple(map, prefix + "RequestFailCount", this.RequestFailCount);
         }
     }
 }

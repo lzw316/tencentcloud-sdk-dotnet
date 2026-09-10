@@ -45,6 +45,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("BeautyConfig")]
         public ImageBeautyConfig BeautyConfig{ get; set; }
 
+        /// <summary>
+        /// <p>Ai抠图配置</p>
+        /// </summary>
+        [JsonProperty("AiCutOutConfig")]
+        public AiCutOutConfig AiCutOutConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "EncodeConfig.", this.EncodeConfig);
             this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
             this.SetParamObj(map, prefix + "BeautyConfig.", this.BeautyConfig);
+            this.SetParamObj(map, prefix + "AiCutOutConfig.", this.AiCutOutConfig);
         }
     }
 }

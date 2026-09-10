@@ -28,7 +28,7 @@ namespace TencentCloud.Teo.V20220901
 
        private const string endpoint = "teo.tencentcloudapi.com";
        private const string version = "2022-09-01";
-       private const string sdkVersion = "SDK_NET_3.0.1504";
+       private const string sdkVersion = "SDK_NET_3.0.1505";
 
         /// <summary>
         /// Client constructor.
@@ -3576,7 +3576,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DownloadL4Logs）用于下载四层离线日志。
+        /// 本接口（DownloadL4Logs）用于获取四层代理业务的离线日志下载链接。
+        /// **注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
         /// </summary>
         /// <param name="req"><see cref="DownloadL4LogsRequest"/></param>
         /// <returns><see cref="DownloadL4LogsResponse"/></returns>
@@ -3586,7 +3587,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DownloadL4Logs）用于下载四层离线日志。
+        /// 本接口（DownloadL4Logs）用于获取四层代理业务的离线日志下载链接。
+        /// **注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
         /// </summary>
         /// <param name="req"><see cref="DownloadL4LogsRequest"/></param>
         /// <returns><see cref="DownloadL4LogsResponse"/></returns>
@@ -3597,7 +3599,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DownloadL7Logs）下载七层离线日志。
+        /// 本接口（DownloadL7Logs）用于获取七层域名业务的离线日志下载链接。
+        /// **注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
         /// </summary>
         /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
         /// <returns><see cref="DownloadL7LogsResponse"/></returns>
@@ -3607,7 +3610,8 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 本接口（DownloadL7Logs）下载七层离线日志。
+        /// 本接口（DownloadL7Logs）用于获取七层域名业务的离线日志下载链接。
+        /// **注意：**仅当离线日志功能开启期间，EO 才会存储相关离线日志并提供下载服务。具体功能介绍请见[文档](https://cloud.tencent.com/document/product/1552/73660)。
         /// </summary>
         /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
         /// <returns><see cref="DownloadL7LogsResponse"/></returns>

@@ -52,14 +52,12 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 媒体处理的文件输出存储位置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
         /// 媒体处理类型任务参数。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
@@ -87,7 +85,6 @@ namespace TencentCloud.Mps.V20190612.Models
 
         /// <summary>
         /// 任务的事件通知信息，不填代表不获取事件通知。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
         public TaskNotifyConfig TaskNotifyConfig{ get; set; }

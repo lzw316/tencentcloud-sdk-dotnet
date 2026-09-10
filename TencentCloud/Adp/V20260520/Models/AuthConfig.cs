@@ -31,25 +31,31 @@ namespace TencentCloud.Adp.V20260520.Models
         public long? AuthType{ get; set; }
 
         /// <summary>
-        /// API Key授权配置
+        /// <p>API Key授权配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApiKeyAuthConfig")]
         public ApiKeyAuthConfig ApiKeyAuthConfig{ get; set; }
 
         /// <summary>
-        /// CAM授权配置
+        /// <p>CAM授权配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CamAuthConfig")]
         public CamAuthConfig CamAuthConfig{ get; set; }
 
         /// <summary>
-        /// OAuth2.0授权配置
+        /// <p>OAuth2.0授权配置</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OAuthConfig")]
         public OAuthConfig OAuthConfig{ get; set; }
+
+        /// <summary>
+        /// <p>AccessKey授权配置</p>
+        /// </summary>
+        [JsonProperty("AccessKeyAuthConfig")]
+        public AccessKeyAuthConfig AccessKeyAuthConfig{ get; set; }
 
 
         /// <summary>
@@ -61,6 +67,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamObj(map, prefix + "ApiKeyAuthConfig.", this.ApiKeyAuthConfig);
             this.SetParamObj(map, prefix + "CamAuthConfig.", this.CamAuthConfig);
             this.SetParamObj(map, prefix + "OAuthConfig.", this.OAuthConfig);
+            this.SetParamObj(map, prefix + "AccessKeyAuthConfig.", this.AccessKeyAuthConfig);
         }
     }
 }

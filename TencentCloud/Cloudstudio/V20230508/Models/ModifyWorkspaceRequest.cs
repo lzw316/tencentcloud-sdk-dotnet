@@ -25,43 +25,43 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 工作空间 SpaceKey. 更新该工作空间的属性
+        /// <p>工作空间 SpaceKey. 更新该工作空间的属性</p>
         /// </summary>
         [JsonProperty("SpaceKey")]
         public string SpaceKey{ get; set; }
 
         /// <summary>
-        /// 工作空间名称
+        /// <p>工作空间名称</p>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 工作空间描述
+        /// <p>工作空间描述</p>
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。
+        /// <p>工作空间规格。STANDARD: 2C4G, CALCULATION: 4C8G, PROFESSION: 8C16G. 默认是 STANDARD。</p>
         /// </summary>
         [JsonProperty("Specs")]
         public string Specs{ get; set; }
 
         /// <summary>
-        /// 环境变量. 会被注入到工作空间中
+        /// <p>环境变量. 会被注入到工作空间中</p>
         /// </summary>
         [JsonProperty("Envs")]
         public Env[] Envs{ get; set; }
 
         /// <summary>
-        /// 预装插件. 工作空间启动时, 会自动安装这些插件 
+        /// <p>预装插件. 工作空间启动时, 会自动安装这些插件</p>
         /// </summary>
         [JsonProperty("Extensions")]
         public string[] Extensions{ get; set; }
 
         /// <summary>
-        /// 工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令. 
+        /// <p>工作空间生命周期钩子.  分为三个阶段 init, start, destroy. 分别表示工作空间数据初始化阶段, 工作空间启动阶段, 工作空间关闭阶段.  用户可以自定义 shell 命令.</p>
         /// </summary>
         [JsonProperty("Lifecycle")]
         public LifeCycle Lifecycle{ get; set; }

@@ -25,19 +25,19 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 工作空间 SpaceKey
+        /// <p>工作空间 SpaceKey</p>
         /// </summary>
         [JsonProperty("SpaceKey")]
         public string SpaceKey{ get; set; }
 
         /// <summary>
-        /// token过期时间，单位是秒，默认 3600
+        /// <p>token过期时间，单位是秒，默认 3600</p>
         /// </summary>
         [JsonProperty("TokenExpiredLimitSec")]
         public ulong? TokenExpiredLimitSec{ get; set; }
 
         /// <summary>
-        /// token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only
+        /// <p>token 授权策略，可选值为 workspace-run-only, all。默认为 workspace-run-only</p>
         /// </summary>
         [JsonProperty("Policies")]
         public string[] Policies{ get; set; }

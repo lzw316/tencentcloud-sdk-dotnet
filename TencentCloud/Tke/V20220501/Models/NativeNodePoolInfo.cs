@@ -163,6 +163,13 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
+        /// <summary>
+        /// <p>自定义镜像 ID</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomImage")]
+        public string CustomImage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +198,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "CustomImage", this.CustomImage);
         }
     }
 }

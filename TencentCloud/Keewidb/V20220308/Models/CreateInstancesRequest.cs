@@ -127,6 +127,12 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public string[] SecurityGroupIdList{ get; set; }
 
         /// <summary>
+        /// <p>实例的节点信息。</p><ul><li>包含节点ID、节点类型、节点可用区 ID等。具体信息，请参见<a href="https://cloud.tencent.com/document/product/1520/86230#NodeInfo">NodeInfo</a> 。</li><li>目前支持传入节点的类型（主节点或者副本节点），节点的可用区。未指定该参数时，系统将默认创建单可用区架构实例。</li></ul>
+        /// </summary>
+        [JsonProperty("NodeSet")]
+        public NodeInfo[] NodeSet{ get; set; }
+
+        /// <summary>
         /// <p>给实例绑定标签。</p>
         /// </summary>
         [JsonProperty("ResourceTags")]
@@ -185,6 +191,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
             this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIdList.", this.SecurityGroupIdList);
+            this.SetParamArrayObj(map, prefix + "NodeSet.", this.NodeSet);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);

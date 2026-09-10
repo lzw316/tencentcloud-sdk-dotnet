@@ -25,13 +25,19 @@ namespace TencentCloud.Keewidb.V20220308.Models
     {
         
         /// <summary>
-        /// 实例 ID，如：kee-6ubh****。
+        /// <p>实例 ID，如：kee-6ubh****。</p>
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 副本节点 ID。
+        /// <p>副本节点组 ID，请通过接口DescribeInstanceReplicas获取多 AZ备节点组的 ID 信息。</p>
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
+
+        /// <summary>
+        /// <p>副本节点 ID。</p>
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Keewidb.V20220308.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
         }
     }

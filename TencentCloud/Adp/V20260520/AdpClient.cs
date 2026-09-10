@@ -28,7 +28,7 @@ namespace TencentCloud.Adp.V20260520
 
        private const string endpoint = "adp.tencentcloudapi.com";
        private const string version = "2026-05-20";
-       private const string sdkVersion = "SDK_NET_3.0.1504";
+       private const string sdkVersion = "SDK_NET_3.0.1505";
 
         /// <summary>
         /// Client constructor.
@@ -96,7 +96,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 创建Agent
+        /// 创建Agent（目前仅支持claw模式）
         /// </summary>
         /// <param name="req"><see cref="CreateAgentRequest"/></param>
         /// <returns><see cref="CreateAgentResponse"/></returns>
@@ -106,7 +106,7 @@ namespace TencentCloud.Adp.V20260520
         }
 
         /// <summary>
-        /// 创建Agent
+        /// 创建Agent（目前仅支持claw模式）
         /// </summary>
         /// <param name="req"><see cref="CreateAgentRequest"/></param>
         /// <returns><see cref="CreateAgentResponse"/></returns>

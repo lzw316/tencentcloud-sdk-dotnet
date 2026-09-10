@@ -91,6 +91,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public SmartEraseTaskInput SmartEraseTask{ get; set; }
 
         /// <summary>
+        /// <p>AI配音类型任务参数</p>
+        /// </summary>
+        [JsonProperty("AIDubbingTask")]
+        public AIDubbingTaskInput AIDubbingTask{ get; set; }
+
+        /// <summary>
         /// <p>任务的事件通知信息，不填代表不获取事件通知。</p>
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -155,6 +161,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "AiQualityControlTask.", this.AiQualityControlTask);
             this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
             this.SetParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
+            this.SetParamObj(map, prefix + "AIDubbingTask.", this.AIDubbingTask);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

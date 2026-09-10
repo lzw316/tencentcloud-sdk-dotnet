@@ -25,14 +25,14 @@ namespace TencentCloud.Keewidb.V20220308.Models
     {
         
         /// <summary>
-        /// 交易ID。
+        /// <p>交易ID。</p>
         /// </summary>
         [JsonProperty("DealId")]
         [System.Obsolete]
         public string DealId{ get; set; }
 
         /// <summary>
-        /// 订单号。
+        /// <p>订单号。</p>
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }

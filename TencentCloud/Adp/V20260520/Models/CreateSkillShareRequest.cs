@@ -48,6 +48,12 @@ namespace TencentCloud.Adp.V20260520.Models
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }
 
+        /// <summary>
+        /// <p>共享配置</p>
+        /// </summary>
+        [JsonProperty("CorpShareConfig")]
+        public SkillCorpShareConfig CorpShareConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "SkillId", this.SkillId);
             this.SetParamSimple(map, prefix + "SpaceId", this.SpaceId);
             this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
+            this.SetParamObj(map, prefix + "CorpShareConfig.", this.CorpShareConfig);
         }
     }
 }

@@ -25,34 +25,40 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 角色名称
+        /// <p>角色名称</p>
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
         /// <summary>
-        /// 密钥位置 HEADER/QUERY
-        /// 
-        /// 枚举值:
-        /// | uint | 描述 |
-        /// | --- | --- |
-        /// | 0 | 头鉴权 |
-        /// | 1 | 请求信息鉴权 |
+        /// <p>密钥位置 HEADER/QUERY</p><p>枚举值:<br>| uint | 描述 |<br>| --- | --- |<br>| 0 | 头鉴权 |<br>| 1 | 请求信息鉴权 |</p>
         /// </summary>
         [JsonProperty("KeyLocation")]
         public long? KeyLocation{ get; set; }
 
         /// <summary>
-        /// SecretId字段名称
+        /// <p>SecretId字段名称</p>
         /// </summary>
         [JsonProperty("SecretIdName")]
         public string SecretIdName{ get; set; }
 
         /// <summary>
-        /// SecretKey字段名称
+        /// <p>SecretKey字段名称</p>
         /// </summary>
         [JsonProperty("SecretKeyName")]
         public string SecretKeyName{ get; set; }
+
+        /// <summary>
+        /// <p>CAM Access Key 字段配置</p>
+        /// </summary>
+        [JsonProperty("ParamList")]
+        public AccessKeyParamConfig[] ParamList{ get; set; }
+
+        /// <summary>
+        /// <p>是否支持CAM角色授权</p>
+        /// </summary>
+        [JsonProperty("SupportRoleAuth")]
+        public bool? SupportRoleAuth{ get; set; }
 
 
         /// <summary>
@@ -64,6 +70,8 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "KeyLocation", this.KeyLocation);
             this.SetParamSimple(map, prefix + "SecretIdName", this.SecretIdName);
             this.SetParamSimple(map, prefix + "SecretKeyName", this.SecretKeyName);
+            this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+            this.SetParamSimple(map, prefix + "SupportRoleAuth", this.SupportRoleAuth);
         }
     }
 }

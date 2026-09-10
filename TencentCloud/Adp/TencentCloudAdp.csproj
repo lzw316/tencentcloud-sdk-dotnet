@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32FB9CEB-0B2F-3A09-9A16-8DA24F0C4BBC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1504</VersionPrefix>
+    <VersionPrefix>3.0.1505</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,9 @@
     <Compile Include="V20260520\AdpClient.cs" />
     <Compile Include="V20260520\Models\AICallConfig.cs" />
     <Compile Include="V20260520\Models\AIOptimizeModel.cs" />
+    <Compile Include="V20260520\Models\AccessKeyAuthConfig.cs" />
+    <Compile Include="V20260520\Models\AccessKeyParamConfig.cs" />
+    <Compile Include="V20260520\Models\AccessKeyPassThroughConfig.cs" />
     <Compile Include="V20260520\Models\AccountInfo.cs" />
     <Compile Include="V20260520\Models\AgentAdvancedConfig.cs" />
     <Compile Include="V20260520\Models\AgentCollaborationConfig.cs" />

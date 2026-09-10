@@ -25,95 +25,101 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 转码任务输出
+        /// <p>转码任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TranscodeTask")]
         public MediaProcessTaskTranscodeResult TranscodeTask{ get; set; }
 
         /// <summary>
-        /// 转动图任务输出
+        /// <p>转动图任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnimatedGraphicTask")]
         public MediaProcessTaskAnimatedGraphicResult AnimatedGraphicTask{ get; set; }
 
         /// <summary>
-        /// 时间点截图任务输出
+        /// <p>时间点截图任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SnapshotByTimeOffsetTask")]
         public MediaProcessTaskSnapshotByTimeOffsetResult SnapshotByTimeOffsetTask{ get; set; }
 
         /// <summary>
-        /// 采样截图任务输出
+        /// <p>采样截图任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SampleSnapshotTask")]
         public MediaProcessTaskSampleSnapshotResult SampleSnapshotTask{ get; set; }
 
         /// <summary>
-        /// 雪碧图任务输出
+        /// <p>雪碧图任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageSpriteTask")]
         public MediaProcessTaskImageSpriteResult ImageSpriteTask{ get; set; }
 
         /// <summary>
-        /// 自适应码流任务输出
+        /// <p>自适应码流任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdaptiveDynamicStreamingTask")]
         public MediaProcessTaskAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask{ get; set; }
 
         /// <summary>
-        /// 识别任务输出
+        /// <p>识别任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RecognitionTask")]
         public ScheduleRecognitionTaskResult RecognitionTask{ get; set; }
 
         /// <summary>
-        /// 审核任务输出
+        /// <p>审核任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReviewTask")]
         public ScheduleReviewTaskResult ReviewTask{ get; set; }
 
         /// <summary>
-        /// 分析任务输出
+        /// <p>分析任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisTask")]
         public ScheduleAnalysisTaskResult AnalysisTask{ get; set; }
 
         /// <summary>
-        /// 媒体质检任务输出
+        /// <p>媒体质检任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityControlTask")]
         public ScheduleQualityControlTaskResult QualityControlTask{ get; set; }
 
         /// <summary>
-        /// 条件判断任务输出
+        /// <p>条件判断任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExecRuleTask")]
         public ScheduleExecRuleTaskResult ExecRuleTask{ get; set; }
 
         /// <summary>
-        /// 智能字幕任务输出
+        /// <p>智能字幕任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmartSubtitlesTask")]
         public ScheduleSmartSubtitleTaskResult SmartSubtitlesTask{ get; set; }
 
         /// <summary>
-        /// 智能擦除任务输出
+        /// <p>智能擦除任务输出</p>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmartEraseTask")]
         public SmartEraseTaskResult SmartEraseTask{ get; set; }
+
+        /// <summary>
+        /// <p>AI配音任务输出。</p>
+        /// </summary>
+        [JsonProperty("AIDubbingTask")]
+        public AIDubbingTaskResult AIDubbingTask{ get; set; }
 
 
         /// <summary>
@@ -134,6 +140,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "ExecRuleTask.", this.ExecRuleTask);
             this.SetParamObj(map, prefix + "SmartSubtitlesTask.", this.SmartSubtitlesTask);
             this.SetParamObj(map, prefix + "SmartEraseTask.", this.SmartEraseTask);
+            this.SetParamObj(map, prefix + "AIDubbingTask.", this.AIDubbingTask);
         }
     }
 }

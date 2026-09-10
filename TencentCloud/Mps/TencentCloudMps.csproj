@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EF70E5DB-4615-3FEC-AD26-886743B104F6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.1502</VersionPrefix>
+    <VersionPrefix>3.0.1505</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,9 @@
   <ItemGroup>
     <Compile Include="V20190612\MpsClient.cs" />
     <Compile Include="V20190612\Models\AIAnalysisTemplateItem.cs" />
+    <Compile Include="V20190612\Models\AIDubbingTaskInput.cs" />
+    <Compile Include="V20190612\Models\AIDubbingTaskOutput.cs" />
+    <Compile Include="V20190612\Models\AIDubbingTaskResult.cs" />
     <Compile Include="V20190612\Models\AIRecognitionTemplateItem.cs" />
     <Compile Include="V20190612\Models\ActionConfigInfo.cs" />
     <Compile Include="V20190612\Models\ActivateSSAIRequest.cs" />
@@ -675,6 +678,12 @@
     <Compile Include="V20190612\Models\DocToVideoRegenerateInput.cs" />
     <Compile Include="V20190612\Models\DocToVideoWatermarkInfo.cs" />
     <Compile Include="V20190612\Models\DrmInfo.cs" />
+    <Compile Include="V20190612\Models\DstSubtitleInput.cs" />
+    <Compile Include="V20190612\Models\DubbingConfig.cs" />
+    <Compile Include="V20190612\Models\DubbingEmbedSubtitleConfig.cs" />
+    <Compile Include="V20190612\Models\DubbingOutputConfig.cs" />
+    <Compile Include="V20190612\Models\DubbingSubtitleConfig.cs" />
+    <Compile Include="V20190612\Models\DubbingTranslateConfig.cs" />
     <Compile Include="V20190612\Models\EditMediaFileInfo.cs" />
     <Compile Include="V20190612\Models\EditMediaOutputConfig.cs" />
     <Compile Include="V20190612\Models\EditMediaRequest.cs" />
@@ -914,6 +923,7 @@
     <Compile Include="V20190612\Models\OutputRISTSourceAddressResp.cs" />
     <Compile Include="V20190612\Models\OutputReq.cs" />
     <Compile Include="V20190612\Models\OutputSRTSourceAddressResp.cs" />
+    <Compile Include="V20190612\Models\OverrideAIDubbingParameter.cs" />
     <Compile Include="V20190612\Models\OverrideEraseParameter.cs" />
     <Compile Include="V20190612\Models\OverrideTranscodeParameter.cs" />
     <Compile Include="V20190612\Models\ParseLiveStreamProcessNotificationRequest.cs" />
@@ -974,6 +984,7 @@
     <Compile Include="V20190612\Models\RTMPPullSourceAddress.cs" />
     <Compile Include="V20190612\Models\RTPAddressDestination.cs" />
     <Compile Include="V20190612\Models\RTSPPullSourceAddress.cs" />
+    <Compile Include="V20190612\Models\RawAIDubbingParameter.cs" />
     <Compile Include="V20190612\Models\RawImageWatermarkInput.cs" />
     <Compile Include="V20190612\Models\RawSmartEraseParameter.cs" />
     <Compile Include="V20190612\Models\RawSmartSubtitleParameter.cs" />

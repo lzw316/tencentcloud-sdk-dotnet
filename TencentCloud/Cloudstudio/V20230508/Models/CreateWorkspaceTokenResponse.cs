@@ -25,13 +25,13 @@ namespace TencentCloud.Cloudstudio.V20230508.Models
     {
         
         /// <summary>
-        /// 访问工作空间临时凭证
+        /// <p>访问工作空间临时凭证</p>
         /// </summary>
         [JsonProperty("Token")]
         public string Token{ get; set; }
 
         /// <summary>
-        /// token 过期时间
+        /// <p>token 过期时间</p>
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }

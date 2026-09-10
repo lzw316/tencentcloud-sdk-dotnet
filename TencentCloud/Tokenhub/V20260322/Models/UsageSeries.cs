@@ -25,25 +25,25 @@ namespace TencentCloud.Tokenhub.V20260322.Models
     {
         
         /// <summary>
-        /// <p>[tokens 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+        /// <p>[tokens / apikey_usage 族]总 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
         /// </summary>
         [JsonProperty("TotalToken")]
         public string TotalToken{ get; set; }
 
         /// <summary>
-        /// <p>[tokens 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
+        /// <p>[tokens / apikey_usage 族]输入 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[7,null,9]&quot;</code>。</p>
         /// </summary>
         [JsonProperty("InputTotalToken")]
         public string InputTotalToken{ get; set; }
 
         /// <summary>
-        /// <p>[tokens 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
+        /// <p>[tokens / apikey_usage 族]输出 token 数用量时间周期内的 JSON 字符串形式，如 <code>&quot;[5,null,6]&quot;</code>。</p>
         /// </summary>
         [JsonProperty("OutputTotalToken")]
         public string OutputTotalToken{ get; set; }
 
         /// <summary>
-        /// <p>[tokens 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
+        /// <p>[tokens / apikey_usage 族]读缓存 token 数用量时间周期内的 JSON 字符串形式，如<code>&quot;[5,null,6]&quot;</code>。</p>
         /// </summary>
         [JsonProperty("CacheTotalToken")]
         public string CacheTotalToken{ get; set; }
@@ -60,6 +60,18 @@ namespace TencentCloud.Tokenhub.V20260322.Models
         [JsonProperty("SearchCount")]
         public string SearchCount{ get; set; }
 
+        /// <summary>
+        /// <p>[apikey_usage 族] 请求次数在时间周期内的 JSON 字符串形式，如 <code>&quot;[12,null,15]&quot;</code>。</p>
+        /// </summary>
+        [JsonProperty("RequestCount")]
+        public string RequestCount{ get; set; }
+
+        /// <summary>
+        /// <p>[apikey_usage 族] 请求失败次数在时间周期内的 JSON 字符串形式，如 &quot;[12,null,15]&quot;。</p>
+        /// </summary>
+        [JsonProperty("RequestFailCount")]
+        public string RequestFailCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Tokenhub.V20260322.Models
             this.SetParamSimple(map, prefix + "CacheTotalToken", this.CacheTotalToken);
             this.SetParamSimple(map, prefix + "SearchRequestCount", this.SearchRequestCount);
             this.SetParamSimple(map, prefix + "SearchCount", this.SearchCount);
+            this.SetParamSimple(map, prefix + "RequestCount", this.RequestCount);
+            this.SetParamSimple(map, prefix + "RequestFailCount", this.RequestFailCount);
         }
     }
 }

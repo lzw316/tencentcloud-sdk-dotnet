@@ -1,0 +1,65 @@
+/*
+ * Copyright (c) 2018-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Vod.V20180717.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class AiCutOutConfig : AbstractModel
+    {
+        
+        /// <summary>
+        /// <p>能力配置开关，可选值：  ON：开启； OFF：关闭。 默认值：ON。</p>
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// <p>抠图目标类型指定：&quot;foreground&quot; / &quot;pattern&quot;</p>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// <p>图案抠图配置。仅在Type为pattern时生效。</p>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PatternConfig")]
+        public PatternConfig PatternConfig{ get; set; }
+
+        /// <summary>
+        /// <p>抠图模型选择，可不填。</p><p>枚举值：</p><ul><li>auto： 自动选择合适的模型</li><li>WAND-cutout-1.0-lite： 标准版，速度最快</li><li>WAND-cutout-2.0-lite： 增强版，速度更快</li><li>WAND-cutout-2.0-flash： 增强版，质量-速度平衡</li><li>WAND-cutout-3.0-lite： 增强版，速度更快</li><li>WAND-cutout-3.0-flash： 增强版，质量-速度平衡</li></ul>
+        /// </summary>
+        [JsonProperty("Model")]
+        public string Model{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "PatternConfig.", this.PatternConfig);
+            this.SetParamSimple(map, prefix + "Model", this.Model);
+        }
+    }
+}
+

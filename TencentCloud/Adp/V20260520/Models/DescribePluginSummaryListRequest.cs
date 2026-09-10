@@ -25,13 +25,13 @@ namespace TencentCloud.Adp.V20260520.Models
     {
         
         /// <summary>
-        /// 空间ID，查询空间内的插件列表时使用
+        /// <p>空间ID，查询空间内的插件列表时使用</p>
         /// </summary>
         [JsonProperty("SpaceId")]
         public string SpaceId{ get; set; }
 
         /// <summary>
-        /// 过滤条件列表 支持：PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType
+        /// <p>过滤条件列表，支持 PluginKind、CategoryKey、PluginSource、PluginId、PluginClass、BillingType、AuthType、IsShared、IsCreatedByMe</p>
         /// </summary>
         [JsonProperty("FilterList")]
         public Filter[] FilterList{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Adp.V20260520.Models
         public long? Module{ get; set; }
 
         /// <summary>
-        /// 页码 从0开始
+        /// <p>页码 从0开始</p>
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// 每页大小
+        /// <p>每页大小</p>
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述
+        /// <p>查询内容 模糊匹配：插件名称/插件描述/工具名称/工具描述</p>
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
@@ -71,6 +71,12 @@ namespace TencentCloud.Adp.V20260520.Models
         /// </summary>
         [JsonProperty("SortType")]
         public long? SortType{ get; set; }
+
+        /// <summary>
+        /// <p>筛选当前空间/企业共享插件</p><p>取值范围：[0, 2]</p>
+        /// </summary>
+        [JsonProperty("PluginSpaceRelation")]
+        public long? PluginSpaceRelation{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Adp.V20260520.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "SortType", this.SortType);
+            this.SetParamSimple(map, prefix + "PluginSpaceRelation", this.PluginSpaceRelation);
         }
     }
 }

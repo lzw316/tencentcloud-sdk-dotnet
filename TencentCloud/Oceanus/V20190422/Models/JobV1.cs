@@ -373,6 +373,24 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ManagerUin")]
         public string ManagerUin{ get; set; }
 
+        /// <summary>
+        /// <p>启动位点</p>
+        /// </summary>
+        [JsonProperty("StartupPoint")]
+        public string StartupPoint{ get; set; }
+
+        /// <summary>
+        /// <p>是否有事件</p>
+        /// </summary>
+        [JsonProperty("IsEvent")]
+        public bool? IsEvent{ get; set; }
+
+        /// <summary>
+        /// <p>是否告警</p>
+        /// </summary>
+        [JsonProperty("IsAlarm")]
+        public bool? IsAlarm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -430,6 +448,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "HealthScore", this.HealthScore);
             this.SetParamSimple(map, prefix + "LastDiagnoseTime", this.LastDiagnoseTime);
             this.SetParamSimple(map, prefix + "ManagerUin", this.ManagerUin);
+            this.SetParamSimple(map, prefix + "StartupPoint", this.StartupPoint);
+            this.SetParamSimple(map, prefix + "IsEvent", this.IsEvent);
+            this.SetParamSimple(map, prefix + "IsAlarm", this.IsAlarm);
         }
     }
 }

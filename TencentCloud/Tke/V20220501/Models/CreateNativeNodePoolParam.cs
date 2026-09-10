@@ -174,6 +174,12 @@ namespace TencentCloud.Tke.V20220501.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// <p>自定义镜像 ID</p>
+        /// </summary>
+        [JsonProperty("CustomImage")]
+        public string CustomImage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Tke.V20220501.Models
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "AutomationService", this.AutomationService);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "CustomImage", this.CustomImage);
         }
     }
 }

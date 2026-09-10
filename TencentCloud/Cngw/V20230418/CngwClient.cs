@@ -28,7 +28,7 @@ namespace TencentCloud.Cngw.V20230418
 
        private const string endpoint = "cngw.tencentcloudapi.com";
        private const string version = "2023-04-18";
-       private const string sdkVersion = "SDK_NET_3.0.1496";
+       private const string sdkVersion = "SDK_NET_3.0.1505";
 
         /// <summary>
         /// Client constructor.
@@ -117,6 +117,90 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="CheckCloudNativeAPIGatewayMCPRouteMatchRequest"/></param>
+        /// <returns><see cref="CheckCloudNativeAPIGatewayMCPRouteMatchResponse"/></returns>
+        public Task<CheckCloudNativeAPIGatewayMCPRouteMatchResponse> CheckCloudNativeAPIGatewayMCPRouteMatch(CheckCloudNativeAPIGatewayMCPRouteMatchRequest req)
+        {
+            return InternalRequestAsync<CheckCloudNativeAPIGatewayMCPRouteMatchResponse>(req, "CheckCloudNativeAPIGatewayMCPRouteMatch");
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="CheckCloudNativeAPIGatewayMCPRouteMatchRequest"/></param>
+        /// <returns><see cref="CheckCloudNativeAPIGatewayMCPRouteMatchResponse"/></returns>
+        public CheckCloudNativeAPIGatewayMCPRouteMatchResponse CheckCloudNativeAPIGatewayMCPRouteMatchSync(CheckCloudNativeAPIGatewayMCPRouteMatchRequest req)
+        {
+            return InternalRequestAsync<CheckCloudNativeAPIGatewayMCPRouteMatchResponse>(req, "CheckCloudNativeAPIGatewayMCPRouteMatch")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="CheckCloudNativeAPIGatewayMCPToolVersionExistRequest"/></param>
+        /// <returns><see cref="CheckCloudNativeAPIGatewayMCPToolVersionExistResponse"/></returns>
+        public Task<CheckCloudNativeAPIGatewayMCPToolVersionExistResponse> CheckCloudNativeAPIGatewayMCPToolVersionExist(CheckCloudNativeAPIGatewayMCPToolVersionExistRequest req)
+        {
+            return InternalRequestAsync<CheckCloudNativeAPIGatewayMCPToolVersionExistResponse>(req, "CheckCloudNativeAPIGatewayMCPToolVersionExist");
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="CheckCloudNativeAPIGatewayMCPToolVersionExistRequest"/></param>
+        /// <returns><see cref="CheckCloudNativeAPIGatewayMCPToolVersionExistResponse"/></returns>
+        public CheckCloudNativeAPIGatewayMCPToolVersionExistResponse CheckCloudNativeAPIGatewayMCPToolVersionExistSync(CheckCloudNativeAPIGatewayMCPToolVersionExistRequest req)
+        {
+            return InternalRequestAsync<CheckCloudNativeAPIGatewayMCPToolVersionExistResponse>(req, "CheckCloudNativeAPIGatewayMCPToolVersionExist")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="CompareCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="CompareCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public Task<CompareCloudNativeAPIGatewayMCPToolVersionResponse> CompareCloudNativeAPIGatewayMCPToolVersion(CompareCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<CompareCloudNativeAPIGatewayMCPToolVersionResponse>(req, "CompareCloudNativeAPIGatewayMCPToolVersion");
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="CompareCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="CompareCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public CompareCloudNativeAPIGatewayMCPToolVersionResponse CompareCloudNativeAPIGatewayMCPToolVersionSync(CompareCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<CompareCloudNativeAPIGatewayMCPToolVersionResponse>(req, "CompareCloudNativeAPIGatewayMCPToolVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 创建云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayAIServiceSourceRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayAIServiceSourceResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewayAIServiceSourceResponse> CreateCloudNativeAPIGatewayAIServiceSource(CreateCloudNativeAPIGatewayAIServiceSourceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayAIServiceSourceResponse>(req, "CreateCloudNativeAPIGatewayAIServiceSource");
+        }
+
+        /// <summary>
+        /// 创建云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayAIServiceSourceRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayAIServiceSourceResponse"/></returns>
+        public CreateCloudNativeAPIGatewayAIServiceSourceResponse CreateCloudNativeAPIGatewayAIServiceSourceSync(CreateCloudNativeAPIGatewayAIServiceSourceRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayAIServiceSourceResponse>(req, "CreateCloudNativeAPIGatewayAIServiceSource")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建AI网关消费者。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayConsumerRequest"/></param>
@@ -201,6 +285,27 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayMCPRouteRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayMCPRouteResponse"/></returns>
+        public Task<CreateCloudNativeAPIGatewayMCPRouteResponse> CreateCloudNativeAPIGatewayMCPRoute(CreateCloudNativeAPIGatewayMCPRouteRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayMCPRouteResponse>(req, "CreateCloudNativeAPIGatewayMCPRoute");
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudNativeAPIGatewayMCPRouteRequest"/></param>
+        /// <returns><see cref="CreateCloudNativeAPIGatewayMCPRouteResponse"/></returns>
+        public CreateCloudNativeAPIGatewayMCPRouteResponse CreateCloudNativeAPIGatewayMCPRouteSync(CreateCloudNativeAPIGatewayMCPRouteRequest req)
+        {
+            return InternalRequestAsync<CreateCloudNativeAPIGatewayMCPRouteResponse>(req, "CreateCloudNativeAPIGatewayMCPRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 创建AI网关MCP Server
         /// </summary>
         /// <param name="req"><see cref="CreateCloudNativeAPIGatewayMCPServerRequest"/></param>
@@ -260,6 +365,27 @@ namespace TencentCloud.Cngw.V20230418
         public CreateCloudNativeAPIGatewaySecretKeyResponse CreateCloudNativeAPIGatewaySecretKeySync(CreateCloudNativeAPIGatewaySecretKeyRequest req)
         {
             return InternalRequestAsync<CreateCloudNativeAPIGatewaySecretKeyResponse>(req, "CreateCloudNativeAPIGatewaySecretKey")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 删除云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayAIServiceSourceRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayAIServiceSourceResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayAIServiceSourceResponse> DeleteCloudNativeAPIGatewayAIServiceSource(DeleteCloudNativeAPIGatewayAIServiceSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayAIServiceSourceResponse>(req, "DeleteCloudNativeAPIGatewayAIServiceSource");
+        }
+
+        /// <summary>
+        /// 删除云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayAIServiceSourceRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayAIServiceSourceResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayAIServiceSourceResponse DeleteCloudNativeAPIGatewayAIServiceSourceSync(DeleteCloudNativeAPIGatewayAIServiceSourceRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayAIServiceSourceResponse>(req, "DeleteCloudNativeAPIGatewayAIServiceSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -348,6 +474,27 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayMCPRouteRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayMCPRouteResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayMCPRouteResponse> DeleteCloudNativeAPIGatewayMCPRoute(DeleteCloudNativeAPIGatewayMCPRouteRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayMCPRouteResponse>(req, "DeleteCloudNativeAPIGatewayMCPRoute");
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayMCPRouteRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayMCPRouteResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayMCPRouteResponse DeleteCloudNativeAPIGatewayMCPRouteSync(DeleteCloudNativeAPIGatewayMCPRouteRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayMCPRouteResponse>(req, "DeleteCloudNativeAPIGatewayMCPRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除AI网关MCP服务
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayMCPServerRequest"/></param>
@@ -390,6 +537,27 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public Task<DeleteCloudNativeAPIGatewayMCPToolVersionResponse> DeleteCloudNativeAPIGatewayMCPToolVersion(DeleteCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayMCPToolVersionResponse>(req, "DeleteCloudNativeAPIGatewayMCPToolVersion");
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public DeleteCloudNativeAPIGatewayMCPToolVersionResponse DeleteCloudNativeAPIGatewayMCPToolVersionSync(DeleteCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<DeleteCloudNativeAPIGatewayMCPToolVersionResponse>(req, "DeleteCloudNativeAPIGatewayMCPToolVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 删除消费者密钥（被绑定时需先解绑）。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudNativeAPIGatewaySecretKeyRequest"/></param>
@@ -428,6 +596,69 @@ namespace TencentCloud.Cngw.V20230418
         public DescribeCNGWServicesWithRoutesResponse DescribeCNGWServicesWithRoutesSync(DescribeCNGWServicesWithRoutesRequest req)
         {
             return InternalRequestAsync<DescribeCNGWServicesWithRoutesResponse>(req, "DescribeCNGWServicesWithRoutes")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI网关配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayAIQuotaResponse> DescribeCloudNativeAPIGatewayAIQuota(DescribeCloudNativeAPIGatewayAIQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayAIQuotaResponse>(req, "DescribeCloudNativeAPIGatewayAIQuota");
+        }
+
+        /// <summary>
+        /// 查询AI网关配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayAIQuotaResponse DescribeCloudNativeAPIGatewayAIQuotaSync(DescribeCloudNativeAPIGatewayAIQuotaRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayAIQuotaResponse>(req, "DescribeCloudNativeAPIGatewayAIQuota")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询AI配额配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayAIQuotaListResponse> DescribeCloudNativeAPIGatewayAIQuotaList(DescribeCloudNativeAPIGatewayAIQuotaListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayAIQuotaListResponse>(req, "DescribeCloudNativeAPIGatewayAIQuotaList");
+        }
+
+        /// <summary>
+        /// 查询AI配额配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIQuotaListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayAIQuotaListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayAIQuotaListResponse DescribeCloudNativeAPIGatewayAIQuotaListSync(DescribeCloudNativeAPIGatewayAIQuotaListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayAIQuotaListResponse>(req, "DescribeCloudNativeAPIGatewayAIQuotaList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 查询云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIServiceSourceListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayAIServiceSourceListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayAIServiceSourceListResponse> DescribeCloudNativeAPIGatewayAIServiceSourceList(DescribeCloudNativeAPIGatewayAIServiceSourceListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayAIServiceSourceListResponse>(req, "DescribeCloudNativeAPIGatewayAIServiceSourceList");
+        }
+
+        /// <summary>
+        /// 查询云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayAIServiceSourceListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayAIServiceSourceListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayAIServiceSourceListResponse DescribeCloudNativeAPIGatewayAIServiceSourceListSync(DescribeCloudNativeAPIGatewayAIServiceSourceListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayAIServiceSourceListResponse>(req, "DescribeCloudNativeAPIGatewayAIServiceSourceList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -600,6 +831,27 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPRouteListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPRouteListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayMCPRouteListResponse> DescribeCloudNativeAPIGatewayMCPRouteList(DescribeCloudNativeAPIGatewayMCPRouteListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPRouteListResponse>(req, "DescribeCloudNativeAPIGatewayMCPRouteList");
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPRouteListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPRouteListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayMCPRouteListResponse DescribeCloudNativeAPIGatewayMCPRouteListSync(DescribeCloudNativeAPIGatewayMCPRouteListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPRouteListResponse>(req, "DescribeCloudNativeAPIGatewayMCPRouteList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询AI 网关MCP服务信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPServerRequest"/></param>
@@ -726,6 +978,27 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 查询批量导入MCP Tools的任务进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolImportTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse> DescribeCloudNativeAPIGatewayMCPToolImportTask(DescribeCloudNativeAPIGatewayMCPToolImportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolImportTask");
+        }
+
+        /// <summary>
+        /// 查询批量导入MCP Tools的任务进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolImportTaskRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse DescribeCloudNativeAPIGatewayMCPToolImportTaskSync(DescribeCloudNativeAPIGatewayMCPToolImportTaskRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolImportTaskResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolImportTask")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询 AI 网关MCP Tool 列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolListRequest"/></param>
@@ -743,6 +1016,48 @@ namespace TencentCloud.Cngw.V20230418
         public DescribeCloudNativeAPIGatewayMCPToolListResponse DescribeCloudNativeAPIGatewayMCPToolListSync(DescribeCloudNativeAPIGatewayMCPToolListRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolListResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayMCPToolVersionResponse> DescribeCloudNativeAPIGatewayMCPToolVersion(DescribeCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolVersionResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolVersion");
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayMCPToolVersionResponse DescribeCloudNativeAPIGatewayMCPToolVersionSync(DescribeCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolVersionResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolVersion")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewayMCPToolVersionListResponse> DescribeCloudNativeAPIGatewayMCPToolVersionList(DescribeCloudNativeAPIGatewayMCPToolVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolVersionListResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolVersionList");
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayMCPToolVersionListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayMCPToolVersionListResponse DescribeCloudNativeAPIGatewayMCPToolVersionListSync(DescribeCloudNativeAPIGatewayMCPToolVersionListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewayMCPToolVersionListResponse>(req, "DescribeCloudNativeAPIGatewayMCPToolVersionList")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -789,6 +1104,27 @@ namespace TencentCloud.Cngw.V20230418
         }
 
         /// <summary>
+        /// 查询密钥列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
+        public Task<DescribeCloudNativeAPIGatewaySecretKeyListResponse> DescribeCloudNativeAPIGatewaySecretKeyList(DescribeCloudNativeAPIGatewaySecretKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyListResponse>(req, "DescribeCloudNativeAPIGatewaySecretKeyList");
+        }
+
+        /// <summary>
+        /// 查询密钥列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyListRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewaySecretKeyListResponse"/></returns>
+        public DescribeCloudNativeAPIGatewaySecretKeyListResponse DescribeCloudNativeAPIGatewaySecretKeyListSync(DescribeCloudNativeAPIGatewaySecretKeyListRequest req)
+        {
+            return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyListResponse>(req, "DescribeCloudNativeAPIGatewaySecretKeyList")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
         /// 查询密钥明文值（KMS 类型密钥不可获取）。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudNativeAPIGatewaySecretKeyValueRequest"/></param>
@@ -806,6 +1142,27 @@ namespace TencentCloud.Cngw.V20230418
         public DescribeCloudNativeAPIGatewaySecretKeyValueResponse DescribeCloudNativeAPIGatewaySecretKeyValueSync(DescribeCloudNativeAPIGatewaySecretKeyValueRequest req)
         {
             return InternalRequestAsync<DescribeCloudNativeAPIGatewaySecretKeyValueResponse>(req, "DescribeCloudNativeAPIGatewaySecretKeyValue")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayAIServiceSourceRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayAIServiceSourceResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewayAIServiceSourceResponse> ModifyCloudNativeAPIGatewayAIServiceSource(ModifyCloudNativeAPIGatewayAIServiceSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayAIServiceSourceResponse>(req, "ModifyCloudNativeAPIGatewayAIServiceSource");
+        }
+
+        /// <summary>
+        /// 修改云原生网关AI服务来源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayAIServiceSourceRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayAIServiceSourceResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayAIServiceSourceResponse ModifyCloudNativeAPIGatewayAIServiceSourceSync(ModifyCloudNativeAPIGatewayAIServiceSourceRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayAIServiceSourceResponse>(req, "ModifyCloudNativeAPIGatewayAIServiceSource")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -890,6 +1247,48 @@ namespace TencentCloud.Cngw.V20230418
         public ModifyCloudNativeAPIGatewayLLMModelServiceResponse ModifyCloudNativeAPIGatewayLLMModelServiceSync(ModifyCloudNativeAPIGatewayLLMModelServiceRequest req)
         {
             return InternalRequestAsync<ModifyCloudNativeAPIGatewayLLMModelServiceResponse>(req, "ModifyCloudNativeAPIGatewayLLMModelService")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayMCPRouteRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayMCPRouteResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewayMCPRouteResponse> ModifyCloudNativeAPIGatewayMCPRoute(ModifyCloudNativeAPIGatewayMCPRouteRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayMCPRouteResponse>(req, "ModifyCloudNativeAPIGatewayMCPRoute");
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayMCPRouteRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayMCPRouteResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayMCPRouteResponse ModifyCloudNativeAPIGatewayMCPRouteSync(ModifyCloudNativeAPIGatewayMCPRouteRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayMCPRouteResponse>(req, "ModifyCloudNativeAPIGatewayMCPRoute")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayMCPRouteStatusRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayMCPRouteStatusResponse"/></returns>
+        public Task<ModifyCloudNativeAPIGatewayMCPRouteStatusResponse> ModifyCloudNativeAPIGatewayMCPRouteStatus(ModifyCloudNativeAPIGatewayMCPRouteStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayMCPRouteStatusResponse>(req, "ModifyCloudNativeAPIGatewayMCPRouteStatus");
+        }
+
+        /// <summary>
+        /// 上传插件前置操作，获取COS相关信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudNativeAPIGatewayMCPRouteStatusRequest"/></param>
+        /// <returns><see cref="ModifyCloudNativeAPIGatewayMCPRouteStatusResponse"/></returns>
+        public ModifyCloudNativeAPIGatewayMCPRouteStatusResponse ModifyCloudNativeAPIGatewayMCPRouteStatusSync(ModifyCloudNativeAPIGatewayMCPRouteStatusRequest req)
+        {
+            return InternalRequestAsync<ModifyCloudNativeAPIGatewayMCPRouteStatusResponse>(req, "ModifyCloudNativeAPIGatewayMCPRouteStatus")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
@@ -1100,6 +1499,27 @@ namespace TencentCloud.Cngw.V20230418
         public RemoveCloudNativeAPIGatewayConsumerInGroupResponse RemoveCloudNativeAPIGatewayConsumerInGroupSync(RemoveCloudNativeAPIGatewayConsumerInGroupRequest req)
         {
             return InternalRequestAsync<RemoveCloudNativeAPIGatewayConsumerInGroupResponse>(req, "RemoveCloudNativeAPIGatewayConsumerInGroup")
+                .ConfigureAwait(false).GetAwaiter().GetResult();
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="RollbackCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="RollbackCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public Task<RollbackCloudNativeAPIGatewayMCPToolVersionResponse> RollbackCloudNativeAPIGatewayMCPToolVersion(RollbackCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<RollbackCloudNativeAPIGatewayMCPToolVersionResponse>(req, "RollbackCloudNativeAPIGatewayMCPToolVersion");
+        }
+
+        /// <summary>
+        /// 修改云原生智能网关MCP Tool
+        /// </summary>
+        /// <param name="req"><see cref="RollbackCloudNativeAPIGatewayMCPToolVersionRequest"/></param>
+        /// <returns><see cref="RollbackCloudNativeAPIGatewayMCPToolVersionResponse"/></returns>
+        public RollbackCloudNativeAPIGatewayMCPToolVersionResponse RollbackCloudNativeAPIGatewayMCPToolVersionSync(RollbackCloudNativeAPIGatewayMCPToolVersionRequest req)
+        {
+            return InternalRequestAsync<RollbackCloudNativeAPIGatewayMCPToolVersionResponse>(req, "RollbackCloudNativeAPIGatewayMCPToolVersion")
                 .ConfigureAwait(false).GetAwaiter().GetResult();
         }
 
